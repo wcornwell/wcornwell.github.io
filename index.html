@@ -4,8 +4,9 @@
     <title>Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
-        @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
       body {
         font-family: 'Droid Serif';
@@ -168,10 +169,11 @@ layout: false
            
 ---
            
-## Temporal filing cabinet
+## A temporal filing cabinet of hidden files
 
  <img src="http://version-control.net/wp-content/uploads/2011/03/version-control-edit-commit.png" alt="Drawing" style="width: 800px;"/>    
-           
+
+All that you see on your computer is the current (hopefully best) version
 ---
 
 ## Distributed copies and workflow
@@ -188,7 +190,7 @@ layout: false
 
 ## Respositories
 
--Just another computer in the cloud, can be public or private
+-Just another computer, can be public or private, can have some added bells and whistles
            
 -Names: Github, Bitbucket, UNSW
 
@@ -223,7 +225,7 @@ layout: false
 ]
 .right-column[
 
-1. *git pull* .red[*]
+1. *git pull* 
 
 2. DO SOMETHING USEFUL 
 
@@ -236,9 +238,25 @@ layout: false
 6. *git push*
            
            
-.footnote[.red[*] Not necessary if it's only you working on something]
+.footnote[.red[*] Git pull not necessary if it's only you working on something]
 ]    
            
+---
+layout: false
+.left-column[
+## Limitations (probably for the next 5 years or so)
+]
+.right-column[
+
+-Big data files are tricky at the moment
+
+-No GUI so some learning required for collaborations
+           
+-Binary files--files that cannot be opened in a text editor (.docx, .xlsx, .pptx, and others)--are tricky
+           
+-Multi-person work flow is a seperate problem from version control--you still need to talk to each other
+           
+] 
 ---
 layout: false
 .left-column[
@@ -250,7 +268,8 @@ layout: false
 
 -*git diff*
            
-]        
+]             
+           
 ---
 layout: true
 class: center, middle, inverse         
