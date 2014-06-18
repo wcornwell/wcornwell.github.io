@@ -141,6 +141,8 @@ name: how
 .right-column[
 - Brownian motion
            
+<img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif">
+  
 - Mean reverting processes
            
 - Heterogeneous models
@@ -148,7 +150,11 @@ name: how
     
 ]                
 
-        
+---
+class: center, middle, inverse
+           
+               <img src=" http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Diffusion_of_Brownian_particles.svg/464px-Diffusion_of_Brownian_particles.svg.png">    
+
 
 ---
 name: how
@@ -183,6 +189,25 @@ name: how
 
 6. Compare test statistics between obs and sim 
            ]
+
+---
+
+
+##Statistical ways that the trait evolution model may be inadequate
+
+
+1. Coefficient of variation of contrasts
+
+2. Evaluate normality of contrasts
+
+3. REML estimate of BM parameter
+           
+4. Relationship between contrasts and inferred ancestral state
+
+5. Relationship between contrasts and node height
+
+6. Relationship between contrasts and their variances
+
            
 ---
 class: center, middle, inverse
@@ -192,6 +217,7 @@ class: center, middle, inverse
 
 
 ---
+layout: false
 name: how    
            
 .left-column[
@@ -215,10 +241,20 @@ fit.bm <- fitContinuous(phy=phy, dat=data,
           
 modelad.bm <- arbutus(fit.bm, nsim=10)
 modelad.bm
+plot(modelad.bm)
 ```
            ]
            
----         
+---
+class: center, middle, inverse
+<img src="../graphics/oaks_seed_evolve.034.png"  alt="Drawing" style="width:650px" align="middle"/>
+---
+class: center, middle, inverse
+<img src="../graphics/oaks_dist_check.035.png"  alt="Drawing" style="width:650px" align="middle"/> 
+---
+class: center, middle, inverse
+###<a href="http://biorxiv.org/content/early/2014/04/07/004002">http://biorxiv.org/content/early/2014/04/07/004002</a>        
+
 ---
 name: last-page
 template: inverse
