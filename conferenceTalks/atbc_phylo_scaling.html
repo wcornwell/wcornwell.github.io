@@ -10,48 +10,27 @@
 name: inverse
 layout: true
 class: center, middle, inverse
----
-#Phylogenetic model adequacy
-###All models are wrong and sometimes even the best of a set of models is useless. 
-
-.footnote[Go to directly to [github repo](https://github.com/mwpennell/arbutus)]
----
-
-class: center, middle, inverse
-<img src="https://pbs.twimg.com/media/BmMdiSkCcAEJDdL.png" alt="Drawing" style="width: 500px;"/> 
 
 ---
 
-class: center, middle, inverse
-<img src="https://github.com/mwpennell/arbutus/raw/master/extra/arbutus_logo.png" alt="Drawing" style="width: 500px;"/> 
+#Trees, branches and (square) roots: why evolutionary relatedness is not linearly related to functional distance
+## Will Cornwell and Andrew Letten
+### UNSW, Australia
 
 ---
 
-class: center, middle, inverse
- <img src="../graphics/fraction-on-phylogeny.jpg" alt="Drawing" style="width:550px" align="middle"/>
+The scaling of functional and phylogenetic distance/dissimilarity/diversity
+Introduce the importance of this scaling
 
 ---
-layout: false
-name: how
+
+Connect the trait scaling idea to trait evolution
+
+---
+
+Brownian motion as a null model
            
-.left-column[
-  ## Install library
-]
-.right-column[
-
-```python 
-install.packages("devtools") 
-           
-library(devtools)
-
-install_github("mwpennell/arbutus")
-           
-library(arbutus)
-           
-```
-]
-           
----
+---           
 layout: false
 name: how
        
@@ -218,37 +197,6 @@ name: how
 class: center, middle, inverse
            
  <img src="../graphics/distributions.021.png" alt="Drawing" style="width:550px" align="middle"/>
-
-
-
----
-layout: false
-name: how    
-           
-.left-column[
-  ## Fit model to data and then assess model
-]
-.right-column[           
-
-```
-data(finch)
-phy <- finch$phy
-plot(finch$phy)
-data <- finch$data[,"wingL"]
-data
-
-install.packages("geiger")
-require(geiger)
-## fit Brownian motion model
-## using geiger's fitContinuous function
-fit.bm <- fitContinuous(phy=phy, dat=data, 
-          model="BM",control=list(niter=10))
-          
-modelad.bm <- arbutus(fit.bm, nsim=10)
-modelad.bm
-plot(modelad.bm)
-```
-           ]
            
 ---
 class: center, middle, inverse
@@ -261,22 +209,8 @@ class: center, middle, inverse
 ###<a href="http://biorxiv.org/content/early/2014/04/07/004002">http://biorxiv.org/content/early/2014/04/07/004002</a>        
 
 ---
-name: last-page
-template: inverse
 
-## That's all folks (for now)!
-
----
-class: center, middle
-
-# `\(\LaTeX{}\)` in remark
-
----
-
-# Display and Inline
-
-1. This is an inline integral: `\(\int_a^bf(x)dx\)`
-2. More `\(x={a \over b}\)` formulae.
+Checking that math works
 
 Display formula:
     $$e^{i\pi} + 1 = 0$$
