@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Phylo Model Adequacy</title>
+    <title>Trees, branches and (square) roots</title>
    <link rel="stylesheet" type="text/css" href="../reStyle.css">
   </head>
   <body>
        <textarea id="source">
 
-name: inverse
-layout: true
-class: center, middle, inverse
+
+
 
 ---
-
+class: center, middle, inverse
 #Trees, branches and (square) roots: why evolutionary relatedness is not linearly related to functional distance
 ## Will Cornwell and Andrew Letten
 ### UNSW, Australia
@@ -27,91 +26,88 @@ Introduce the importance of this scaling
 Connect the trait scaling idea to trait evolution
 
 ---
-
-Brownian motion as a null model
-           
----           
 layout: false
-name: how
-       
-    
 .left-column[
-  ## Model adequacy: what is it?
+  ## Why does the relative scaling of phylogenetic and functional distance matter?
 ]
 .right-column[
- <img src="../graphics/simple_model.png" alt="Drawing" style="width:550px" align="middle"/>
+ 
 ]
----
-.left-column[
-  ## Model (in)adequacy: 
-### A hint that something else is going on
-]
-.right-column[
- <img src="../graphics/model_badness.png" alt="Drawing" style="width:550px" align="middle"/>
-r^2=0.67, P=0.002, Anscombe 1973
-           ]
+           
         
+           
+---
+class: center
+##Question:   
+
+#What is the scaling of functional and phylogenetic distance is (a) simulations and (b) plants?
+           
+---
+class: center
+<img src="../graphics/caddotte2013.png" alt="Drawing" style="width:550px" align="middle"/>
+
+
+Caddotte 2013, Ecology Letters
+                   
+---
+layout: false
+class: center
+.left-column[
+  ## The math of Brownian motion
+]
+           
+
+           
+.right-column[
+           
+           $$\frac{\partial\rho}{\partial t}=\sigma^2\frac{\partial^2\rho}{\partial x^2}$$
+           <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Drawing" style="width:150px" align="center"/>
+           
+           
+           the mean displacement is therefore proportional to 
+           the square root (*Quadratwurzel*) of the time 
+           -Einstein 1905
+           
+           ]
+           
+---
+class: center, middle
+           
+<img src="../graphics/sq_root_resub.png" alt="Drawing" style="width:800px" align="middle"/>
+       
+           
+---
+           
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Drawing" style="width:150px" align="center"/>
+ was right           
+
+---
+layout: false
+class: center
+           
+.left-column[
+Traditional metrics of community phylogenetics:
+           ]
+.right-column[
+
+           EQUATION IMAGE
+      
+           simply becomes:
+           
+           EQUATION 2 IMAGE
+           
+           ]
+
 
 ---
 .left-column[
-  ## For (phylogenetic) models of trait evolution
-]
+## A more realistic model of trait evolution improves power of phylogenetic methods
+           ]
 .right-column[
-
-
-- Plotting is sometimes complicated
-
-
-- No general method for assessing model adequacy
-
-]
----
-template: inverse
-
-## Our approach
----
-.left-column[
-  ## The general (simple) idea
-
-]
-.right-column[
-- Fit the model to comparative data
---                      
-- Use fitted parameters to simulate data
---           
-- Compare observed to simulated data
---
-- Look for differences
---           
-]
-
----
-class: center, middle, inverse
+           <img src="../graphics/bm_diff_p220_c40.png" alt="Drawing" style="width:600px" align="middle"/>
+           ]
            
-# If we re-ran evolution, how likely are we to see a dataset like ours?
-
 ---
-name: how
-           
-.left-column[
-  ## Aspects of phylogenetic data
-
-]
-.right-column[
-- Species are not independent data points
-           
-- Instead use "contrasts"
-           
-    
-]         
-
----
-class: center, middle, inverse
-           
-<img src="http://upload.wikimedia.org/wikipedia/en/2/28/Phylogenetically_Independent_Contrasts_1.jpg" alt="Drawing" style="width:550px" align="middle"/>      
-   
----
-name: how
            
 .left-column[
   ## Types of trait evolution models
@@ -122,77 +118,11 @@ name: how
            
 <img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif">
   
-- Mean reverting processes
+- Mean-reverting processes
            
 - Heterogeneous models
-           
-    
 ]                
 
----
-class: center, middle, inverse
-           
-               <img src=" http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Diffusion_of_Brownian_particles.svg/464px-Diffusion_of_Brownian_particles.svg.png">    
-
-
----
-name: how
-
-.left-column[
- ##Nice things about unit trees
-           ]
-.right-column[
--Transformation applies to most* models of
-continuous trait evolution
-
--If model is appropriate, contrasts on unit tree will be
-I.I.D. ~ Normal(0, 1) - same as BM with \sigma ^2 = 1 
-           ]           
-
----
-name: how
-
-.left-column[
- ##The whole process
-           ]
-.right-column[
-1. Fit model, estimate parameters
-
-2. Build unit tree  from simulated parameters
-
-3. Calculate test statistics on contrasts
-
-4. Simulate n BM datasets on unit tree
-
-5. Calculate test statistics on contrasts of sim data
-
-6. Compare test statistics between obs and sim 
-           ]
-
----
-
-
-##Statistical ways that the observed trait evolution model may be different that the model
-
-
-1. Coefficient of variation of contrasts
-           
---
-2. Evaluate normality of contrasts
-           
---
-3. REML estimate of BM parameter
-           
---
-4. Relationship between contrasts and inferred ancestral state
-
---
-5. Relationship between contrasts and node height
-
-
---
-6. Relationship between contrasts and their variances
-           
 ---
 class: center, middle, inverse
            
@@ -210,13 +140,7 @@ class: center, middle, inverse
 
 ---
 
-Checking that math works
 
-Display formula:
-    $$e^{i\pi} + 1 = 0$$
-
----
-           
 Thanks!
            
 ---
