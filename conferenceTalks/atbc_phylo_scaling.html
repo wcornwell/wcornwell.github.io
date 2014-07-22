@@ -12,26 +12,44 @@
 
 
 class: center, middle
-#Trees, branches and (square) roots: why evolutionary relatedness is not linearly related to functional distance
+#How closely do close relatives resemble each other?
 ## Will Cornwell and Andrew Letten
 ### UNSW, Australia
 
 ---
-
-The scaling of functional and phylogenetic distance/dissimilarity/diversity
-Introduce the importance of this scaling
+class: center, middle
+           
+<img src="../graphics/func_div.png" alt="Drawing" style="width:750px" align="middle"/>
+---
+class: center, middle
+           
+<img src="../graphics/schimper.png" alt="Drawing" style="width:750px" align="middle"/>
 
 ---
+class: center, middle
+           
+<img src="../graphics/trait_evolution_acer.png" alt="Drawing" style="width:750px" align="middle"/>
 
-Connect the trait scaling idea to trait evolution
+
 
 ---
 layout: false
+
 .left-column[
-  ## Why does the relative scaling of phylogenetic and functional distance matter?
-]
+  ## How closely do close relatives resemble each other? 
+           ]
 .right-column[
- 
+### Theory built on this includes:
+       
+- Metrics of community phylogenetics
+           
+- Connection between phylogenetic and functional diversity
+           
+- Patterns of functional and phylogenetic diversity in space and time
+           
+- Approaches for "gap-filling" functional databases
+  
+
 ]
            
         
@@ -46,8 +64,7 @@ class: center
 class: center
 <img src="../graphics/caddotte2013.png" alt="Drawing" style="width:550px" align="middle"/>
 
-
-Caddotte 2013, Ecology Letters
+Caddotte 2013, Ecology Letters, prediction under Brownian motion
                    
 ---
 layout: false
@@ -56,13 +73,12 @@ class: center
   ## The math of Brownian motion
 ]
            
-
-           
 .right-column[
            
            $$\frac{\partial\rho}{\partial t}=\sigma^2\frac{\partial^2\rho}{\partial x^2}$$
            <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Drawing" style="width:150px" align="center"/>
            
+--
            
            the mean displacement is therefore proportional to 
            the square root (*Quadratwurzel*) of the time 
@@ -86,31 +102,35 @@ layout: false
 class: center
            
 .left-column[
-Traditional metrics of community phylogenetics:
+##Traditional metrics of community phylogenetics (see Webb et al. 2002)
            ]
 .right-column[
 
-           EQUATION IMAGE
-      
-           simply becomes:
-           
-           EQUATION 2 IMAGE
+<img src="../graphics/mpd_trad.png"alt="Drawing" style="width:300px" align="middle"/>
+
+simply becomes:
+
+<img src="../graphics/mpd_star.png"alt="Drawing" style="width:300px" align="middle"/>
            
            ]
 
 
 ---
+layout: false
+class: center
+           
 .left-column[
 ## A more realistic model of trait evolution improves power of phylogenetic methods
            ]
 .right-column[
            <img src="../graphics/bm_diff_p220_c40.png" alt="Drawing" style="width:600px" align="middle"/>
+           methods follow Kraft et al. 2007
            ]
            
 ---
            
 .left-column[
-  ## Types of trait evolution models
+  ## Trait evolution models
 
 ]
 .right-column[
@@ -118,46 +138,124 @@ Traditional metrics of community phylogenetics:
            
 <img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif">
   
-- Mean-reverting processes
+- Mean-reverting processes (e.g. Orstein-Uhlembeck process)
            
 - Heterogeneous models           
 ]                
 
 ---
 class: center, middle
-#What is the empirical relationship? 
+#Is the Brownian model supported by empirical relationship? 
   ##(for plants)         
 
 ---
 class: center, middle          
  <img src="../graphics/zanneTree.png" alt="Drawing" style="width:500px" align="middle"/>
            
-32,000 species molecular tree + trait databases           
+32,000 species molecular time-tree, freely availble at DataDryad 
+           
+           (Zanne, Tank, Cornwell et al. 2014)
+
+---
+.left-column[
+           Methods:
+           1. Tip values (incorporating intra-specific variation) 
+           2. Continuous variabes uses Geiger v2 (Harmon et al. 2013)
+           3. Discrete using CorHMM (Beaulieu et al. 2013) 
+           ]
+.right-column[ 
+<img src="../graphics/fraction-on-phylogeny.jpg" alt="Drawing" style="width:500px" align="middle"/>
+]   
            
 ---
+class: center, middle  
 
-Evolution of nitrogen fixing
-(not all Fabaceae fix N)
+<img src="http://upload.wikimedia.org/wikipedia/commons/b/b3/Medicago_italica_root_nodules_2.JPG" alt="Drawing" style="width:300px" align="middle"/> 
+
+Potential to fix N -- 9,156 species (NOTE: NOT ALL Fabaceae can fix N!)
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d9/Coconut_green.JPG" alt="Drawing" style="width:300px" align="middle"/> 
+           
+Seed size (Kew) -- 22,817 sp
+           
+
+
 
 ---
+class: center, middle             
+.left-column[
+##Model selection approach
+           
 
- <img src="../graphics/model_select.070.png" alt="Drawing" style="width:700px" align="middle"/>   
-
-caveat: these models although the best were not adequate by various criteria
+           ]
+.right-column[
+###Split the Zanne et al. tree into many sub-clades, fit all models and compare using AICw
+            
+<img src="../graphics/zanneTree.png" alt="Drawing" style="width:500px" align="middle"/>
+           ]
+           
+           
 ---
-class: center, middle    
+class: center, middle  
+           ##"Brownian" versus "OU" versus "Early Burst" for seed mass
+
+<img src="../graphics/model_select.070.png" alt="Drawing" style="width:500px" align="middle"/>   
+           
+           
+           
+---
+           
+.left-column[
+##Looking for heterogeneity in the evolution of N-fixing
+           ]
+.right-column[
+           - 9,156 species-based observations on the potential to fix N 
+           
+           - Find the most likely combination of "rate heterogeneity"
+           
+           - One rate class is much more likely to evolve the symbiosis
+           ]
+           
+---
+class: center, middle  
+
+<img src="http://willcornwell.org/wp-content/uploads/2014/06/n-fix_phylo.jpg" alt="Drawing" style="width:700px" align="middle"/>   
+           
+
+
+---
+layout: false
+           
+.left-column[           
+##In conclusion
+           ]
+           
+.right-column[
+           
+1. Brownian model does NOT predict linear phylogenetic--functional distance relationship 
+           
+2. In terms of contemporary functional traits, the importance of an evolutionary distance of 1 - 6 million years is larger than a difference of 101 - 106 million years
+           
+3. At large phylogenetic scales heterogeneity is likely the rule not the exception
+           
+4. Among the current "simple" models OU is usually a better fit than Brownian, implying a more sharply curvi-linear relationship
         
-In conclusion
+           ]      
+---
+class: center, middle  
 
+<img src="../graphics/dist_plot_final_shaded.png" alt="Drawing" style="width:700px" align="middle"/>   
+           
 ---
 class: center, top    
+
 ###The whole talk is available at <a href="http://wcornwell.github.io/conferenceTalks/atbc_phylo_scaling.html">http://wcornwell.github.io/conferenceTalks/atbc_phylo_scaling.html</a>
 --
            
 ###Three papers described in this talk:
 
 ```
-1.Letten and Cornwell. 2014. forthcoming.
+1.Letten and Cornwell. 2014. in press. Methods in Ecology and Evolution
 
 2.Werner, Cornwell, et al. 2014. Nature Communications.
  
@@ -173,8 +271,8 @@ class: center, top
 2. N-fixing database at Dryad (Werner et al. 2014)
 ```
 --
-           
-##Thanks!
+
+###Thanks to VU Amsterdam, NESCent, UNSW, and NWO (Dutch Science Foundation)!
            
 
     </textarea>
