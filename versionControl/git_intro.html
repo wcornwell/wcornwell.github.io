@@ -24,7 +24,7 @@ layout: false
            
 - A temporal filing cabinet for research projects 
 
-- A collaborative tool
+- A collaborative tool (with both others and your "future self")
            
 - Directional (but reversible) research .red[*]
 
@@ -35,20 +35,22 @@ layout: false
 ---
 layout: false
 .left-column[
-## What does it do?
+## What's the advantages?
 ]
 .right-column[
            
-- Backup and restore 
+- Backup and restore (from the cloud)
 
-- Synchronize among multiple computers
+- Synchronize among multiple computers/users
            
 - Long- (or short-) term undo 
            
 - Track changes, ownership, and allocate ~~blame~~ credit
            
 - Record your own logic
-           
+
+- Works nicely with remote servers (Katana or Amazon)
+          
 - Distribute science: code, manuscripts, and data
       
 ]           
@@ -59,12 +61,8 @@ layout: false
 
  <img src="http://version-control.net/wp-content/uploads/2011/03/version-control-edit-commit.png" alt="Drawing" style="width: 800px;"/>    
 
-All that you see on your computer is the current (hopefully best) version
----
+All that you see on your computer is the current (hopefully best) version, but everything is saved in an organized way
 
-## Distributed copies and workflow
-
-<img src="http://www.wandisco.com/images/blog/diagram.gif" alt="Drawing" style="width: 600px;"/> 
 ---
 
 ## Standard workflow
@@ -76,19 +74,12 @@ All that you see on your computer is the current (hopefully best) version
 
 ## Cloud respositories
 
--Just another computer that no one uses but everyone can acccess, can be public or private, can have some added bells and whistles
+<img src="https://c2.staticflickr.com/8/7193/6937250243_166162667d_n.jpg" alt="Drawing" style="width: 600px;"/> 
            
--People who offer cloud git respositiories: Github, Bitbucket, UNSW
+- People who offer cloud git respositiories: [Github](http://www.github.com), Bitbucket, UNSW
            
--At a core level no difference between different cloud servers: from the command line all git is the same 
-
--Different bells and whistles among repositories: 
+- Different bells and whistles among repositories
            
-              Bitbucket has free private repositories; 
-              Github has a lot of cool add-ons like pages; 
-              Both have diff viewers, issue trackers, and lots of help pages
-<img src="https://s3-ap-northeast-1.amazonaws.com/opentutorialsfile/module/153/695.png" alt="Drawing" style="width: 200px;"/> 
-.footnote[Go to [github](https://github.com) or [bitbucket](https://bitbucket.com)]
 ---
 layout: false
 .left-column[
@@ -102,7 +93,7 @@ layout: false
 
 - Connect repositories: *git clone* or push buttons on webpage
 
-.footnote[.red[*] GUI's are coming (including in RStudio) but aren't there yet]
+.footnote[.red[*] GUI's are ~~coming~~ here but I don't know how to use them]
 ]    
            
 ---
@@ -118,14 +109,14 @@ layout: false
 
 3. STOP AT A LOGICAL STOPPING POINT FOR YOUR WORK
 
-4. *git add \**
+4. *git add .
 
 5. *git commit -m "informative commit message describing what you did and why"*
 
 6. *git push*
            
            
-.footnote[.red[*] Git pull not necessary if it's only you working on something]
+.footnote[.red[*] Git pull not necessary if it's only you (on only one computer) working on something]
 ]    
            
 ---
@@ -135,14 +126,16 @@ layout: false
 ]
 .right-column[
 
--Big data files are tricky at the moment
+1. Big data files are tricky at the moment.red[*]
 
--No GUI so some learning required for collaborations
+2. ~~No GUI so some learning required for collaborations~~
            
--Binary files--files that cannot be opened in a text editor (.docx, .xlsx, .pptx, and others)--are tricky
+3. Binary files--files that cannot be opened in a text editor (.docx, .xlsx, .pptx, and others)--aren't that great with version control
            
--Multi-person work flow is a seperate problem from version control--you still need to talk to each other
-           
+4. Multi-person work flow is a seperate problem from version control--you still need to talk to each other
+
+
+.footnote[.red[*] github has a brand new service for this but I haven't used it]           
 ] 
 ---
 layout: false
