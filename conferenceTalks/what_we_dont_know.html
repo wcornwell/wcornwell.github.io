@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What we (don't) know about global plant diversity</title>
+   <link rel="stylesheet" type="text/css" href="../reStyle.css">
+  </head>
+  <body>
+       <textarea id="source">
+
+
+
+
+
+class: center, middle, inverse
+#What we (don't) know about global plant diversity
+## Will Cornwell
+### UNSW, Australia
+### @will_cornwell
+
+---
+class: center, middle, inverse
+           
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Teofrasto_Orto_botanico_detail.jpg/200px-Teofrasto_Orto_botanico_detail.jpg" alt="Drawing" style="width:350px" align="middle"/>
+## Theophrastus of Eresus (371--287 BC)
+Father of Botany
+---
+class: center, middle, inverse
+           
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Theophrastus_Enquiry_into_Plants_Hort_1916.jpg/170px-Theophrastus_Enquiry_into_Plants_Hort_1916.jpg" alt="Drawing" style="width:300px" align="middle"/>
+
+Functional classification for 500 species of plants, growing in his garden
+
+---
+class: center, middle, inverse
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Carl_von_Linn%C3%A9.jpg" alt="Drawing" style="width:350px" align="middle"/>
+
+Carl von Linne aka Carolus Linnaeus
+
+Princeps botanicorum (Prince of Botanists)
+
+---
+<img src="http://study.com/cimages/multimages/16/classification1.png" alt="Drawing" style="width:350px" align="middle"/>
+---
+
+class: center, middle
+           
+<img src="../graphics/trait_evolution_acer.png" alt="Drawing" style="width:750px" align="middle"/>
+
+---
+
+# How many species of plants are there in the world?
+
+## The extensive problem of synonomy
+
+### Internation Plant Name Index: >1,000,000 names
+
+<img src="http://www.drought-smart-plants.com/images/collage-keywords-naming-of-plants.jpg" alt="Drawing" style="width:200px" align="middle"/>
+
+---
+
+# A comprehensive list of land plants 
+
+
+
+
+
+
+
+
+---
+layout: false
+
+.left-column[
+  ## How closely do close relatives resemble each other? 
+           ]
+.right-column[
+### Theory built on this includes:
+       
+- Metrics of community phylogenetics
+           
+- Connection between phylogenetic and functional diversity
+           
+- Patterns of functional and phylogenetic diversity in space and time
+           
+- Approaches for "gap-filling" functional databases
+  
+
+]
+           
+        
+           
+---
+class: center
+##Question:   
+
+#What is the scaling of functional and phylogenetic distance within (a) simulations and (b) plants?
+
+---
+class: center
+
+<img src="../graphics/dist_plot_ou_question.png" alt="Drawing" style="width:650px" align="middle"/>
+
+           
+---
+class: center
+<img src="../graphics/caddotte2013.png" alt="Drawing" style="width:550px" align="middle"/>
+
+Caddotte et al. 2013, Ecology Letters, prediction under Brownian motion
+                   
+---
+layout: false
+class: center
+.left-column[
+  ## The math of Brownian motion
+]
+           
+.right-column[
+           
+           $$\frac{\partial\rho}{\partial t}=\sigma^2\frac{\partial^2\rho}{\partial x^2}$$
+           <img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Drawing" style="width:150px" align="center"/>
+
+           
+           the mean displacement is therefore proportional to 
+           the square root (*Quadratwurzel*) of the time 
+           -Einstein 1905 (see also Felsenstein 1985)
+           
+           ]
+           
+---
+class: center, middle
+           
+<img src="../graphics/sq_root_resub.png" alt="Drawing" style="width:800px" align="middle"/>
+       
+           
+---
+           
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Drawing" style="width:150px" align="center"/>
+ was right           
+
+---
+layout: false
+class: center
+           
+.left-column[
+##Traditional metrics of community phylogenetics (see Webb et al. 2002)
+           ]
+.right-column[
+
+<img src="../graphics/mpd_trad.png"alt="Drawing" style="width:500px" align="middle"/>
+
+simply becomes:
+
+<img src="../graphics/mpd_star.png"alt="Drawing" style="width:500px" align="middle"/>
+           
+           ]
+
+
+---
+layout: false
+class: center
+           
+.left-column[
+## A more realistic model of trait evolution improves power of phylogenetic methods
+           ]
+.right-column[
+           <img src="../graphics/bm_diff_p220_c40.png" alt="Drawing" style="width:600px" align="middle"/>
+           methods follow Kraft et al. 2007
+           ]
+           
+---
+           
+.left-column[
+  ## Trait evolution models
+
+]
+.right-column[
+- Brownian motion
+           
+<img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Translational_motion.gif">
+  
+- Mean-reverting processes (e.g. Orstein-Uhlembeck process)
+           
+- Heterogeneous models           
+]                
+---
+class: center, middle
+           
+<img src="../graphics/dist_plot_ou_explain.png" alt="Drawing" style="width:600px" align="middle"/>       
+           
+---
+class: center, middle
+#Is the Brownian model supported by empirical relationship? 
+  ##(for plants)         
+
+---
+class: center, middle          
+ <img src="../graphics/zanneTree.png" alt="Drawing" style="width:600px" align="middle"/>
+           
+32,000 species molecular time-tree, freely availble at DataDryad 
+           
+           (Zanne, Tank, Cornwell et al. 2014)
+
+---
+class: center, middle  
+
+           Methods:
+           1. Tip values (incorporating intra-specific variation) 
+           2. Continuous variabes uses Geiger v2 (Harmon et al. 2013)
+           3. Discrete using CorHMM (Beaulieu et al. 2013)  
+<img src="../graphics/fraction-on-phylogeny.jpg" alt="Drawing" style="width:500px" align="middle"/>   
+           
+---
+class: center, middle  
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/b/b3/Medicago_italica_root_nodules_2.JPG" alt="Drawing" style="width:300px" align="middle"/> 
+
+Potential to fix N -- 9,156 species (NOTE: NOT ALL Fabaceae can fix N!)
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d9/Coconut_green.JPG" alt="Drawing" style="width:300px" align="middle"/> 
+           
+Seed size (Kew) -- 22,817 sp
+           
+
+
+
+---
+class: center, middle             
+.left-column[
+##Model selection approach
+           
+
+           ]
+.right-column[
+###Split the Zanne et al. tree into many sub-clades, fit all models and compare using AICw
+            
+<img src="../graphics/zanneTree.png" alt="Drawing" style="width:500px" align="middle"/>
+           ]
+           
+           
+---
+class: center, middle  
+           ##"Brownian" versus "OU" versus "Early Burst" for seed mass
+
+<img src="../graphics/model_select.070.png" alt="Drawing" style="width:500px" align="middle"/>   
+           
+           
+           
+---
+           
+.left-column[
+##Looking for heterogeneity in the evolution of N-fixing           
+           ]
+
+.right-column[
+- 9,156 species-based observations on the potential to fix N 
+           
+- Find the most likely combination of "rate heterogeneity"
+           
+- One rate class is much more likely to evolve the symbiosis
+]
+           
+---
+class: center, middle  
+
+<img src="http://willcornwell.org/wp-content/uploads/2014/06/n-fix_phylo.jpg" alt="Drawing" style="width:700px" align="middle"/>   
+           
+
+
+---
+layout: false
+           
+.left-column[
+           
+##In conclusion
+]
+           
+.right-column[
+           
+- Brownian model does NOT predict linear phylogenetic-functional distance relationship 
+           
+- An evolutionary distance of 1 - 6 million years is larger than a difference of 101 - 106 million years
+           
+- At large phylogenetic scales heterogeneity is likely the rule not the exception
+           
+- Among the current "simple" models OU is usually a better fit than Brownian, implying a more sharply curvi-linear relationship
+        
+           ]      
+           
+---
+class: center, middle  
+
+<img src="../graphics/dist_plot_final_shaded.png" alt="Drawing" style="width:600px" align="middle"/>   
+           
+---
+class: center, top    
+
+###The whole talk is available at <a href="http://wcornwell.github.io/conferenceTalks/atbc_phylo_scaling.html">http://wcornwell.github.io/conferenceTalks/atbc_phylo_scaling.html</a>
+--
+           
+###Three papers described in this talk:
+
+```
+1.Letten and Cornwell. 2014. in press. Methods in Ecology and Evolution
+
+2.Werner, Cornwell, et al. 2014. Nature Communications.
+ 
+3.Pennell, FitzJohn, Cornwell, and Harmon. 2014. preprint.
+```
+--
+           
+### Resources
+
+```           
+1. 32,000 species molecular tree at Dryad (Zanne et al. 2014)
+    
+2. 9,000 species N-fixing database at Dryad (Werner et al. 2014)
+```
+--
+
+###Thanks to VU Amsterdam, NESCent, UNSW, and NWO (Dutch Science Foundation)!
+           
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
+           
+           
