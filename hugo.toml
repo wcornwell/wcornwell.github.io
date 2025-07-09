@@ -47,12 +47,16 @@ defaultContentLanguage = "en"
   url = "https://orcid.org/0000-0003-4080-4073"
 
 [[params.socialIcons]]
-  name = "google-scholar"
-  url = "https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ&hl=en"
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/will-cornwell/"
 
 [[params.socialIcons]]
-  name = "inaturalist"
-  url = "https://www.inaturalist.org/people/45978"
+  name = "instagram"
+  url = "https://www.instagram.com/willcornwell_nature/"
+
+[[params.socialIcons]]
+  name = "YouTube"
+  url = "https://www.youtube.com/@wily98988"
 
 [menu]
 
