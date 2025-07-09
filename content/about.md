@@ -8,9 +8,9 @@ My work explores how biodiversity respond to environmental changes using cutting
 
 All scientific publications are now collected by [orcid](https://orcid.org/0000-0003-4080-4073) and [google scholar](https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ&hl=en). 
 
-R packages are now in the r-universe, with code in development on [GitHub](https://github.com/wcornwell).    
+R packages are now in the [r-universe](https://traitecoevo.r-universe.dev/packages), with code in development on [GitHub](https://github.com/wcornwell).    
 
-Writing for a broader audience is on the conversation.  Observations of biodiversity across the world are found on the [iNaturalist citizen science site](https://www.inaturalist.org/people/45978).  
+Writing for a broader audience is on the conversation.  Observations of biodiversity across the world are found on the [iNaturalist citizen science site](https://www.inaturalist.org/people/45978). Or if you just want pretty pictures, they are on [instagram](https://www.instagram.com/willcornwell_nature/).    
 
 
 
