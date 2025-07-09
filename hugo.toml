@@ -47,7 +47,7 @@ defaultContentLanguage = "en"
   url = "https://orcid.org/0000-0003-4080-4073"
 
 [[params.socialIcons]]
-  name = "google scholar"
+  name = "google-scholar"
   url = "https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ&hl=en"
 
 [[params.socialIcons]]
