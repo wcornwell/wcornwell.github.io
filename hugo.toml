@@ -2,7 +2,7 @@ baseURL = "https://willcornwell.org/"
 languageCode = "en-us"
 title = "Will Cornwell"
 theme = "PaperMod"
-publishDir = "docs"
+publishDir = "public"
 
 [pagination]
   pagerSize = 5
