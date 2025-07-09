@@ -10,7 +10,7 @@
 on:\
   push:\
     branches:\
-      - main  # or your default branch\
+      - main\
 \
 jobs:\
   deploy:\
@@ -23,14 +23,18 @@ jobs:\
     - name: Setup Hugo\
       uses: peaceiris/actions-hugo@v2\
       with:\
-        hugo-version: '0.125.4'  # use whatever version you're using\
+        hugo-version: '0.125.4'  # or your version\
 \
     - name: Build site\
       run: hugo --minify\
 \
-    - name: Deploy to GitHub Pages\
+    - name: Add .nojekyll\
+      run: touch public/.nojekyll\
+\
+    - name: Deploy\
       uses: peaceiris/actions-gh-pages@v3\
       with:\
         github_token: $\{\{ secrets.GITHUB_TOKEN \}\}\
         publish_dir: ./public\
+\
 }
