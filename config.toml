@@ -1,0 +1,65 @@
+baseURL = "https://wcornwell.github.io/"
+languageCode = "en-us"
+title = "Will Cornwell"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 5
+
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+defaultContentLanguage = "en"
+
+[params]
+  author = "Will Cornwell"
+  description = "Ecologist | Researcher | Lecturer"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  hideFooter = true
+  disableScrollToTop = false
+  homeInfoParams = { Title = "Will Cornwell", Content = "Ecologist | Researcher | Lecturer. This site is a work in progress." }
+
+  [params.profileMode]
+    enabled = true
+    title = "Will Cornwell"
+    subtitle = "Ecologist | Researcher | Lecturer"
+    imageUrl = "images/will.jpg"
+    imageTitle = "Photo of Will Cornwell"
+    imageWidth = 120
+    imageHeight = 120
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/wcornwell"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:w.cornwell@unsw.edu.au"
+
+[[params.socialIcons]]
+  name = "orcid"
+  url = "https://orcid.org/0000-0003-4080-4073"
+
+[[params.socialIcons]]
+  name = "google scholar"
+  url = "https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ&hl=en"
+
+[[params.socialIcons]]
+  name = "inaturalist"
+  url = "https://www.inaturalist.org/people/45978"
+
+[menu]
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
