@@ -1,0 +1,27 @@
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+.grid-item {
+  text-align: center;
+}
+.gallery-thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.gallery-thumb:hover {
+  transform: scale(1.03);
+}
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}

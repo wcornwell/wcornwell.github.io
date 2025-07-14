@@ -11,6 +11,11 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 defaultContentLanguage = "en"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   author = "Will Cornwell"
   description = "Ecologist | Researcher | Lecturer"
@@ -33,6 +38,10 @@ defaultContentLanguage = "en"
     imageTitle = "Photo of Will Cornwell"
     imageWidth = 120
     imageHeight = 120
+
+  [params.assets]
+    customCSS = ["css/lightbox.css"]
+    customJS  = ["js/lightbox.js"]
 
 [[params.socialIcons]]
   name = "github"
