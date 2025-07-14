@@ -8,16 +8,18 @@
   {{ $galleryPath := .Params.galleryPath }}
   {{ $images := resources.Match (printf "%s/*.{jpg,jpeg,png}" $galleryPath) }}
 
- {{ if gt (len $images) 0 }}
-  {{ range $images }}
-    {{ $img := . | resources.Fingerprint }}
-    <div class="gallery-item">
-      <img src="{{ $img.RelPermalink }}" alt="{{ .Name }}" class="gallery-thumb" />
-      <div class="caption">
-        {{ replaceRE `[_-]` " " (replaceRE `^.+/` "" (replaceRE `\..+$` "" .Name)) | title }}
+{{ if gt (len $images) 0 }}
+  <div class="gallery-grid">
+    {{ range $images }}
+      {{ $img := . | resources.Fingerprint }}
+      <div class="gallery-item">
+        <img src="{{ $img.RelPermalink }}" alt="{{ .Name }}" class="gallery-thumb" />
+        <div class="caption">
+          {{ replaceRE `[_-]` " " (replaceRE `^.+/` "" (replaceRE `\..+$` "" .Name)) | title }}
+        </div>
       </div>
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 {{ else }}
   <p>No images found in {{ .Params.galleryPath }}</p>
 {{ end }}

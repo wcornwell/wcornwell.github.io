@@ -70,8 +70,8 @@ defaultContentLanguage = "en"
 [menu]
 
 [[menu.main]]
-  name = "About"
-  url = "/about/"
+  name = "Bio"
+  url = "/bio/"
   weight = 1
 
 [taxonomies]

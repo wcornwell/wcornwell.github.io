@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Bio"
 ---
 
 I'm a researcher and professor in ecology at [UNSW](https://www.unsw.edu.au/), in the [School of Biological, Earth, and Environmental Sciences](https://www.unsw.edu.au/science/our-schools/bees).  
