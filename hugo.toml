@@ -1,7 +1,7 @@
 baseURL = "https://willcornwell.org/"
 languageCode = "en-us"
 title = "Will Cornwell"
-theme = "PaperMod"
+theme = "academic-minimal"
 publishDir = "public"
 
 [pagination]
@@ -18,7 +18,7 @@ defaultContentLanguage = "en"
 
 [params]
   author = "Will Cornwell"
-  description = "Ecologist | Researcher | Lecturer"
+  description = "Ecological Data Science"
   defaultTheme = "auto"
   disableThemeToggle = false
   ShowReadingTime = false
@@ -28,19 +28,9 @@ defaultContentLanguage = "en"
   ShowCodeCopyButtons = true
   hideFooter = true
   disableScrollToTop = false
-  homeInfoParams = { Title = "Will Cornwell", Content = "Ecologist | Researcher | Lecturer. This site is a work in progress." }
-
-  [params.profileMode]
-    enabled = true
-    title = "Will Cornwell"
-    subtitle = "Ecologist | Researcher | Lecturer"
-    imageUrl = "images/will.jpg"
-    imageTitle = "Photo of Will Cornwell"
-    imageWidth = 120
-    imageHeight = 120
 
   [params.assets]
-    customCSS = ["css/lightbox.css"]
+    customCSS = ["css/people.css","css/lightbox.css"]
     customJS  = ["js/lightbox.js"]
 
 [[params.socialIcons]]
@@ -66,14 +56,3 @@ defaultContentLanguage = "en"
 [[params.socialIcons]]
   name = "YouTube"
   url = "https://www.youtube.com/@wily98988"
-
-[menu]
-
-[[menu.main]]
-  name = "Bio"
-  url = "/bio/"
-  weight = 1
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"

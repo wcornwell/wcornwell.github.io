@@ -1,0 +1,33 @@
+<div class="col-md-4" prefix="schema: http://schema.org/ foaf: http://xmlns.com/foaf/0.1"  typeof="foaf:Person schema:Person" about="{{.homepage}}">
+<div class="team-player">
+<div class="card card-plain">
+<div>
+<img property="foaf:depiction" width="175" height="175" src="{{ "/img/" | relURL }}{{.photo}}" alt="Photo of {{.name.first}}" class="img-raised rounded-circle img-fluid"/>
+</div>
+<h4 class="card-title">
+<span
+  property="foaf:name"><span
+  property="foaf:givenName">{{.name.first}}</span> <span
+  property="foaf:familyName">{{.name.last}}</span></span>
+<br/>
+<small class="card-description text-muted" property="schema:jobTitle">{{.title}}</small>
+</h4>
+{{ with .description }} <small class="card-description text-muted">  {{.}}</small> {{ end }}
+<div class="card-footer justify-content-center">
+{{ with .email }}<a class="btn btn-link btn-just-icon" href="mailto:{{.}}" title="email"><i class="fa fa-envelope"></i></a>{{ end }}
+{{ with .website }}<a class="btn btn-link btn-just-icon" href="{{.}}" title="website"><i class="fa fa-home"></i></a>{{ end }}
+{{ with .orcid }}<a class="btn btn-link btn-just-icon" rel="http://purl.org/spar/datacite/orcid" href="https://orcid.org/{{.}}" title="ORCID ID"><i class="ai ai-orcid"></i></a>{{ end }}
+{{ with .googlescholar }}<a class="btn btn-link btn-just-icon" rel="foaf:publications" href="https://scholar.google.com/citations?hl=en&user={{.}}" title="Publications"><i class="ai ai-google-scholar"></i></a>{{ end }}
+{{ with .github }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://github.com/{{.}}" title="GitHub: {{.}}"><i class="fa fa-github"></i></a>{{ end }}
+{{ with .twitter }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://twitter.com/{{.}}" title="Twitter: {{.}}"><i class="fa fa-twitter"></i></a>{{ end }}
+{{ with .inaturalist }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://www.inaturalist.org/people/{{.}}" title="iNaturalist: {{.}}"><i class="fa fa-camera"></i></a>{{ end }}
+{{ with .ebird }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://ebird.org/profile/{{.}}" title="eBird: {{.}}"><i class="fa fa-binoculars"></i></a>{{ end }}
+{{ with .impactstory }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://profiles.impactstory.org/u/{{.}}" title="ImpactStory"><i class="ai ai-impactstory"></i></a>{{ end }}
+{{ with .linkedin }}<a  class="btn btn-link btn-just-icon" rel="foaf:account" href="https://www.linkedin.com/in/{{.}}" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{{ end }}
+{{ with .researchgate }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://www.researchgate.net/profile/{{.}}" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{{ end }}
+{{ with .amazon }}<a class="btn btn-link btn-just-icon" rel="foaf:account" href="https://www.amazon.com/{{.}}" title="Amazon: {{.}}"><i class="fa fa-amazon"></i></a>{{ end }}
+</div>
+
+</div>
+</div>
+</div>

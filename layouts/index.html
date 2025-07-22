@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ $root := . }}
+{{ with .Params.image }}
+  <div class="hero-banner" style="position: relative; width: 100%; margin-bottom: 2rem;">
+    <img src="/{{ . }}" alt="Banner" style="width: 100%; height: auto; display: block;">
+    <div class="hero-text" style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.7); text-align: center;">
+      <h1 style="margin-bottom: 1rem; font-size: 3rem;">Will Cornwell Lab</h1>
+      <p style="font-size: 1.5rem;">{{ $root.Site.Params.description }}</p>
+    </div>
+  </div>
+{{ end }}
+
+<main class="main" role="main">
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+    <div style="flex: 2; min-width: 300px;">
+      <article class="content">
+        {{ .Content }}
+      </article>
+    </div>
+    <div style="flex: 1; min-width: 200px; text-align: center;">
+      <img src="/images/will.jpg" alt="Will Cornwell" style="border-radius: 50%; width: 200px;">
+      <h3 style="margin-top: 1rem;">Will Cornwell</h3>
+      <p>Ecological Data Science</p>
+      <p><a href="mailto:w.cornwell@unsw.edu.au">w.cornwell@unsw.edu.au</a></p>
+    </div>
+  </div>
+</main>
+{{ end }}

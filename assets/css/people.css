@@ -1,0 +1,42 @@
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.article-card {
+  text-align: center;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease;
+  border-radius: 1rem;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+  display: block;
+  margin: 0 auto 0.75rem auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article-card h2 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.article-card .role {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.article-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
