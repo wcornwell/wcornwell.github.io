@@ -33,7 +33,7 @@ defaultContentLanguage = "en"
   [params.profileMode]
     enabled = true
     title = "Will Cornwell"
-    subtitle = "Ecologist | Researcher | Lecturer"
+    subtitle = "Ecological Data Science"
     imageUrl = "images/will.jpg"
     imageTitle = "Photo of Will Cornwell"
     imageWidth = 120
