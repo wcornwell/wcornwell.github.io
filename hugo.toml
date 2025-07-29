@@ -74,6 +74,11 @@ defaultContentLanguage = "en"
   url = "/bio/"
   weight = 1
 
+[[menu.main]]
+  name = "Publications"
+  url = "https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ"
+  weight = 1
+
 [taxonomies]
   tag = "tags"
   category = "categories"
