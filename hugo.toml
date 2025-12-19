@@ -70,6 +70,10 @@ defaultContentLanguage = "en"
   name = "YouTube"
   url = "https://www.youtube.com/@wily98988"
 
+[[params.socialIcons]]
+  name = "inaturalist"
+  url = "https://www.inaturalist.org/people/45978"
+
 [menu]
 
 [[menu.main]]
