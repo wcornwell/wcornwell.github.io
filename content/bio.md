@@ -12,7 +12,7 @@ R packages are hosted on [r-universe](https://traitecoevo.r-universe.dev/package
 
 Writing for a broader audience is occasionally published on [The Conversation](https://theconversation.com/profiles/will-cornwell-125923/articles). Observations of biodiversity across the world are shared on [iNaturalist](https://www.inaturalist.org/people/45978). For photography and nature moments, see [Instagram](https://www.instagram.com/willcornwell_nature/).
 
-- PhD 2006, [Biological Sciences](https://biology.stanford.edu), Stanford Universtiy
+- PhD 2006, [Biological Sciences](https://biology.stanford.edu), Stanford University
 
 - MPhil 2001, [Plant Sciences](https://www.plantsci.cam.ac.uk), Cambridge University
 

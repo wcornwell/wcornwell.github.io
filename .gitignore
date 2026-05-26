@@ -4,3 +4,5 @@
 /docs/
 docs/
 public/
+_site/
+Gemfile.lock
