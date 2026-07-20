@@ -77,10 +77,7 @@ defaultContentLanguage = "en"
   url = "/bio/"
   weight = 1
 
-[[menu.main]]
-  name = "Publications"
-  url = "https://scholar.google.com.au/citations?user=jYQfwwkAAAAJ"
-  weight = 1
+# The Publications menu entry comes from content/publications.md front matter.
 
 [taxonomies]
   tag = "tags"

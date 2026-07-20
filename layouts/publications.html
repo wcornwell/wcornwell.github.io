@@ -1,0 +1,93 @@
+{{ define "main" }}
+{{ $data := site.Data.publications }}
+{{ $pubs := $data.publications | default slice }}
+{{ $lead := 8 }}{{/* authors shown before collapsing */}}
+
+<main class="main-content pubs">
+  <h1>{{ .Title }}</h1>
+
+  <div class="pubs-intro">
+    {{ .Content }}
+  </div>
+
+  {{ if $pubs }}
+    {{ $css := resources.Get "css/publications.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}"
+          integrity="{{ $css.Data.Integrity }}">
+
+    <p class="pubs-meta">
+      {{ len $pubs }} works · updated {{ $data.generated }} from
+      <a href="https://orcid.org/{{ $data.orcid }}" rel="noopener">ORCID</a>
+    </p>
+
+    {{/* Data arrives sorted newest-first, so uniq preserves that order. */}}
+    {{ $years := slice }}
+    {{ range $pubs }}{{ $years = $years | append .year }}{{ end }}
+
+    {{ range uniq $years }}
+      {{ $year := . }}
+      <section class="pubs-year">
+        <h2 id="y{{ $year }}">{{ $year }}</h2>
+        <ol class="pubs-list">
+          {{ range where $pubs "year" $year }}
+            {{ $link := "" }}
+            {{ if .doi }}{{ $link = printf "https://doi.org/%s" .doi }}
+            {{ else if .url }}{{ $link = .url }}{{ end }}
+
+            <li class="pub">
+              <div class="pub-title">
+                {{ if $link }}
+                  <a href="{{ $link }}" rel="noopener">{{ .title }}</a>
+                {{ else }}
+                  {{ .title }}
+                {{ end }}
+                {{ if eq .type "preprint" }}<span class="pub-tag">preprint</span>{{ end }}
+              </div>
+
+              {{/* JSON numbers arrive as float64; index needs a real int. */}}
+              {{ $me := int .me_index }}
+              {{ with .authors }}
+                {{ $total := len . }}
+                {{ if gt $total $lead }}
+                  {{/* Long author list: show a lead, collapse the rest.
+                       If Will falls outside the lead, surface him anyway. */}}
+                  <details class="pub-authors">
+                    <summary>
+                      {{ range $i, $a := first $lead . }}
+                        {{- if $i }}, {{ end -}}
+                        {{ if $a.me }}<b>{{ $a.name }}</b>{{ else }}{{ $a.name }}{{ end }}
+                      {{- end -}}
+                      {{- if ge $me $lead }}, …, <b>{{ (index . $me).name }}</b>{{ end -}}
+                      <span class="pub-more">
+                        {{- if ge $me $lead }}, and {{ sub $total (add $lead 1) }} more
+                        {{- else }} … and {{ sub $total $lead }} more{{ end -}}
+                      </span>
+                    </summary>
+                    <div class="pub-all">
+                      {{ range $i, $a := . }}
+                        {{- if $i }}, {{ end -}}
+                        {{ if $a.me }}<b>{{ $a.name }}</b>{{ else }}{{ $a.name }}{{ end }}
+                      {{- end -}}
+                    </div>
+                  </details>
+                {{ else }}
+                  <div class="pub-authors-plain">
+                    {{ range $i, $a := . }}
+                      {{- if $i }}, {{ end -}}
+                      {{ if $a.me }}<b>{{ $a.name }}</b>{{ else }}{{ $a.name }}{{ end }}
+                    {{- end -}}
+                  </div>
+                {{ end }}
+              {{ end }}
+
+              {{ with .journal }}<div class="pub-journal">{{ . }}</div>{{ end }}
+            </li>
+          {{ end }}
+        </ol>
+      </section>
+    {{ end }}
+  {{ else }}
+    <p>No publication data found. Run <code>python3 scripts/fetch_publications.py</code>.</p>
+  {{ end }}
+</main>
+{{ end }}
