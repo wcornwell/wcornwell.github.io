@@ -17,6 +17,8 @@ hugo server -D
 
 The site builds to `public/` (configured via `publishDir` in `hugo.toml`). The `_site/` directory in the repo root is unrelated (likely a Jekyll artifact) — ignore it.
 
+**Deployment** is automatic: `.github/workflows/hugo.yml` runs `hugo --minify` on every push to `main` and publishes to GitHub Pages. It pins **Hugo 0.163.3 extended** — keep that pin in sync with your local `hugo version`, since a mismatch means `hugo server` can pass locally while CI renders differently. Hugo **extended** is required (the gallery emits WebP). The PaperMod theme is *vendored* as ordinary tracked files under `themes/PaperMod/`, not fetched at build time — the stale `[submodule]` entry in `.gitmodules` is a leftover and does nothing, which is why CI works without a submodule checkout.
+
 ## Architecture
 
 This is a [Hugo](https://gohugo.io/) static site using the [PaperMod](https://github.com/adityatelange/hugo-papermod) theme (located at `themes/PaperMod/`). The site is Will Cornwell's academic homepage at willcornwell.org.
