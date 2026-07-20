@@ -1,0 +1,24 @@
+{{- /*
+  Overrides PaperMod's social_icons.html for one reason only: to inject the
+  iNaturalist icon, which the theme does not ship. Every other icon delegates
+  to the theme's own svg.html (151 icons), so adding a social icon that
+  PaperMod already supports needs no change here.
+
+  This deliberately overrides social_icons.html (8 lines, rarely changes)
+  rather than svg.html (~150 icons, changes often). Overriding svg.html would
+  shadow the theme's whole icon set and silently drop any icon not copied in.
+
+  Keep in sync with themes/PaperMod/layouts/_partials/social_icons.html.
+*/ -}}
+<div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
+    {{- range site.Params.socialIcons }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+        {{- if eq (trim .name " " | lower) "inaturalist" }}
+        {{ partial "inaturalist_icon.html" . }}
+        {{- else }}
+        {{ partial "svg.html" . }}
+        {{- end }}
+    </a>
+    {{- end }}
+</div>
