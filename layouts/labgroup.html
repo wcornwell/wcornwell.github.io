@@ -9,25 +9,36 @@
   {{ $images := resources.Match (printf "%s/*.{jpg,jpeg,png}" $galleryPath) }}
 
 {{ if gt (len $images) 0 }}
+  {{ $lbCSS := resources.Get "css/lightbox.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $lbCSS.RelPermalink }}"
+        integrity="{{ $lbCSS.Data.Integrity }}">
   <div class="gallery-grid">
     {{ range $images }}
       {{ $caption := replaceRE `[_-]` " " (replaceRE `^.+/` "" (replaceRE `\.[^.]+$` "" .Name)) | title }}
       {{ $small := .Resize "400x webp q80" }}
       {{ $large := .Resize "800x webp q80" }}
+      {{/* Lightbox copy: capped at 1600w, but never upscaled past the original. */}}
+      {{ $full := .Resize (printf "%dx webp q82" (int (math.Min 1600 .Width))) }}
       <div class="gallery-item">
-        <img
-          src="{{ $small.RelPermalink }}"
-          srcset="{{ $small.RelPermalink }} 400w, {{ $large.RelPermalink }} 800w"
-          sizes="(max-width: 640px) 100vw, 320px"
-          width="{{ $small.Width }}" height="{{ $small.Height }}"
-          loading="lazy" decoding="async"
-          alt="{{ $caption }}" class="gallery-thumb" />
+        <a href="{{ $full.RelPermalink }}" class="gallery-link"
+           data-lightbox data-caption="{{ $caption }}">
+          <img
+            src="{{ $small.RelPermalink }}"
+            srcset="{{ $small.RelPermalink }} 400w, {{ $large.RelPermalink }} 800w"
+            sizes="(max-width: 640px) 100vw, 320px"
+            width="{{ $small.Width }}" height="{{ $small.Height }}"
+            loading="lazy" decoding="async"
+            alt="{{ $caption }}" class="gallery-thumb" />
+        </a>
         <div class="caption">
           {{ $caption }}
         </div>
       </div>
     {{ end }}
   </div>
+  {{ $lbJS := resources.Get "js/lightbox.js" | minify | fingerprint }}
+  <script defer src="{{ $lbJS.RelPermalink }}"
+          integrity="{{ $lbJS.Data.Integrity }}"></script>
 {{ else }}
   <p>No images found in {{ .Params.galleryPath }}</p>
 {{ end }}

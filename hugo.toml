@@ -42,10 +42,6 @@ defaultContentLanguage = "en"
     imageWidth = 120
     imageHeight = 120
 
-  [params.assets]
-    customCSS = ["css/lightbox.css"]
-    customJS  = ["js/lightbox.js"]
-
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/wcornwell"

@@ -1,1 +1,126 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css");
+/* Styles for the gallery lightbox (assets/js/lightbox.js).
+   The overlay element is created by JS, so nothing here can flash
+   before the stylesheet loads. */
+
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  /* Backdrop is always dark, so controls are light in both site themes. */
+  color: #f2f2f2;
+}
+
+.lb-overlay.is-open {
+  display: flex;
+}
+
+.lb-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lb-image {
+  max-width: min(1400px, 100%);
+  max-height: calc(100vh - 8rem);
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lb-image.is-loaded {
+  opacity: 1;
+}
+
+.lb-caption {
+  margin-top: 0.85rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.lb-counter {
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lb-btn {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 50%;
+  transition: background 0.15s ease;
+}
+
+.lb-btn:hover,
+.lb-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+}
+
+.lb-close {
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.6rem;
+}
+
+.lb-prev,
+.lb-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.2rem;
+}
+
+.lb-prev {
+  left: 1rem;
+}
+
+.lb-next {
+  right: 1rem;
+}
+
+/* Stop the page behind the overlay from scrolling. */
+body.lb-lock {
+  overflow: hidden;
+}
+
+.gallery-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+@media (max-width: 640px) {
+  .lb-prev,
+  .lb-next {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-image {
+    transition: none;
+  }
+}
