@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  # Lets refresh-publications.yml redeploy after it commits new data. A commit
+  # pushed with GITHUB_TOKEN does not fire the `push` trigger above, so the
+  # refresh workflow has to call this one explicitly.
+  workflow_call:
 
 permissions:
   contents: read
