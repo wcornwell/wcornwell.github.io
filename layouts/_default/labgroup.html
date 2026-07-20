@@ -11,11 +11,19 @@
 {{ if gt (len $images) 0 }}
   <div class="gallery-grid">
     {{ range $images }}
-      {{ $img := . | resources.Fingerprint }}
+      {{ $caption := replaceRE `[_-]` " " (replaceRE `^.+/` "" (replaceRE `\.[^.]+$` "" .Name)) | title }}
+      {{ $small := .Resize "400x webp q80" }}
+      {{ $large := .Resize "800x webp q80" }}
       <div class="gallery-item">
-        <img src="{{ $img.RelPermalink }}" alt="{{ .Name }}" class="gallery-thumb" />
+        <img
+          src="{{ $small.RelPermalink }}"
+          srcset="{{ $small.RelPermalink }} 400w, {{ $large.RelPermalink }} 800w"
+          sizes="(max-width: 640px) 100vw, 320px"
+          width="{{ $small.Width }}" height="{{ $small.Height }}"
+          loading="lazy" decoding="async"
+          alt="{{ $caption }}" class="gallery-thumb" />
         <div class="caption">
-          {{ replaceRE `[_-]` " " (replaceRE `^.+/` "" (replaceRE `\..+$` "" .Name)) | title }}
+          {{ $caption }}
         </div>
       </div>
     {{ end }}

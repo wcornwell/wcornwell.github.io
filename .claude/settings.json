@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo --quiet --destination /private/tmp/claude-503/*)",
+      "Bash(hugo version *)"
+    ]
+  }
+}
