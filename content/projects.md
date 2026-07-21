@@ -37,7 +37,7 @@ the NSW Biodiversity Assessment Method team to standardise how birds and bats ar
 assessed on wind farms.
 
 **People:** [Ruby Stephens](https://rubyestephens.com), Malan Bothma\
-**Collaborators:** Richard Kingsford, Pia Lentini, Emma Bennett, Lis Ashby, James Watson, NSW BAM team
+**Collaborators:** Richard Kingsford, Iberdrola Austrralia, NSW DEECCW BAM team
 
 <!-- TODO: add a photo here — e.g. the Gullen Range wind farm, or fieldwork at the central-west NSW site -->
 
