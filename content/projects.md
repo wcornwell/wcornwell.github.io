@@ -80,12 +80,28 @@ flying-foxes from continuous audio.
 
 ## Brown food webs in arid ecosystems
 
-<!-- TODO: replace this stub. -->
+Most thinking about desert ecosystems centres on the "green pulse" of plant
+growth that follows rain. But deserts are dry most of the time, and many species
+persist — some even thrive — through droughts, when almost nothing is
+photosynthesising. Where does that energy come from?
 
-Most of the energy in an ecosystem does not pass through green leaves — it moves
-through dead material and the decomposers that process it. In arid Australia,
-where primary production is pulsed and unpredictable, these "brown" food webs may
-do much of the ecological work. We are studying how they are structured and how
-they respond to the boom-and-bust dynamics of the arid zone.
+We think the answer is the brown food web: the slow transfer of energy from dead
+plant material to invertebrate detritivores, mainly termites, and the predators
+that eat them. Grazing disrupts this. Across arid Australia, more than 75 million
+sheep, 40 million kangaroos and 24 million cattle strip vegetation before it can
+senesce into standing litter, which may starve the brown food web of energy just
+as the green food web goes quiet.
 
-**People:**
+A five-year ARC Discovery Project based at UNSW's Fowlers Gap research station
+is testing this directly. We are using satellite time series to separate green
+and brown vegetation pulses at landscape scale, litter-decomposition experiments
+that isolate the roles of termites, UV and microbes under wet and dry
+conditions, and large termite-suppression plots (paired with existing herbivore
+exclosures) that track the flow-on effects to arthropods, small vertebrates, and
+their diets — reconstructed via DNA metabarcoding — as rainfall cycles between
+boom and bust.
+
+**People:** Baptiste Wijas, Charlotte Hogan\
+**Collaborators:** Mike Letnic, Adrian Fisher, Heloise Gibb, Kylie Cairns
+
+<!-- TODO: add a photo here — e.g. the Fowlers Gap fenceline contrast, or a termite-suppression plot -->
