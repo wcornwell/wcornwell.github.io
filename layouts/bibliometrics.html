@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $data := site.Data.publications }}
 {{ $pubs := $data.publications | default slice }}
+{{ $cd := site.Data.abstract_clusters }}
+{{ $clusters := $cd.clusters | default slice }}
 
 <main class="main-content biblio">
   <h1>{{ .Title }}</h1>
@@ -9,11 +11,13 @@
     {{ .Content }}
   </div>
 
-  {{ if $pubs }}
+  {{ if or $pubs $clusters }}
     {{ $css := resources.Get "css/bibliometrics.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}"
           integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
 
+  {{ if $pubs }}
     {{/* Bucket every work by year and by Will's position in the author list:
          solo/first-author, an interior "middle" slot, or last-author (the
          senior/PI slot). me_index and year arrive as float64 from JSON. */}}
@@ -166,6 +170,222 @@
     </section>
   {{ else }}
     <p>No publication data found. Run <code>python3 scripts/fetch_publications.py</code>.</p>
+  {{ end }}
+
+  {{ if $clusters }}
+    <p class="biblio-caveat">
+      The themes below were grouped automatically by shared vocabulary in titles and abstracts
+      (not yet by a language model reading them) &mdash; treat the groupings as approximate; a
+      paper can land in the wrong bucket if it happens to share generic words with another theme.
+    </p>
+
+    {{/* ============================= Ranked list ============================= */}}
+    <section class="biblio-chart">
+      <h2>Research themes, ranked by size</h2>
+
+      {{ $maxClusterCount := 0 }}
+      {{ range $clusters }}{{ if gt (len .works) $maxClusterCount }}{{ $maxClusterCount = len .works }}{{ end }}{{ end }}
+
+      <ul class="biblio-rank-list">
+        {{ range $clusters }}
+          {{ $cn := len .works }}
+          {{ $pct := mul (div (float $cn) (float $maxClusterCount)) 100.0 }}
+          <li class="biblio-rank-row">
+            <div class="biblio-rank-head">
+              <span>{{ .name }}</span>
+              <span class="biblio-rank-count">{{ $cn }} paper{{ if ne $cn 1 }}s{{ end }}</span>
+            </div>
+            <div class="biblio-rank-bar-track">
+              <div class="biblio-rank-bar-fill" style="width: {{ printf "%.1f" $pct }}%"></div>
+            </div>
+            <div class="biblio-rank-desc">{{ .description }}</div>
+            <div class="biblio-rank-examples">
+              {{ range $i, $w := first 2 .works }}{{ if $i }} &middot; {{ end }}{{ $w.title }} ({{ $w.year }}){{ end }}
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+
+    {{/* ============================= Theme mix by year ============================= */}}
+    <section class="biblio-chart">
+      <h2>Theme mix by year</h2>
+
+      {{ $topClusters := first 7 $clusters }}
+      {{ $restClusters := after 7 $clusters }}
+
+      {{/* append spreads slice arguments instead of nesting them, so each
+           series' works list is wrapped in a dict to keep series separate. */}}
+      {{ $seriesList := slice }}
+      {{ $seriesNames := slice }}
+      {{ range $topClusters }}
+        {{ $seriesList = $seriesList | append (dict "name" .name "works" .works) }}
+        {{ $seriesNames = $seriesNames | append .name }}
+      {{ end }}
+      {{ if $restClusters }}
+        {{ $otherWorks := slice }}
+        {{ range $restClusters }}
+          {{ range .works }}{{ $otherWorks = $otherWorks | append . }}{{ end }}
+        {{ end }}
+        {{ $seriesList = $seriesList | append (dict "name" "Other" "works" $otherWorks) }}
+        {{ $seriesNames = $seriesNames | append "Other" }}
+      {{ end }}
+
+      <div class="biblio-legend">
+        {{ range $i, $name := $seriesNames }}
+          {{ $isOther := eq $name "Other" }}
+          <span class="biblio-legend-item">
+            <i class="biblio-swatch {{ if $isOther }}biblio-cluster-swatch-other{{ else }}biblio-cluster-swatch-{{ $i }}{{ end }}"></i>{{ $name }}
+          </span>
+        {{ end }}
+      </div>
+
+      {{ $years2 := slice }}
+      {{ range $seriesList }}{{ range .works }}{{ $years2 = $years2 | append .year }}{{ end }}{{ end }}
+      {{ $sortedYears2 := sort (uniq $years2) }}
+
+      {{ $g2 := newScratch }}
+      {{ $rows2 := slice }}
+      {{ range $sortedYears2 }}
+        {{ $year := . }}
+        {{ $counts := slice }}
+        {{ $total := 0 }}
+        {{ range $seriesList }}
+          {{ $cnt := len (where .works "year" $year) }}
+          {{ $counts = $counts | append $cnt }}
+          {{ $total = add $total $cnt }}
+        {{ end }}
+        {{ $rows2 = $rows2 | append (dict "year" (int $year) "counts" $counts "total" $total) }}
+        {{ if gt $total ($g2.Get "max" | default 0) }}{{ $g2.Set "max" $total }}{{ end }}
+      {{ end }}
+      {{ $max2 := $g2.Get "max" }}
+
+      {{ $plotLeft2 := 46.0 }}
+      {{ $plotRight2 := 750.0 }}
+      {{ $plotTop2 := 30.0 }}
+      {{ $plotBottom2 := 250.0 }}
+      {{ $plotWidth2 := sub $plotRight2 $plotLeft2 }}
+      {{ $plotHeight2 := sub $plotBottom2 $plotTop2 }}
+      {{ $n2 := len $rows2 }}
+      {{ $band2 := div $plotWidth2 (float $n2) }}
+      {{ $barW2 := math.Min 22.0 (sub $band2 5.0) }}
+      {{ $scale2 := div $plotHeight2 (float $max2) }}
+
+      {{ $yTicks2 := slice 0 }}
+      {{ $t2 := 5 }}
+      {{ range $i := seq 0 20 }}
+        {{ if le $t2 $max2 }}{{ $yTicks2 = $yTicks2 | append $t2 }}{{ $t2 = add $t2 5 }}{{ end }}
+      {{ end }}
+      {{ if lt (index $yTicks2 (sub (len $yTicks2) 1)) $max2 }}{{ $yTicks2 = $yTicks2 | append $t2 }}{{ end }}
+
+      <svg class="biblio-svg" viewBox="0 0 800 300" role="img"
+           aria-label="Stacked bar chart of paper counts per year, split by research theme. Exact figures are in the table below the chart.">
+        {{ range $yTicks2 }}
+          {{ $ty := sub $plotBottom2 (mul (float .) $scale2) }}
+          <line class="biblio-grid" x1="{{ $plotLeft2 }}" x2="{{ $plotRight2 }}" y1="{{ printf "%.1f" $ty }}" y2="{{ printf "%.1f" $ty }}"></line>
+          <text class="biblio-axis-label" x="{{ sub $plotLeft2 8.0 }}" y="{{ printf "%.1f" (add $ty 3.0) }}" text-anchor="end">{{ . }}</text>
+        {{ end }}
+        <line class="biblio-baseline" x1="{{ $plotLeft2 }}" x2="{{ $plotRight2 }}" y1="{{ $plotBottom2 }}" y2="{{ $plotBottom2 }}"></line>
+
+        {{ range $i, $row := $rows2 }}
+          {{ $x := add $plotLeft2 (mul (float $i) $band2) }}
+          {{ $cx := add $x (div $band2 2.0) }}
+          {{ $barX := sub $cx (div $barW2 2.0) }}
+          {{ $cum := 0.0 }}
+          <g class="biblio-bar-group" tabindex="0">
+            {{ range $si, $count := $row.counts }}
+              {{ if gt $count 0 }}
+                {{ $h := mul (float $count) $scale2 }}
+                {{ $yTop := sub (sub $plotBottom2 $cum) $h }}
+                {{ $seriesName := index $seriesNames $si }}
+                {{ $isOther := eq $seriesName "Other" }}
+                <rect class="biblio-cluster-seg {{ if $isOther }}biblio-cluster-seg-other{{ else }}biblio-cluster-seg-{{ $si }}{{ end }}"
+                      x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yTop }}"
+                      width="{{ printf "%.1f" $barW2 }}" height="{{ printf "%.1f" $h }}">
+                  <title>{{ $row.year }} &middot; {{ $seriesName }} &middot; {{ $count }} paper{{ if ne $count 1 }}s{{ end }}</title>
+                </rect>
+                {{ $cum = add $cum $h }}
+              {{ end }}
+            {{ end }}
+            <text class="biblio-year-label" x="{{ printf "%.1f" $cx }}" y="{{ add $plotBottom2 12.0 }}"
+                  text-anchor="end" transform="rotate(-60 {{ printf "%.1f" $cx }} {{ add $plotBottom2 12.0 }})">{{ $row.year }}</text>
+          </g>
+        {{ end }}
+      </svg>
+
+      <details class="biblio-table-toggle">
+        <summary>View exact numbers</summary>
+        <div class="biblio-table-wrap">
+          <table class="biblio-table">
+            <thead>
+              <tr><th scope="col">Year</th>{{ range $seriesNames }}<th scope="col">{{ . }}</th>{{ end }}<th scope="col">Total</th></tr>
+            </thead>
+            <tbody>
+              {{ range $rows2 }}
+              <tr><td>{{ .year }}</td>{{ range .counts }}<td>{{ . }}</td>{{ end }}<td>{{ .total }}</td></tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    {{/* ============================= Bubble layout ============================= */}}
+    <section class="biblio-chart">
+      <h2>Themes by career period</h2>
+      <p class="biblio-chart-note">Each bubble is a theme: x is the mean publication year, y is how many years the theme has been active (span between its earliest and latest paper), size is paper count.</p>
+
+      {{ $bubbles := slice }}
+      {{ $g3 := newScratch }}
+      {{ range $clusters }}
+        {{ $c := . }}
+        {{ $sum := 0 }}
+        {{ $minY := 9999 }}
+        {{ $maxY := 0 }}
+        {{ range .works }}
+          {{ $y := int .year }}
+          {{ $sum = add $sum $y }}
+          {{ if lt $y $minY }}{{ $minY = $y }}{{ end }}
+          {{ if gt $y $maxY }}{{ $maxY = $y }}{{ end }}
+        {{ end }}
+        {{ $bn := len .works }}
+        {{ $mean := div (float $sum) (float $bn) }}
+        {{ $span := sub $maxY $minY }}
+        {{ $bubbles = $bubbles | append (dict "name" $c.name "mean" $mean "span" $span "count" $bn) }}
+        {{ if gt $bn ($g3.Get "maxCount" | default 0) }}{{ $g3.Set "maxCount" $bn }}{{ end }}
+        {{ if gt $span ($g3.Get "maxSpan" | default 0) }}{{ $g3.Set "maxSpan" $span }}{{ end }}
+        {{ if or (not ($g3.Get "minMean")) (lt $mean ($g3.Get "minMean")) }}{{ $g3.Set "minMean" $mean }}{{ end }}
+        {{ if or (not ($g3.Get "maxMean")) (gt $mean ($g3.Get "maxMean")) }}{{ $g3.Set "maxMean" $mean }}{{ end }}
+      {{ end }}
+      {{ $maxCount3 := $g3.Get "maxCount" }}
+      {{ $maxSpan3 := $g3.Get "maxSpan" }}
+      {{ $minMean3 := $g3.Get "minMean" }}
+      {{ $maxMean3 := $g3.Get "maxMean" }}
+
+      {{ $bPlotLeft := 70.0 }}
+      {{ $bPlotRight := 730.0 }}
+      {{ $bPlotTop := 30.0 }}
+      {{ $bPlotBottom := 250.0 }}
+      {{ $xLo := sub $minMean3 1.0 }}
+      {{ $xSpan := sub (add $maxMean3 1.0) $xLo }}
+      {{ $xScale := div (sub $bPlotRight $bPlotLeft) $xSpan }}
+      {{ $ySpanMax := add (float $maxSpan3) 1.0 }}
+      {{ $yScale := div (sub $bPlotBottom $bPlotTop) $ySpanMax }}
+
+      <svg class="biblio-svg" viewBox="0 0 800 300" role="img"
+           aria-label="Bubble chart of research themes: x-axis mean publication year, y-axis years the theme has been active, bubble size is paper count.">
+        <line class="biblio-baseline" x1="{{ $bPlotLeft }}" x2="{{ $bPlotRight }}" y1="{{ $bPlotBottom }}" y2="{{ $bPlotBottom }}"></line>
+        {{ range $bubbles }}
+          {{ $cx := add $bPlotLeft (mul (sub .mean $xLo) $xScale) }}
+          {{ $cy := sub $bPlotBottom (mul (add (float .span) 0.5) $yScale) }}
+          {{ $r := add 4.0 (mul (math.Sqrt (div (float .count) (float $maxCount3))) 22.0) }}
+          <circle class="biblio-bubble" cx="{{ printf "%.1f" $cx }}" cy="{{ printf "%.1f" $cy }}" r="{{ printf "%.1f" $r }}">
+            <title>{{ .name }} &middot; {{ .count }} papers &middot; active {{ .span }} year{{ if ne .span 1 }}s{{ end }}</title>
+          </circle>
+          <text class="biblio-bubble-label" x="{{ printf "%.1f" $cx }}" y="{{ printf "%.1f" (sub $cy (add $r 5.0)) }}" text-anchor="middle">{{ .name }}</text>
+        {{ end }}
+      </svg>
+    </section>
   {{ end }}
 </main>
 {{ end }}

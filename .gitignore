@@ -7,4 +7,5 @@ public/
 _site/
 Gemfile.lock
 resources/
+__pycache__/
 .claude/settings.local.json

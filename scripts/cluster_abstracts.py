@@ -4,19 +4,24 @@
 Two steps:
   1. Fetch abstracts from Crossref for every work in data/publications.json
      that has a DOI (~90% coverage, including works back to 2001).
-  2. Send all titles/abstracts to Claude in one request and have it group
-     them into coherent research themes (a tool call, not free-text parsing).
+  2. Group them into coherent research themes, either by asking Claude (a
+     tool call, not free-text parsing) or, with --offline, via TF-IDF +
+     k-means -- a lower-quality but zero-dependency, zero-cost fallback that
+     needs no Anthropic API access at all. Both paths write the same JSON
+     shape, so the site layout doesn't care which one produced it.
 
 This is a manual, occasional script -- unlike fetch_publications.py it is NOT
 run by a scheduled workflow. Re-run it by hand whenever the publication list
 has moved on enough to be worth reclustering.
 
-Requires the `anthropic` package and API credentials (ANTHROPIC_API_KEY, or
-an `ant auth login` profile).
+The default (LLM) path requires the `anthropic` package and API credentials
+(ANTHROPIC_API_KEY, or an `ant auth login` profile).
 
-Run with no arguments:  python3 scripts/cluster_abstracts.py
+Run with no arguments:       python3 scripts/cluster_abstracts.py
+Run offline (no API needed): python3 scripts/cluster_abstracts.py --offline
 """
 
+import argparse
 import json
 import pathlib
 import re
@@ -25,11 +30,6 @@ import time
 import urllib.parse
 
 from fetch_publications import CONTACT, get_json
-
-try:
-    import anthropic
-except ImportError:
-    sys.exit("This script needs the `anthropic` package: pip install anthropic")
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLICATIONS = ROOT / "data" / "publications.json"
@@ -119,6 +119,83 @@ overlap. Every work must end up in exactly one cluster, including works with no 
 recognize (e.g. "Plant functional traits and decomposition", not "Cluster 3" or "Misc")."""
 
 
+def cluster_offline(works, abstracts, k_range=range(6, 13)):
+    """TF-IDF + k-means fallback: no LLM, no API key, no cost.
+
+    Picks k (within k_range) by silhouette score, then names each cluster
+    after its top TF-IDF terms -- cruder than an LLM's thematic read, but
+    fully local. Returns the same [{"name", "description", "dois"}, ...]
+    shape main() expects from the Claude path.
+    """
+    from sklearn.cluster import KMeans
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics import silhouette_score
+
+    docs = [f"{w['title']} {abstracts.get(w['doi'], '')}" for w in works]
+    vectorizer = TfidfVectorizer(stop_words="english", max_df=0.6, min_df=2)
+    X = vectorizer.fit_transform(docs)
+    terms = vectorizer.get_feature_names_out()
+
+    best_k, best_score, best_labels = None, -1.0, None
+    for k in k_range:
+        if k >= len(works):
+            break
+        km = KMeans(n_clusters=k, n_init=10, random_state=0).fit(X)
+        score = silhouette_score(X, km.labels_)
+        print(f"  k={k}: silhouette={score:.3f}", file=sys.stderr)
+        if score > best_score:
+            best_k, best_score, best_labels = k, score, km.labels_
+
+    print(f"  picked k={best_k} (silhouette={best_score:.3f})", file=sys.stderr)
+    km = KMeans(n_clusters=best_k, n_init=10, random_state=0).fit(X)
+
+    clusters = []
+    for cluster_id in range(best_k):
+        member_idx = [i for i, label in enumerate(km.labels_) if label == cluster_id]
+        centroid = km.cluster_centers_[cluster_id]
+        top_terms = [terms[i] for i in centroid.argsort()[::-1][:4]]
+        clusters.append({
+            "name": " / ".join(t.title() for t in top_terms[:3]),
+            "description": (
+                "Works whose titles/abstracts share the terms: "
+                + ", ".join(top_terms) + "."
+            ),
+            "dois": [works[i]["doi"] for i in member_idx],
+        })
+    return clusters
+
+
+def cluster_with_claude(works, abstracts):
+    try:
+        import anthropic
+    except ImportError:
+        sys.exit("This script needs the `anthropic` package: pip install anthropic")
+
+    corpus = build_corpus_text(works, abstracts)
+    print(f"Asking {MODEL} to cluster {len(works)} works...", file=sys.stderr)
+    client = anthropic.Anthropic()
+    try:
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=8192,
+            thinking={"type": "adaptive"},
+            output_config={"effort": "high"},
+            system=SYSTEM_PROMPT,
+            tools=[CLUSTER_TOOL],
+            tool_choice={"type": "tool", "name": "assign_research_clusters"},
+            messages=[{"role": "user", "content": corpus}],
+        )
+    except anthropic.AuthenticationError:
+        sys.exit(
+            "No Anthropic API credentials found. Set ANTHROPIC_API_KEY, or run "
+            "`ant auth login`, then re-run this script. Or pass --offline to "
+            "cluster without the API (lower quality, but free and local)."
+        )
+
+    tool_use = next(b for b in response.content if b.type == "tool_use")
+    return tool_use.input["clusters"]
+
+
 def build_corpus_text(works, abstracts):
     lines = []
     for w in works:
@@ -136,6 +213,13 @@ def build_corpus_text(works, abstracts):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--offline", action="store_true",
+        help="cluster with TF-IDF + k-means instead of Claude -- no API key or network cost beyond Crossref",
+    )
+    args = parser.parse_args()
+
     data = json.loads(PUBLICATIONS.read_text())
     works = [w for w in data["publications"] if w.get("doi")]
     print(f"{len(works)} works with a DOI", file=sys.stderr)
@@ -144,29 +228,12 @@ def main():
     abstracts = fetch_abstracts([w["doi"] for w in works])
     print(f"  {len(abstracts)}/{len(works)} have an abstract", file=sys.stderr)
 
-    corpus = build_corpus_text(works, abstracts)
-
-    print(f"Asking {MODEL} to cluster {len(works)} works...", file=sys.stderr)
-    client = anthropic.Anthropic()
-    try:
-        response = client.messages.create(
-            model=MODEL,
-            max_tokens=8192,
-            thinking={"type": "adaptive"},
-            output_config={"effort": "high"},
-            system=SYSTEM_PROMPT,
-            tools=[CLUSTER_TOOL],
-            tool_choice={"type": "tool", "name": "assign_research_clusters"},
-            messages=[{"role": "user", "content": corpus}],
-        )
-    except anthropic.AuthenticationError:
-        sys.exit(
-            "No Anthropic API credentials found. Set ANTHROPIC_API_KEY, or run "
-            "`ant auth login`, then re-run this script."
-        )
-
-    tool_use = next(b for b in response.content if b.type == "tool_use")
-    clusters = tool_use.input["clusters"]
+    if args.offline:
+        clusters = cluster_offline(works, abstracts)
+        method = "tfidf-kmeans (offline fallback, not LLM-based)"
+    else:
+        clusters = cluster_with_claude(works, abstracts)
+        method = MODEL
 
     by_doi = {w["doi"]: w for w in works}
     assigned_dois = set()
@@ -204,7 +271,7 @@ def main():
 
     payload = {
         "generated": time.strftime("%Y-%m-%d"),
-        "model": MODEL,
+        "model": method,
         "source_works": len(works),
         "works_with_abstract": len(abstracts),
         "clusters": out_clusters,
