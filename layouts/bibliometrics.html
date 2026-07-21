@@ -173,10 +173,22 @@
   {{ end }}
 
   {{ if $clusters }}
+    {{/* Driven off the recorded method so this caption cannot describe one
+         clustering run while the data came from the other. */}}
+    {{ $offline := hasPrefix ($cd.model | default "") "tfidf" }}
     <p class="biblio-caveat">
-      The themes below were grouped automatically by shared vocabulary in titles and abstracts
-      (not yet by a language model reading them) &mdash; treat the groupings as approximate; a
-      paper can land in the wrong bucket if it happens to share generic words with another theme.
+      {{ if $offline }}
+        The themes below were grouped automatically by shared vocabulary in titles and
+        abstracts, without a language model reading them &mdash; treat the groupings as
+        approximate; a paper can land in the wrong bucket if it happens to share generic
+        words with another theme.
+      {{ else }}
+        The themes below were grouped by {{ $cd.model }}, reading the title and abstract of
+        each paper ({{ $cd.works_with_abstract }} of {{ $cd.source_works }} works have an
+        abstract available; the rest were placed on their titles alone). Treat the groupings
+        as approximate &mdash; many papers could sit reasonably in more than one theme, and
+        each is shown in only one.
+      {{ end }}
     </p>
 
     {{/* ============================= Ranked list ============================= */}}
