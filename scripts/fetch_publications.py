@@ -6,8 +6,12 @@ author lists, which ORCID's work summaries omit -- so a paper missing from
 Crossref still shows up, just without authors.
 
 Crossref's own `filter=orcid:` search is NOT a usable source here: it returns
-only the works where a publisher happened to deposit the ORCID iD (68 of 176
-at time of writing).
+only the works where a publisher happened to deposit the ORCID iD -- well under
+half of them.
+
+Deposited metadata is messy, so this also de-duplicates preprint/published
+pairs and corrigenda, normalises JATS markup and full-caps titles, and folds
+variant spellings of the same author onto one form. See CLAUDE.md.
 
 Run with no arguments:  python3 scripts/fetch_publications.py
 """

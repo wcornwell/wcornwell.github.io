@@ -18,7 +18,7 @@ defaultContentLanguage = "en"
 
 [params]
   author = "Will Cornwell"
-  description = "Ecologist | Researcher | Lecturer"
+  description = "Ecologist | Researcher | Professor"
   defaultTheme = "auto"
   disableThemeToggle = false
   ShowSearch = true
@@ -31,7 +31,7 @@ defaultContentLanguage = "en"
   disableScrollToTop = false
   images = ["images/will.jpg"] 
   title = "Will Cornwell - Ecologist"
-  homeInfoParams = { Title = "Will Cornwell", Content = "Ecologist | Researcher | Lecturer. This site is a work in progress." }
+  homeInfoParams = { Title = "Will Cornwell", Content = "Ecologist | Researcher | Professor." }
 
   [params.profileMode]
     enabled = true
