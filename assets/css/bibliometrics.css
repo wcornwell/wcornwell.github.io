@@ -1,0 +1,147 @@
+/* Styles for layouts/bibliometrics.html.
+   Chrome (ink, borders, surfaces) inherits PaperMod's theme variables, same
+   as publications.css. The three series colours are new custom properties,
+   validated as a categorical triple (CVD ΔE >= 8, normal-vision ΔE >= 15 on
+   both surfaces) -- see the dataviz skill's palette reference. */
+
+.biblio-intro {
+  margin-bottom: 1.5rem;
+}
+
+.biblio-chart {
+  --series-first: #2a78d6;
+  --series-mid: #eb6834;
+  --series-last: #1baf7a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .biblio-chart {
+    --series-first: #3987e5;
+    --series-mid: #d95926;
+    --series-last: #199e70;
+  }
+}
+
+:root[data-theme="dark"] .biblio-chart {
+  --series-first: #3987e5;
+  --series-mid: #d95926;
+  --series-last: #199e70;
+}
+
+.biblio-chart h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.biblio-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.biblio-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.biblio-swatch {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2px;
+  flex: none;
+}
+
+.biblio-swatch-first { background: var(--series-first); }
+.biblio-swatch-mid { background: var(--series-mid); }
+.biblio-swatch-last { background: var(--series-last); }
+
+.biblio-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.biblio-seg-first { fill: var(--series-first); }
+.biblio-seg-mid { fill: var(--series-mid); }
+.biblio-seg-last { fill: var(--series-last); }
+
+.biblio-gap { fill: var(--entry); }
+
+.biblio-bar-group:hover .biblio-seg,
+.biblio-bar-group:focus .biblio-seg {
+  filter: brightness(1.12);
+}
+
+.biblio-bar-group:focus {
+  outline: none;
+}
+
+.biblio-bar-group:focus .biblio-seg:first-of-type {
+  filter: brightness(1.12) drop-shadow(0 0 0 1px var(--primary));
+}
+
+.biblio-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.biblio-baseline {
+  stroke: var(--secondary);
+  stroke-width: 1;
+}
+
+.biblio-axis-label,
+.biblio-year-label {
+  fill: var(--secondary);
+  font-size: 9px;
+}
+
+.biblio-year-label {
+  font-size: 8px;
+}
+
+.biblio-table-toggle {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.biblio-table-toggle summary {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.biblio-table-wrap {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.biblio-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.biblio-table th,
+.biblio-table td {
+  padding: 0.3rem 0.6rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+}
+
+.biblio-table th:first-child,
+.biblio-table td:first-child {
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .biblio-seg {
+    transition: none;
+  }
+}
