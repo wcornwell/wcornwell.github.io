@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-20",
+ "generated": "2026-07-21",
  "orcid": "0000-0003-4080-4073",
- "count": 176,
- "with_authors": 165,
+ "count": 168,
+ "with_authors": 160,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -318,29 +318,6 @@
    "me_index": 1
   },
   {
-   "title": "Decoupling both local and global abundance from global range size, challenging the abundance-occupancy relationship in birds",
-   "year": 2025,
-   "journal": "eLife",
-   "type": "journal-article",
-   "doi": "10.7554/elife.95857.3",
-   "url": "https://doi.org/10.7554/eLife.95857.3",
-   "authors": [
-    {
-     "name": "Shinichi Nakagawa",
-     "me": false
-    },
-    {
-     "name": "William K Cornwell",
-     "me": true
-    },
-    {
-     "name": "Corey T Callaghan",
-     "me": false
-    }
-   ],
-   "me_index": 1
-  },
-  {
    "title": "Defining the pyro‐thermal niche: do seed traits, ecosystem type and phylogeny influence thermal thresholds in seeds with physical dormancy?",
    "year": 2025,
    "journal": "New Phytologist",
@@ -557,49 +534,6 @@
     },
     {
      "name": "Daniel S. Falster",
-     "me": false
-    }
-   ],
-   "me_index": 1
-  },
-  {
-   "title": "APCalign: an R package workflow and app for aligning and updating flora names to the Australian Plant Census",
-   "year": 2024,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.1101/2024.02.02.578715",
-   "url": "https://doi.org/10.1101/2024.02.02.578715",
-   "authors": [
-    {
-     "name": "Elizabeth Wenk",
-     "me": false
-    },
-    {
-     "name": "William Cornwell",
-     "me": true
-    },
-    {
-     "name": "Anne Fuchs",
-     "me": false
-    },
-    {
-     "name": "Fonti Kar",
-     "me": false
-    },
-    {
-     "name": "Anna Monro",
-     "me": false
-    },
-    {
-     "name": "Hervé Sauquet",
-     "me": false
-    },
-    {
-     "name": "Ruby Stephens",
-     "me": false
-    },
-    {
-     "name": "Daniel S Falster",
      "me": false
     }
    ],
@@ -3038,15 +2972,15 @@
    "me_index": 5
   },
   {
-   "title": "Fungal functional ecology: bringing a trait‐based approach to plant‐associated fungi",
+   "title": "Fungal functional ecology: Bringing a trait-based approach to plant-associated fungi",
    "year": 2020,
    "journal": "Biological Reviews",
    "type": "journal-article",
-   "doi": "10.1111/brv.12570",
+   "doi": "10.32942/osf.io/a7f6g",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85075435168&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Amy E. Zanne",
+     "name": "Amy Zanne",
      "me": false
     },
     {
@@ -3054,11 +2988,11 @@
      "me": false
     },
     {
-     "name": "Michelle E. Afkhami",
+     "name": "Michelle Afkhami",
      "me": false
     },
     {
-     "name": "Carlos A. Aguilar‐Trigueros",
+     "name": "Carlos Aguilar-Trigueros",
      "me": false
     },
     {
@@ -3066,11 +3000,11 @@
      "me": false
     },
     {
-     "name": "Jennifer M. Bhatnagar",
+     "name": "Jennifer Bhatnagar",
      "me": false
     },
     {
-     "name": "Posy E. Busby",
+     "name": "Posy Busby",
      "me": false
     },
     {
@@ -3078,63 +3012,11 @@
      "me": false
     },
     {
-     "name": "William K. Cornwell",
+     "name": "Will Cornwell",
      "me": true
     },
     {
-     "name": "Thomas W. Crowther",
-     "me": false
-    },
-    {
-     "name": "Habacuc Flores‐Moreno",
-     "me": false
-    },
-    {
-     "name": "Dimitrios Floudas",
-     "me": false
-    },
-    {
-     "name": "Romina Gazis",
-     "me": false
-    },
-    {
-     "name": "David Hibbett",
-     "me": false
-    },
-    {
-     "name": "Peter Kennedy",
-     "me": false
-    },
-    {
-     "name": "Daniel L. Lindner",
-     "me": false
-    },
-    {
-     "name": "Daniel S. Maynard",
-     "me": false
-    },
-    {
-     "name": "Amy M. Milo",
-     "me": false
-    },
-    {
-     "name": "Rolf Henrik Nilsson",
-     "me": false
-    },
-    {
-     "name": "Jeff Powell",
-     "me": false
-    },
-    {
-     "name": "Mark Schildhauer",
-     "me": false
-    },
-    {
-     "name": "Jonathan Schilling",
-     "me": false
-    },
-    {
-     "name": "Kathleen K. Treseder",
+     "name": "Thomas Crowther",
      "me": false
     }
    ],
@@ -6846,41 +6728,6 @@
    "me_index": 3
   },
   {
-   "title": "Finding fungal ecological strategies: Is recycling an option?",
-   "year": 2019,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.32942/osf.io/tkxj2",
-   "url": "https://doi.org/10.32942/OSF.IO/TKXJ2",
-   "authors": [
-    {
-     "name": "Amy Zanne",
-     "me": false
-    },
-    {
-     "name": "Jeff Powell",
-     "me": false
-    },
-    {
-     "name": "Habacuc Moreno",
-     "me": false
-    },
-    {
-     "name": "E. Kiers",
-     "me": false
-    },
-    {
-     "name": "Anouk van ’t Padje",
-     "me": false
-    },
-    {
-     "name": "Will Cornwell",
-     "me": true
-    }
-   ],
-   "me_index": 5
-  },
-  {
    "title": "From dangerous branches to urban banyan: Facilitating aerial root growth of Ficus rubiginosa",
    "year": 2019,
    "journal": "PLOS ONE",
@@ -7046,57 +6893,6 @@
     }
    ],
    "me_index": 38
-  },
-  {
-   "title": "Fungal functional ecology: Bringing a trait-based approach to plant-associated fungi",
-   "year": 2019,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.32942/osf.io/a7f6g",
-   "url": "https://doi.org/10.32942/OSF.IO/A7F6G",
-   "authors": [
-    {
-     "name": "Amy Zanne",
-     "me": false
-    },
-    {
-     "name": "Kessy Abarenkov",
-     "me": false
-    },
-    {
-     "name": "Michelle Afkhami",
-     "me": false
-    },
-    {
-     "name": "Carlos Aguilar-Trigueros",
-     "me": false
-    },
-    {
-     "name": "Scott Bates",
-     "me": false
-    },
-    {
-     "name": "Jennifer Bhatnagar",
-     "me": false
-    },
-    {
-     "name": "Posy Busby",
-     "me": false
-    },
-    {
-     "name": "Natalie Christian",
-     "me": false
-    },
-    {
-     "name": "Will Cornwell",
-     "me": true
-    },
-    {
-     "name": "Thomas Crowther",
-     "me": false
-    }
-   ],
-   "me_index": 8
   },
   {
    "title": "Generalists are the most urban‐tolerant of birds: a phylogenetically controlled analysis of ecological and life history traits using a novel continuous measure of bird responses to urbanization",
@@ -7433,29 +7229,6 @@
     }
    ],
    "me_index": 4
-  },
-  {
-   "title": "Relationships between mycorrhizal type and leaf flammability in the Australian flora",
-   "year": 2019,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.32942/osf.io/u7bhv",
-   "url": "https://doi.org/10.32942/OSF.IO/U7BHV",
-   "authors": [
-    {
-     "name": "Jeff Powell",
-     "me": false
-    },
-    {
-     "name": "Rohan Riley",
-     "me": false
-    },
-    {
-     "name": "Will Cornwell",
-     "me": true
-    }
-   ],
-   "me_index": 2
   },
   {
    "title": "Strong restrictions on the trait range of co-occurring species in the newly created riparian zone of the Three Gorges Reservoir Area, China",
@@ -8647,10 +8420,10 @@
   {
    "title": "Symbiont switching and alternative resource acquisition strategies drive mutualism breakdown",
    "year": 2018,
-   "journal": "",
-   "type": "other",
+   "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+   "type": "journal-article",
    "doi": "10.1101/242834",
-   "url": "https://doi.org/10.1101/242834",
+   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85046971563&partnerID=MN8TOARS",
    "authors": [
     {
      "name": "Gijsbert DA Werner",
@@ -8678,45 +8451,6 @@
     },
     {
      "name": "E Toby Kiers",
-     "me": false
-    }
-   ],
-   "me_index": 2
-  },
-  {
-   "title": "Symbiont switching and alternative resource acquisition strategies drive mutualism breakdown",
-   "year": 2018,
-   "journal": "Proceedings of the National Academy of Sciences",
-   "type": "journal-article",
-   "doi": "10.1073/pnas.1721629115",
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85046971563&partnerID=MN8TOARS",
-   "authors": [
-    {
-     "name": "Gijsbert D. A. Werner",
-     "me": false
-    },
-    {
-     "name": "Johannes H. C. Cornelissen",
-     "me": false
-    },
-    {
-     "name": "William K. Cornwell",
-     "me": true
-    },
-    {
-     "name": "Nadejda A. Soudzilovskaia",
-     "me": false
-    },
-    {
-     "name": "Jens Kattge",
-     "me": false
-    },
-    {
-     "name": "Stuart A. West",
-     "me": false
-    },
-    {
-     "name": "E. Toby Kiers",
      "me": false
     }
    ],
@@ -9150,15 +8884,15 @@
    "year": 2017,
    "journal": "Pedobiologia",
    "type": "journal-article",
-   "doi": "10.1016/j.pedobi.2017.07.001",
+   "doi": "10.32942/osf.io/u7bhv",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85024127862&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Jeff R. Powell",
+     "name": "Jeff Powell",
      "me": false
     },
     {
-     "name": "Rohan C. Riley",
+     "name": "Rohan Riley",
      "me": false
     },
     {
@@ -9429,16 +9163,6 @@
    "me_index": 4
   },
   {
-   "title": "Burn or rot: leaf traits explain why flammability and decomposability are decoupled across species",
-   "year": 2015,
-   "journal": "Functional Ecology",
-   "type": "journal-article",
-   "doi": null,
-   "url": null,
-   "authors": [],
-   "me_index": -1
-  },
-  {
    "title": "Correction: Corrigendum: Three keys to the radiation of angiosperms into freezing environments",
    "year": 2015,
    "journal": "Nature",
@@ -9552,16 +9276,6 @@
     }
    ],
    "me_index": 2
-  },
-  {
-   "title": "Decomposition of 51 semidesert species from wide-ranging phylogeny is faster in standing and sand-buried than in surface leaf litters: implications for carbon and nutrient dynamics",
-   "year": 2015,
-   "journal": "Plant and Soil",
-   "type": "journal-article",
-   "doi": null,
-   "url": null,
-   "authors": [],
-   "me_index": -1
   },
   {
    "title": "Decomposition of 51 semidesert species from wide-ranging phylogeny is faster in standing and sand-buried than in surface leaf litters: implications for carbon and nutrient dynamics",
@@ -9900,22 +9614,12 @@
    "me_index": 2
   },
   {
-   "title": "Model adequacy and the macroevolution of angiosperm functional traits",
-   "year": 2015,
-   "journal": "The American Naturalist",
-   "type": "journal-article",
-   "doi": null,
-   "url": "http://www.jstor.org/stable/10.1086/682022",
-   "authors": [],
-   "me_index": -1
-  },
-  {
    "title": "Model Adequacy and the Macroevolution of Angiosperm Functional Traits",
    "year": 2015,
    "journal": "The American Naturalist",
    "type": "journal-article",
    "doi": "10.1086/682022",
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84937066947&partnerID=MN8TOARS",
+   "url": "http://www.jstor.org/stable/10.1086/682022",
    "authors": [
     {
      "name": "Matthew W. Pennell",
@@ -13380,6 +13084,29 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0042124605&partnerID=MN8TOARS",
    "authors": [],
    "me_index": -1
+  },
+  {
+   "title": "Occurrence of arbuscular mycorrhizal fungi in a phosphorus‐poor wetland and mycorrhizal response to phosphorus fertilization",
+   "year": 2001,
+   "journal": "American Journal of Botany",
+   "type": "journal-article",
+   "doi": "10.2307/3558359",
+   "url": "http://dx.doi.org/10.2307/3558359",
+   "authors": [
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Barbara L. Bedford",
+     "me": false
+    },
+    {
+     "name": "Carmen T. Chapin",
+     "me": false
+    }
+   ],
+   "me_index": 0
   }
  ]
 }
