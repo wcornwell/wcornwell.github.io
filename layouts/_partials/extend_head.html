@@ -1,0 +1,27 @@
+{{- /*
+  PaperMod's documented head hook (called from the theme's head.html).
+
+  The profile photo lives in assets/, not static/, so that index_profile.html's
+  resources.Get finds it and can resize it — served from static/ it fell through
+  to the raw-URL branch and shipped the full 536x536 original into a 120px box.
+
+  But hugo.toml's params.images (og:image / twitter:image) is a plain path the
+  theme resolves with absURL, i.e. against the published site root. Moving the
+  file would have 404'd both social-card tags. Rather than keep two copies of
+  the same JPEG in the repo, publish the single asset back to that stable path.
+
+  resources.Copy only emits a file once something asks for its URL, hence the
+  discarded assignment — printing it here would inject a bare URL into <head>.
+*/ -}}
+{{- with resources.Get "images/will.jpg" }}
+  {{- $og := resources.Copy "/images/will.jpg" . }}
+  {{- $_ := $og.RelPermalink }}
+{{- end }}
+
+{{- /*
+  profileMode renders the portrait at whatever imageWidth/imageHeight say, with
+  no srcset. Those are set to 240 so the file itself is 2x; this pins the box
+  back to the intended 120px. Both attributes stay square, so constraining them
+  here changes no aspect ratio and introduces no layout shift.
+*/ -}}
+<style>.profile img{width:120px;height:120px}</style>

@@ -1,8 +1,11 @@
 baseURL = "https://willcornwell.org/"
-languageCode = "en-us"
+# `locale` replaced the deprecated `languageCode` in Hugo 0.158. The BCP-47
+# casing matters: it is what the theme turns into og:locale (en_US).
+locale = "en-US"
 title = "Will Cornwell"
 theme = "PaperMod"
 publishDir = "public"
+enableRobotsTXT = true
 
 [pagination]
   pagerSize = 5
@@ -21,7 +24,6 @@ defaultContentLanguage = "en"
   description = "Ecologist | Researcher | Professor"
   defaultTheme = "auto"
   disableThemeToggle = false
-  ShowSearch = true
   ShowReadingTime = false
   ShowShareButtons = false
   ShowPostNavLinks = false
@@ -39,8 +41,11 @@ defaultContentLanguage = "en"
     subtitle = "Ecological Data Science"
     imageUrl = "images/will.jpg"
     imageTitle = "Photo of Will Cornwell"
-    imageWidth = 120
-    imageHeight = 120
+    # 2x the 120px display size: the theme resizes to exactly these numbers and
+    # emits no srcset, so asking for 120 would ship a 1x image that looks soft
+    # on HiDPI screens. extend_head.html pins the rendered box back to 120px.
+    imageWidth = 240
+    imageHeight = 240
 
 [[params.socialIcons]]
   name = "github"
@@ -79,9 +84,10 @@ defaultContentLanguage = "en"
 
 # The Publications menu entry comes from content/publications.md front matter.
 
+# Deliberately empty: an empty table disables Hugo's default tags/categories.
+# No content here is tagged, and leaving the defaults on published two blank
+# pages (/tags/, /categories/) and listed them in the sitemap.
 [taxonomies]
-  tag = "tags"
-  category = "categories"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

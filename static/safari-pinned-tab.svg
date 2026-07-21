@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!--
+    Safari pinned-tab mask icon. The theme's head.html emits
+    <link rel="mask-icon" href="safari-pinned-tab.svg"> unconditionally, so
+    without this file every page requested a 404.
+
+    Safari renders it as a mask, so it must be a solid single-colour silhouette:
+    no strokes, no gradients, no multiple fills. Shape matches the leaf emoji
+    used for the favicon and the android-chrome icons.
+  -->
+  <path fill="#000" d="M1.6 14.4C1.6 6.6 6.2 1.6 14.4 1.6c0 8.2-5 12.8-12.8 12.8z"/>
+</svg>

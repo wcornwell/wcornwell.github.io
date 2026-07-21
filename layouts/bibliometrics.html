@@ -1,7 +1,7 @@
 {{ define "main" }}
-{{ $data := site.Data.publications }}
+{{ $data := hugo.Data.publications }}
 {{ $pubs := $data.publications | default slice }}
-{{ $cd := site.Data.abstract_clusters }}
+{{ $cd := hugo.Data.abstract_clusters }}
 {{ $clusters := $cd.clusters | default slice }}
 
 <main class="main-content biblio">

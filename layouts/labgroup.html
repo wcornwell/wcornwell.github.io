@@ -74,7 +74,9 @@
   .caption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: #666;
+    /* Theme variable, not a literal: #666 was fine on the light background but
+       fell to ~3.4:1 against PaperMod's dark theme, under the 4.5:1 minimum. */
+    color: var(--secondary);
     text-align: center;
   }
 

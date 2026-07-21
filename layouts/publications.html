@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $data := site.Data.publications }}
+{{ $data := hugo.Data.publications }}
 {{ $pubs := $data.publications | default slice }}
 {{ $lead := 8 }}{{/* authors shown before collapsing */}}
 

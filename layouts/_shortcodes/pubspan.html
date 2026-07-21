@@ -3,7 +3,7 @@
 
        Hugo 0.146+ template system: shortcodes live in layouts/_shortcodes/,
        not layouts/shortcodes/, which is silently ignored. */ -}}
-{{- $pubs := site.Data.publications.publications | default slice -}}
+{{- $pubs := hugo.Data.publications.publications | default slice -}}
 {{- if $pubs -}}
   {{- /* Data arrives sorted newest-first. */ -}}
   {{- $newest := (index $pubs 0).year -}}
