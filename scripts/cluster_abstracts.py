@@ -116,9 +116,14 @@ Group these works into 6-12 coherent research themes based on their actual scien
 content -- not by journal, year, or author. Prefer a moderate number of well-separated, \
 substantive themes over many overlapping micro-clusters. Base each cluster on genuine \
 thematic/methodological similarity in the abstracts and titles, not superficial keyword \
-overlap. Every work must end up in exactly one cluster, including works with no abstract \
-(cluster those by title alone). Use plain, specific theme names an ecologist would \
-recognize (e.g. "Plant functional traits and decomposition", not "Cluster 3" or "Misc")."""
+overlap. Use plain, specific theme names an ecologist would recognize (e.g. "Plant \
+functional traits and decomposition", not "Cluster 3" or "Misc").
+
+COMPLETENESS IS MANDATORY. The corpus below is numbered, and the last line tells you \
+how many works there are. Every single DOI must appear in exactly one cluster's `dois` \
+list -- no omissions, no duplicates. Works with no abstract are clustered on their title \
+alone; a work is never skipped for being hard to place. Before you answer, count the \
+DOIs you are emitting and check the total matches the corpus count."""
 
 
 def cluster_offline(works, abstracts, k_range=range(6, 13)):
@@ -206,11 +211,90 @@ def cluster_with_openai(works, abstracts, model):
     return json.loads(message.content)["clusters"]
 
 
+def fill_coverage_gaps(works, abstracts, clusters, model, max_retries):
+    """Re-ask for any works the first pass omitted, until none are left.
+
+    A strict schema constrains the *shape* of the answer but cannot make the
+    model exhaustive, and in practice it drops a fifth of a 164-work corpus. So
+    coverage is enforced here instead of trusted.
+    """
+    for attempt in range(max_retries):
+        placed = {d.lower() for c in clusters for d in c["dois"]}
+        missing = [w for w in works if w["doi"].lower() not in placed]
+        if not missing:
+            break
+        print(f"  {len(missing)} works unplaced; retry {attempt + 1}/{max_retries}",
+              file=sys.stderr)
+        names = [c["name"] for c in clusters]
+        by_name = {c["name"]: c for c in clusters}
+        for a in assign_stragglers(missing, abstracts, names, model):
+            cluster = by_name.get(a["theme"])
+            if cluster:
+                cluster["dois"].append(a["doi"])
+    return clusters
+
+
+STRAGGLER_PROMPT = """You previously grouped an ecologist's publications into research \
+themes but left some works out. Assign every work below to whichever of the existing \
+themes fits best. You may not invent new themes, and you may not skip a work -- pick the \
+closest theme even when the fit is imperfect."""
+
+
+def assign_stragglers(missing, abstracts, cluster_names, model):
+    """Place works the first pass dropped into the themes it already chose.
+
+    Restricting `theme` to an enum of existing names means the model cannot
+    answer with a theme that does not exist, so the result always merges cleanly.
+    """
+    import openai
+
+    schema = {
+        "name": "assign_remaining_works",
+        "strict": True,
+        "schema": {
+            "type": "object",
+            "properties": {
+                "assignments": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "doi": {"type": "string"},
+                            "theme": {"type": "string", "enum": cluster_names},
+                        },
+                        "required": ["doi", "theme"],
+                        "additionalProperties": False,
+                    },
+                },
+            },
+            "required": ["assignments"],
+            "additionalProperties": False,
+        },
+    }
+
+    corpus = build_corpus_text(missing, abstracts)
+    themes = "\n".join(f"- {n}" for n in cluster_names)
+    client = openai.OpenAI()
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": STRAGGLER_PROMPT},
+            {"role": "user", "content": f"Existing themes:\n{themes}\n\n{corpus}"},
+        ],
+        response_format={"type": "json_schema", "json_schema": schema},
+    )
+    message = response.choices[0].message
+    if message.refusal:
+        sys.exit(f"The model refused to answer: {message.refusal}")
+    return json.loads(message.content)["assignments"]
+
+
 def build_corpus_text(works, abstracts):
     lines = []
-    for w in works:
+    for n, w in enumerate(works, 1):
         doi = w["doi"]
         abstract = abstracts.get(doi)
+        lines.append(f"[{n}/{len(works)}]")
         lines.append(f"DOI: {doi}")
         lines.append(f"Title: {w['title']}")
         lines.append(f"Year: {w['year']}  Journal: {w.get('journal') or 'unknown'}")
@@ -219,6 +303,8 @@ def build_corpus_text(works, abstracts):
         else:
             lines.append("Abstract: (not available)")
         lines.append("")
+    lines.append(f"END OF CORPUS. {len(works)} works above; all {len(works)} DOIs "
+                 "must appear exactly once across your clusters.")
     return "\n".join(lines)
 
 
@@ -227,6 +313,14 @@ def main():
     parser.add_argument(
         "--offline", action="store_true",
         help="cluster with TF-IDF + k-means instead of the API -- no API key or network cost beyond Crossref",
+    )
+    parser.add_argument(
+        "--max-retries", type=int, default=2,
+        help="extra passes asking the model to place works it left out (default: 2)",
+    )
+    parser.add_argument(
+        "--allow-partial", action="store_true",
+        help="write the file even if some works could not be clustered",
     )
     parser.add_argument(
         "--model", default=DEFAULT_MODEL,
@@ -248,6 +342,9 @@ def main():
     else:
         clusters = cluster_with_openai(works, abstracts, args.model)
         method = args.model
+        clusters = fill_coverage_gaps(
+            works, abstracts, clusters, args.model, args.max_retries
+        )
 
     by_doi = {w["doi"]: w for w in works}
     assigned_dois = set()
@@ -259,6 +356,9 @@ def main():
             w = by_doi.get(doi)
             if not w:
                 print(f"  warning: model returned unknown DOI {doi}, skipping", file=sys.stderr)
+                continue
+            if doi in assigned_dois:
+                # Claimed by an earlier cluster; one work belongs in one theme.
                 continue
             assigned_dois.add(doi)
             cluster_works.append({
@@ -281,7 +381,21 @@ def main():
         for w in works if w["doi"] not in assigned_dois
     ]
     if unassigned:
-        print(f"  {len(unassigned)} works were not assigned to any cluster", file=sys.stderr)
+        # Loud by default: an 81%-complete page looks fine but quietly omits a
+        # fifth of the record, including some of the best-known papers.
+        print(f"  {len(unassigned)} works were not assigned to any cluster",
+              file=sys.stderr)
+        for u in unassigned:
+            print(f"    {u['year']} {u['title'][:70]}", file=sys.stderr)
+        if not args.allow_partial:
+            sys.exit(
+                f"Refusing to write {OUT.name}: {len(unassigned)} of {len(works)} "
+                f"works unclustered ({100 * len(assigned_dois) // len(works)}% "
+                "coverage). Re-run, raise --max-retries, or pass --allow-partial "
+                "to accept an incomplete page."
+            )
+    else:
+        print(f"  all {len(works)} works clustered", file=sys.stderr)
 
     payload = {
         "generated": time.strftime("%Y-%m-%d"),

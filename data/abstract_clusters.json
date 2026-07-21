@@ -1,12 +1,12 @@
 {
  "generated": "2026-07-22",
  "model": "gpt-5",
- "source_works": 164,
- "works_with_abstract": 124,
+ "source_works": 157,
+ "works_with_abstract": 120,
  "clusters": [
   {
-   "name": "Plant functional traits",
-   "description": "Global patterns and theory of plant functional traits and community assembly, linking traits to environment, phylogeny and ecosystem function across scales.",
+   "name": "Plant functional traits and macroecology",
+   "description": "Leaf, wood and whole-plant traits linked to photosynthesis, water–nutrient economics, CO2 responses, community assembly and biogeography across biomes (including tundra). Includes global trait databases, CSR strategies, isotope and soil–climate controls, and functional diversity under environmental change.",
    "works": [
     {
      "doi": "10.1002/ppp3.70126",
@@ -23,10 +23,17 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/gcb.14904",
-     "title": "TRY plant trait database – enhanced coverage and open access",
-     "year": 2020,
-     "journal": "Global Change Biology",
+     "doi": "10.1111/nph.70061",
+     "title": "Defining the pyro‐thermal niche: do seed traits, ecosystem type and phylogeny influence thermal thresholds in seeds with physical dormancy?",
+     "year": 2025,
+     "journal": "New Phytologist",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/nph.18993",
+     "title": "Insect pollination for most of angiosperm evolutionary history",
+     "year": 2023,
+     "journal": "New Phytologist",
      "has_abstract": true
     },
     {
@@ -34,6 +41,34 @@
      "title": "Global plant trait relationships extend to the climatic extremes of the tundra biome",
      "year": 2020,
      "journal": "Nature Communications",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/gcb.14904",
+     "title": "TRY plant trait database – enhanced coverage and open access",
+     "year": 2020,
+     "journal": "Global Change Biology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.7554/elife.63170",
+     "title": "Sexual dimorphism in trait variability and its eco-evolutionary and statistical implications",
+     "year": 2020,
+     "journal": "eLife",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/csp2.287",
+     "title": "Widespread short‐term persistence of frog species after the 2019–2020 bushfires in eastern Australia revealed by citizen science",
+     "year": 2020,
+     "journal": "Conservation Science and Practice",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.3390/f11010105",
+     "title": "The Role of Climate Niche, Geofloristic History, Habitat Preference, and Allometry on Wood Density within a California Plant Community",
+     "year": 2020,
+     "journal": "Forests",
      "has_abstract": true
     },
     {
@@ -51,10 +86,10 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1002/ecy.2614",
-     "title": "A global growth‐form database for 143,616 vascular plant species",
-     "year": 2019,
-     "journal": "Ecology",
+     "doi": "10.1111/geb.12764",
+     "title": "Climate and soils together regulate photosynthetic carbon isotope discrimination within C<sub>3</sub> plants worldwide",
+     "year": 2018,
+     "journal": "Global Ecology and Biogeography",
      "has_abstract": true
     },
     {
@@ -65,18 +100,25 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/geb.12764",
-     "title": "Climate and soils together regulate photosynthetic carbon isotope discrimination within C<sub>3</sub> plants worldwide",
-     "year": 2018,
-     "journal": "Global Ecology and Biogeography",
-     "has_abstract": true
-    },
-    {
      "doi": "10.1038/s41586-018-0563-7",
      "title": "Plant functional trait change across a warming tundra biome",
      "year": 2018,
      "journal": "Nature",
      "has_abstract": false
+    },
+    {
+     "doi": "10.1016/j.evolhumbehav.2017.11.004",
+     "title": "Contest competition and men's facial hair: beards may not provide advantages in combat",
+     "year": 2018,
+     "journal": "Evolution and Human Behavior",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/1365-2435.12722",
+     "title": "A global method for calculating plant CSR ecological strategies applied across biomes world‐wide",
+     "year": 2017,
+     "journal": "Functional Ecology",
+     "has_abstract": true
     },
     {
      "doi": "10.1371/journal.pone.0172495",
@@ -93,11 +135,25 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1086/682022",
-     "title": "Model Adequacy and the Macroevolution of Angiosperm Functional Traits",
+     "doi": "10.1007/s11284-015-1330-y",
+     "title": "Does plant size affect growth responses to water availability at glacial, modern and future CO <sub>2</sub> concentrations?",
+     "year": 2016,
+     "journal": "Ecological Research",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1038/srep26850",
+     "title": "Strong but diverging clonality - climate relationships of different plant clades explain weak overall pattern across China",
+     "year": 2016,
+     "journal": "Scientific Reports",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/geb.12296",
+     "title": "Global effects of soil and climate on leaf photosynthetic traits and rates",
      "year": 2015,
-     "journal": "The American Naturalist",
-     "has_abstract": false
+     "journal": "Global Ecology and Biogeography",
+     "has_abstract": true
     },
     {
      "doi": "10.1111/jvs.12343",
@@ -107,11 +163,11 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1038/nature14371",
-     "title": "Correction: Corrigendum: Three keys to the radiation of angiosperms into freezing environments",
-     "year": 2015,
-     "journal": "Nature",
-     "has_abstract": false
+     "doi": "10.1111/1365-2745.12260",
+     "title": "How much of the world is woody?",
+     "year": 2014,
+     "journal": "Journal of Ecology",
+     "has_abstract": true
     },
     {
      "doi": "10.1111/jvs.12190",
@@ -121,24 +177,10 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/1365-2745.12192",
-     "title": "Understanding the ecosystem implications of the angiosperm rise to dominance: leaf litter decomposability among magnoliids and other basal angiosperms",
-     "year": 2014,
-     "journal": "Journal of Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/1365-2745.12217",
-     "title": "The Tree of Life in ecosystems: evolution of plant effects on carbon and nutrient cycling",
-     "year": 2014,
-     "journal": "Journal of Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1038/nature13842",
-     "title": "Erratum: Corrigendum: Three keys to the radiation of angiosperms into freezing environments",
-     "year": 2014,
-     "journal": "Nature",
+     "doi": "10.1111/nph.12219",
+     "title": "A broader perspective on plant domestication and nutrient and carbon cycling",
+     "year": 2013,
+     "journal": "New Phytologist",
      "has_abstract": false
     },
     {
@@ -149,17 +191,24 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1007/s10530-012-0320-z",
-     "title": "Abundance, rarity and invasion debt among exotic species in a patchy ecosystem",
+     "doi": "10.1890/12-1602.1",
+     "title": "Leaf traits within communities: Context may affect the mapping of traits to function",
      "year": 2013,
-     "journal": "Biological Invasions",
-     "has_abstract": false
+     "journal": "Ecology",
+     "has_abstract": true
     },
     {
-     "doi": "10.1111/1365-2745.12092",
-     "title": "Linking litter decomposition of above‐ and below‐ground organs to plant–soil feedbacks worldwide",
+     "doi": "10.1002/ece3.836",
+     "title": "Meta‐analysis reveals profound responses of plant traits to glacial CO<sub>2</sub> levels",
      "year": 2013,
-     "journal": "Journal of Ecology",
+     "journal": "Ecology and Evolution",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1071/bt12225",
+     "title": "New handbook for standardised measurement of plant functional traits worldwide",
+     "year": 2013,
+     "journal": "Australian Journal of Botany",
      "has_abstract": true
     },
     {
@@ -168,13 +217,6 @@
      "year": 2012,
      "journal": "Biotropica",
      "has_abstract": true
-    },
-    {
-     "doi": "10.1111/j.1466-8238.2011.00651.x",
-     "title": "Global to community scale differences in the prevalence of convergent over divergent leaf trait distributions in plant assemblages",
-     "year": 2011,
-     "journal": "Global Ecology and Biogeography",
-     "has_abstract": false
     },
     {
      "doi": "10.1111/j.1466-8238.2010.00641.x",
@@ -191,17 +233,10 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/j.1365-2486.2010.02294.x",
-     "title": "Taller and larger: shifts in Arctic tundra leaf traits after 16 years of experimental warming",
+     "doi": "10.1111/j.1469-8137.2011.03732.x",
+     "title": "Putting plant resistance traits on the map: a test of the idea that plants are better defended at lower latitudes",
      "year": 2011,
-     "journal": "Global Change Biology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/j.1365-2745.2010.01642.x",
-     "title": "Plant functional traits in Australian subtropical rain forest: partitioning within‐community from cross‐landscape variation",
-     "year": 2010,
-     "journal": "Journal of Ecology",
+     "journal": "New Phytologist",
      "has_abstract": true
     },
     {
@@ -212,157 +247,74 @@
      "has_abstract": true
     },
     {
+     "doi": "10.1111/j.1365-2745.2010.01642.x",
+     "title": "Plant functional traits in Australian subtropical rain forest: partitioning within‐community from cross‐landscape variation",
+     "year": 2010,
+     "journal": "Journal of Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/j.1472-4642.2010.00654.x",
+     "title": "The geography of climate change: implications for conservation biogeography",
+     "year": 2010,
+     "journal": "Diversity and Distributions",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1890/07-1134.1",
+     "title": "Community assembly and shifts in plant trait distributions across an environmental gradient in coastal California",
+     "year": 2009,
+     "journal": "Ecological Monographs",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1071/fp08216",
+     "title": "Why are non-photosynthetic tissues generally 13C enriched compared with leaves in C3 plants? Review and synthesis of current hypotheses",
+     "year": 2009,
+     "journal": "Functional Plant Biology",
+     "has_abstract": true
+    },
+    {
      "doi": "10.1111/j.1461-0248.2006.01006.x",
      "title": "A trait‐based approach to community assembly: partitioning of species trait values into within‐ and among‐community components",
      "year": 2007,
      "journal": "Ecology Letters",
      "has_abstract": true
-    }
-   ]
-  },
-  {
-   "name": "Citizen science and urban ecology",
-   "description": "Use and curation of citizen and low‐cost data streams for biodiversity research, data quality, sampling optimization, and urban/rangeland restoration and bird ecology.",
-   "works": [
+    },
     {
-     "doi": "10.2139/ssrn.6514828",
-     "title": "The Sounds of Change: Using Passive Acoustic Monitoring to Assess the Effect of Artificial Watering Point Closure on Arid Australian Avifauna",
-     "year": 2026,
-     "journal": "",
+     "doi": "10.1111/j.1365-2435.2007.01323.x",
+     "title": "Adjustment of structure and function of Hawaiian <em>Metrosideros polymorpha</em> at high vs. low precipitation",
+     "year": 2007,
+     "journal": "Functional Ecology",
      "has_abstract": true
     },
     {
-     "doi": "10.1002/ajb2.70048",
-     "title": "Citizen science records are fuelling exciting discoveries of new plant species",
-     "year": 2025,
-     "journal": "American Journal of Botany",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1002/ppp3.70005",
-     "title": "Expert identification blitz: A rapid high value approach for assessing and improving iNaturalist identification accuracy and data precision and confidence",
-     "year": 2025,
-     "journal": "PLANTS, PEOPLE, PLANET",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.7554/elife.95857",
-     "title": "Decoupling both local and global abundance from global range size, challenging the abundance-occupancy relationship in birds",
-     "year": 2025,
-     "journal": "eLife",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/avsc.70038",
-     "title": "Traits Associated With Local Extinctions of Native Plants in a Species‐Rich Urban Reserve",
-     "year": 2025,
-     "journal": "Applied Vegetation Science",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/nph.18813",
-     "title": "Photographs as an essential biodiversity resource: drivers of gaps in the vascular plant photographic record",
-     "year": 2023,
+     "doi": "10.1111/j.1469-8137.2006.01712.x",
+     "title": "Wood density and vessel traits as distinct correlates of ecological strategy in 51 California coast range angiosperms",
+     "year": 2006,
      "journal": "New Phytologist",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1073/pnas.2117920119",
-     "title": "Reply to Robinson et al.: Data integration will form the basis of future abundance estimates",
-     "year": 2022,
-     "journal": "Proceedings of the National Academy of Sciences",
      "has_abstract": false
     },
     {
-     "doi": "10.1093/gigascience/giac074",
-     "title": "Quantifying research interests in 7,521 mammalian species with <i>h</i>-index: a case study",
-     "year": 2022,
-     "journal": "GigaScience",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1073/pnas.2023170118",
-     "title": "Global abundance estimates for 9,700 bird species",
-     "year": 2021,
-     "journal": "Proceedings of the National Academy of Sciences",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1007/s10531-020-02088-1",
-     "title": "How to build a biodiverse city: environmental determinants of bird diversity within and among 1581 cities",
-     "year": 2021,
-     "journal": "Biodiversity and Conservation",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1002/ece3.7307",
-     "title": "Is color data from citizen science photographs reliable for biodiversity research?",
-     "year": 2021,
-     "journal": "Ecology and Evolution",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/ecog.04863",
-     "title": "A continental measure of urbanness predicts avian response to local urbanization",
-     "year": 2020,
-     "journal": "Ecography",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1098/rspb.2019.1487",
-     "title": "Optimizing future biodiversity sampling by citizen scientists",
-     "year": 2019,
-     "journal": "Proceedings of the Royal Society B: Biological Sciences",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1371/journal.pbio.3000357",
-     "title": "Improving big citizen science data: Moving beyond haphazard sampling",
-     "year": 2019,
-     "journal": "PLOS Biology",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1016/j.biocon.2019.05.007",
-     "title": "Pelagic citizen science data reveal declines of seabirds off south-eastern Australia",
-     "year": 2019,
-     "journal": "Biological Conservation",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1111/1365-2664.13421",
-     "title": "Using citizen science data to define and track restoration targets in urban areas",
-     "year": 2019,
-     "journal": "Journal of Applied Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1371/journal.pone.0226845",
-     "title": "From dangerous branches to urban banyan: Facilitating aerial root growth of Ficus rubiginosa",
-     "year": 2019,
-     "journal": "PLOS ONE",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1111/oik.06158",
-     "title": "Generalists are the most urban‐tolerant of birds: a phylogenetically controlled analysis of ecological and life history traits using a novel continuous measure of bird responses to urbanization",
-     "year": 2019,
+     "doi": "10.1034/j.1600-0706.2003.11697.x",
+     "title": "Regional and local patterns in plant species richness with respect to resource availability",
+     "year": 2003,
      "journal": "Oikos",
      "has_abstract": true
+    },
+    {
+     "doi": "10.2307/3071768",
+     "title": "Interactions between Herbivorous Fishes and Limiting Nutrients in a Tropical Stream Ecosystem",
+     "year": 2002,
+     "journal": "Ecology",
+     "has_abstract": false
     }
    ]
   },
   {
-   "name": "Deadwood decomposition",
-   "description": "Decomposition dynamics of wood and litter, emphasizing termite–microbe interactions, climate sensitivities, and wood/leaf trait controls on decay and nutrient release.",
+   "name": "Decomposition and flammability of plant litter and wood",
+   "description": "Trait controls on litter and wood decay, nutrient release, and fuel flammability, including decoupling of decomposability and flammability, effects of environment (arid photodegradation), and improved decay modelling across organs and species.",
    "works": [
-    {
-     "doi": "10.2139/ssrn.7000384",
-     "title": "Termite discovery disrupts microbial succession and deadwood decay",
-     "year": 2026,
-     "journal": "",
-     "has_abstract": true
-    },
     {
      "doi": "10.1111/nph.20362",
      "title": "Faster than expected: release of nitrogen and phosphorus from decomposing woody litter",
@@ -371,59 +323,31 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/1365-2435.14494",
-     "title": "Drivers of wood decay in tropical ecosystems: Termites versus microbes along spatial, temporal and experimental precipitation gradients",
-     "year": 2024,
-     "journal": "Functional Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/geb.13915",
-     "title": "Biogeographical Variation in Termite Distributions Alters Global Deadwood Decay",
-     "year": 2024,
-     "journal": "Global Ecology and Biogeography",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/aec.13555",
-     "title": "Spatial variability in the contribution of termites to the decay of plant detritus",
-     "year": 2024,
-     "journal": "Austral Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1126/science.abo3856",
-     "title": "Termite sensitivity to temperature affects global wood decay rates",
-     "year": 2022,
-     "journal": "Science",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.21203/rs.3.rs-1242094/v1",
-     "title": "Temperature sensitivity of termites determines global wood decay rates",
-     "year": 2022,
-     "journal": "",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/1365-2435.14025",
-     "title": "Initial wood trait variation overwhelms endophyte community effects for explaining decay trajectories",
-     "year": 2022,
-     "journal": "Functional Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/1365-2745.12427",
-     "title": "Termites amplify the effects of wood traits on decomposition rates among multiple bamboo and dicot woody species",
-     "year": 2015,
+     "doi": "10.1111/1365-2745.14033",
+     "title": "Experimental evidence that leaf litter decomposability and flammability are decoupled across gymnosperm species",
+     "year": 2023,
      "journal": "Journal of Ecology",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/geb.12272",
-     "title": "Global patterns of plant root colonization intensity by mycorrhizal fungi explained by climate and soil chemistry",
+     "doi": "10.1111/nph.14766",
+     "title": "Are litter decomposition and fire linked through plant species traits?",
+     "year": 2017,
+     "journal": "New Phytologist",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ece3.2451",
+     "title": "Species mixture effects on flammability across plant phylogeny: the importance of litter particle size and the special role for non‐<em>Pinus</em> Pinaceae",
+     "year": 2016,
+     "journal": "Ecology and Evolution",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2435.12449",
+     "title": "Burn or rot: leaf traits explain why flammability and decomposability are decoupled across species",
      "year": 2015,
-     "journal": "Global Ecology and Biogeography",
+     "journal": "Functional Ecology",
      "has_abstract": true
     },
     {
@@ -432,6 +356,20 @@
      "year": 2015,
      "journal": "Plant and Soil",
      "has_abstract": false
+    },
+    {
+     "doi": "10.5194/bg-12-457-2015",
+     "title": "Divergence of above- and belowground C and N pool within predominant plant species along two precipitation gradients in North China",
+     "year": 2015,
+     "journal": "Biogeosciences",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/nph.13317",
+     "title": "Flammability across the gymnosperm phylogeny: the importance of litter particle size",
+     "year": 2015,
+     "journal": "New Phytologist",
+     "has_abstract": true
     },
     {
      "doi": "10.1038/srep13217",
@@ -449,9 +387,51 @@
     },
     {
      "doi": "10.1002/ece3.1115",
-     "title": "Experimental evidence that the <scp>O</scp>rnstein‐<scp>U</scp>hlenbeck model best describes the evolution of leaf litter decomposability",
+     "title": "Experimental evidence that the Ornstein‐Uhlenbeck model best describes the evolution of leaf litter decomposability",
      "year": 2014,
      "journal": "Ecology and Evolution",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/geb.12172",
+     "title": "Global relationship of wood and leaf litter decomposability: the role of functional traits within and across plant organs",
+     "year": 2014,
+     "journal": "Global Ecology and Biogeography",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.3390/f5040827",
+     "title": "Interactions between Fine Wood Decomposition and Flammability",
+     "year": 2014,
+     "journal": "Forests",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/jeb.12401",
+     "title": "Weak phylogenetic signal in physiological traits of methane‐oxidizing bacteria",
+     "year": 2014,
+     "journal": "Journal of Evolutionary Biology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2745.12217",
+     "title": "The Tree of Life in ecosystems: evolution of plant effects on carbon and nutrient cycling",
+     "year": 2014,
+     "journal": "Journal of Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2745.12192",
+     "title": "Understanding the ecosystem implications of the angiosperm rise to dominance: leaf litter decomposability among magnoliids and other basal angiosperms",
+     "year": 2014,
+     "journal": "Journal of Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2745.12092",
+     "title": "Linking litter decomposition of above‐ and below‐ground organs to plant–soil feedbacks worldwide",
+     "year": 2013,
+     "journal": "Journal of Ecology",
      "has_abstract": true
     },
     {
@@ -462,10 +442,31 @@
      "has_abstract": true
     },
     {
+     "doi": "10.3389/fpls.2012.00063",
+     "title": "Species composition and fire: non-additive mixture effects on ground fuel flammability",
+     "year": 2012,
+     "journal": "Frontiers in Plant Science",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/j.1466-8238.2011.00651.x",
+     "title": "Global to community scale differences in the prevalence of convergent over divergent leaf trait distributions in plant assemblages",
+     "year": 2011,
+     "journal": "Global Ecology and Biogeography",
+     "has_abstract": false
+    },
+    {
      "doi": "10.1111/j.1365-2486.2009.01916.x",
      "title": "Plant traits and wood fates across the globe: rotted, burned, or consumed?",
      "year": 2009,
      "journal": "Global Change Biology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/j.1461-0248.2008.01259.x",
+     "title": "Global meta‐analysis of wood decomposition rates: a role for trait variation among tree species?",
+     "year": 2009,
+     "journal": "Ecology Letters",
      "has_abstract": true
     },
     {
@@ -478,56 +479,209 @@
    ]
   },
   {
-   "name": "Fire ecology and flammability",
-   "description": "Plant trait controls on litter and fuel flammability, seed heat thresholds, and biodiversity responses to wildfires, including databases and monitoring of post‐fire recovery.",
+   "name": "Global change and land-use impacts",
+   "description": "Effects of climate warming and heat extremes, arid-land management, hydrological alteration and land use on species, soils and ecosystems; includes range limits, plasticity in forecasts, artificial reefs, and conservation in modified landscapes.",
    "works": [
     {
-     "doi": "10.1111/nph.20464",
-     "title": "Continental‐scale empirical evidence for relationships between fire response strategies and fire frequency",
-     "year": 2025,
-     "journal": "New Phytologist",
+     "doi": "10.2139/ssrn.6631204",
+     "title": "Applying the spectral variability hypothesis to arid shrublands using multispectral drone imagery",
+     "year": 2026,
+     "journal": "",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/nph.70061",
-     "title": "Defining the pyro‐thermal niche: do seed traits, ecosystem type and phylogeny influence thermal thresholds in seeds with physical dormancy?",
-     "year": 2025,
-     "journal": "New Phytologist",
+     "doi": "10.1002/oik.12260",
+     "title": "Dress for success: climate pressures predict fur insulation and body size in natural and reintroduced populations of a threatened marsupial",
+     "year": 2026,
+     "journal": "Oikos",
      "has_abstract": true
     },
     {
-     "doi": "10.1038/s41597-025-04705-6",
-     "title": "Fire ecology database for documenting plant responses to fire events in Australia",
-     "year": 2025,
-     "journal": "Scientific Data",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1002/ajb2.16432",
-     "title": "The landscape genetics of a mass‐flowering fire‐ephemeral plant",
-     "year": 2024,
-     "journal": "American Journal of Botany",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/gcb.16955",
-     "title": "Multi‐taxon biodiversity responses to the 2019–2020 Australian megafires",
-     "year": 2023,
+     "doi": "10.1111/gcb.70872",
+     "title": "Estimating the Impacts of Future Extreme Heat on Dryland Threatened Mammals: An Australian Case Study",
+     "year": 2026,
      "journal": "Global Change Biology",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/aec.13105",
-     "title": "Using citizen science to measure recolonisation of birds after the Australian 2019–2020 mega‐fires",
-     "year": 2023,
-     "journal": "Austral Ecology",
+     "doi": "10.2139/ssrn.6514828",
+     "title": "The Sounds of Change: Using Passive Acoustic Monitoring to Assess the Effect of Artificial Watering Point Closure on Arid Australian Avifauna",
+     "year": 2026,
+     "journal": "",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/1365-2745.14033",
-     "title": "Experimental evidence that leaf litter decomposability and flammability are decoupled across gymnosperm species",
+     "doi": "10.1111/avsc.70038",
+     "title": "Traits Associated With Local Extinctions of Native Plants in a Species‐Rich Urban Reserve",
+     "year": 2025,
+     "journal": "Applied Vegetation Science",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1371/journal.pone.0226845",
+     "title": "From dangerous branches to urban banyan: Facilitating aerial root growth of Ficus rubiginosa",
+     "year": 2019,
+     "journal": "PLOS ONE",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1007/s10021-019-00373-x",
+     "title": "Natural and Regenerated Saltmarshes Exhibit Similar Soil and Belowground Organic Carbon Stocks, Root Production and Soil Respiration",
+     "year": 2019,
+     "journal": "Ecosystems",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1002/clen.201700497",
+     "title": "Dam Effect on Soil Nutrients and Potentially Toxic Metals in a Reservoir Riparian Zone",
+     "year": 2019,
+     "journal": "CLEAN – Soil, Air, Water",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1016/j.flora.2018.11.006",
+     "title": "Hungry and thirsty: Effects of CO2 and limited water availability on plant performance",
+     "year": 2019,
+     "journal": "Flora",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1093/jpe/rtz016",
+     "title": "Strong restrictions on the trait range of co-occurring species in the newly created riparian zone of the Three Gorges Reservoir Area, China",
+     "year": 2019,
+     "journal": "Journal of Plant Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1071/mf16019",
+     "title": "Modelling the distribution of fish around an artificial reef",
+     "year": 2017,
+     "journal": "Marine and Freshwater Research",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1016/j.ppees.2017.11.003",
+     "title": "Increases in CO 2 from past low to future high levels result in “slower” strategies on the leaf economic spectrum",
+     "year": 2017,
+     "journal": "Perspectives in Plant Ecology, Evolution and Systematics",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1371/journal.pone.0130629",
+     "title": "A Geographic Mosaic of Climate Change Impacts on Terrestrial Vegetation: Which Areas Are Most at Risk?",
+     "year": 2015,
+     "journal": "PLOS ONE",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1016/j.jenvman.2014.12.039",
+     "title": "Impact of land-use on carbon storage as dependent on soil texture: Evidence from a desertified dryland using repeated paired sampling design",
+     "year": 2015,
+     "journal": "Journal of Environmental Management",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/ecog.00780",
+     "title": "Topographic, latitudinal and climatic distribution of <em>Pinus coulteri</em> : geographic range limits are not at the edge of the climate envelope",
+     "year": 2015,
+     "journal": "Ecography",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ece3.1687",
+     "title": "Winners always win: growth of a wide range of plant species from low to future high CO<sub>2</sub>",
+     "year": 2015,
+     "journal": "Ecology and Evolution",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/ele.12348",
+     "title": "The effects of phenotypic plasticity and local adaptation on forecasts of species range shifts under climate change",
+     "year": 2014,
+     "journal": "Ecology Letters",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1007/s10530-012-0320-z",
+     "title": "Abundance, rarity and invasion debt among exotic species in a patchy ecosystem",
+     "year": 2013,
+     "journal": "Biological Invasions",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/cobi.12088",
+     "title": "Effects of Growth Form and Functional Traits on Response of Woody Plants to Clearing and Fragmentation of Subtropical Rainforest",
+     "year": 2013,
+     "journal": "Conservation Biology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/j.1365-2486.2010.02294.x",
+     "title": "Taller and larger: shifts in Arctic tundra leaf traits after 16 years of experimental warming",
+     "year": 2011,
+     "journal": "Global Change Biology",
+     "has_abstract": true
+    }
+   ]
+  },
+  {
+   "name": "Citizen science and urban biodiversity monitoring",
+   "description": "Use of large-scale citizen science and photographic data to assess biodiversity patterns, data quality, abundance and trend estimation, urban tolerance and restoration, and rapid event response (e.g., fire).",
+   "works": [
+    {
+     "doi": "10.1002/aps3.70012",
+     "title": "<em>infinitylists</em>: A Shiny application and R package for rapid generation of place‐based species checklists",
+     "year": 2025,
+     "journal": "Applications in Plant Sciences",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ajb2.70048",
+     "title": "Citizen science records are fuelling exciting discoveries of new plant species",
+     "year": 2025,
+     "journal": "American Journal of Botany",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.7554/elife.95857",
+     "title": "Decoupling both local and global abundance from global range size, challenging the abundance-occupancy relationship in birds",
+     "year": 2025,
+     "journal": "eLife",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ppp3.70005",
+     "title": "Expert identification blitz: A rapid high value approach for assessing and improving iNaturalist identification accuracy and data precision and confidence",
+     "year": 2025,
+     "journal": "PLANTS, PEOPLE, PLANET",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/nph.18813",
+     "title": "Photographs as an essential biodiversity resource: drivers of gaps in the vascular plant photographic record",
      "year": 2023,
-     "journal": "Journal of Ecology",
+     "journal": "New Phytologist",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1073/pnas.2117920119",
+     "title": "Reply to Robinson et al.: Data integration will form the basis of future abundance estimates",
+     "year": 2022,
+     "journal": "Proceedings of the National Academy of Sciences",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1093/gigascience/giac074",
+     "title": "Quantifying research interests in 7,521 mammalian species with <em>h</em>-index: a case study",
+     "year": 2022,
+     "journal": "GigaScience",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ece3.7307",
+     "title": "Is color data from citizen science photographs reliable for biodiversity research?",
+     "year": 2021,
+     "journal": "Ecology and Evolution",
      "has_abstract": true
     },
     {
@@ -538,79 +692,162 @@
      "has_abstract": false
     },
     {
-     "doi": "10.1111/csp2.287",
-     "title": "Widespread short‐term persistence of frog species after the 2019–2020 bushfires in eastern Australia revealed by citizen science",
+     "doi": "10.1073/pnas.2023170118",
+     "title": "Global abundance estimates for 9,700 bird species",
+     "year": 2021,
+     "journal": "Proceedings of the National Academy of Sciences",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1007/s10531-020-02088-1",
+     "title": "How to build a biodiverse city: environmental determinants of bird diversity within and among 1581 cities",
+     "year": 2021,
+     "journal": "Biodiversity and Conservation",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/ecog.04863",
+     "title": "A continental measure of urbanness predicts avian response to local urbanization",
      "year": 2020,
-     "journal": "Conservation Science and Practice",
+     "journal": "Ecography",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/nph.14766",
-     "title": "Are litter decomposition and fire linked through plant species traits?",
+     "doi": "10.1038/s41597-019-0344-7",
+     "title": "A global database for metacommunity ecology, integrating species, traits, environment and space",
+     "year": 2020,
+     "journal": "Scientific Data",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/oik.06158",
+     "title": "Generalists are the most urban‐tolerant of birds: a phylogenetically controlled analysis of ecological and life history traits using a novel continuous measure of bird responses to urbanization",
+     "year": 2019,
+     "journal": "Oikos",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1371/journal.pbio.3000357",
+     "title": "Improving big citizen science data: Moving beyond haphazard sampling",
+     "year": 2019,
+     "journal": "PLOS Biology",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1098/rspb.2019.1487",
+     "title": "Optimizing future biodiversity sampling by citizen scientists",
+     "year": 2019,
+     "journal": "Proceedings of the Royal Society B: Biological Sciences",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1016/j.biocon.2019.05.007",
+     "title": "Pelagic citizen science data reveal declines of seabirds off south-eastern Australia",
+     "year": 2019,
+     "journal": "Biological Conservation",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/1365-2664.13421",
+     "title": "Using citizen science data to define and track restoration targets in urban areas",
+     "year": 2019,
+     "journal": "Journal of Applied Ecology",
+     "has_abstract": true
+    }
+   ]
+  },
+  {
+   "name": "Phylogenetics, macroevolution and quantitative methods",
+   "description": "Development and application of comparative and theoretical methods, and macroevolutionary studies of angiosperm innovations (freezing tolerance, N2-fixation), with contributions to model adequacy, phylogenetic scaling, and trait variability across sexes.",
+   "works": [
+    {
+     "doi": "10.1111/jbi.12983",
+     "title": "A new metric to assess the predictive accuracy of multinomial land cover models",
      "year": 2017,
-     "journal": "New Phytologist",
+     "journal": "Journal of Biogeography",
      "has_abstract": true
     },
     {
-     "doi": "10.1002/ece3.2451",
-     "title": "Species mixture effects on flammability across plant phylogeny: the importance of litter particle size and the special role for non‐<i>Pinus</i> Pinaceae",
-     "year": 2016,
-     "journal": "Ecology and Evolution",
-     "has_abstract": true
+     "doi": "10.1016/j.cub.2017.03.049",
+     "title": "Phylogenetic comparative methods",
+     "year": 2017,
+     "journal": "Current Biology",
+     "has_abstract": false
     },
     {
-     "doi": "10.1111/nph.13317",
-     "title": "Flammability across the gymnosperm phylogeny: the importance of litter particle size",
+     "doi": "10.1038/s41477-017-0006-8",
+     "title": "Towards a universal model for carbon dioxide uptake by plants",
+     "year": 2017,
+     "journal": "Nature Plants",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1086/682022",
+     "title": "Model Adequacy and the Macroevolution of Angiosperm Functional Traits",
      "year": 2015,
-     "journal": "New Phytologist",
+     "journal": "The American Naturalist",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1111/2041-210x.12237",
+     "title": "Trees, branches and (square) roots: why evolutionary relatedness is not linearly related to functional distance",
+     "year": 2015,
+     "journal": "Methods in Ecology and Evolution",
      "has_abstract": true
     },
     {
-     "doi": "10.3390/f5040827",
-     "title": "Interactions between Fine Wood Decomposition  and Flammability",
+     "doi": "10.1038/nature14394",
+     "title": "Zanne et al. reply",
+     "year": 2015,
+     "journal": "Nature",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1038/ncomms5087",
+     "title": "A single evolutionary innovation drives the deep evolution of symbiotic N2-fixation in angiosperms",
      "year": 2014,
-     "journal": "Forests",
-     "has_abstract": true
+     "journal": "Nature Communications",
+     "has_abstract": false
     },
     {
-     "doi": "10.3389/fpls.2012.00063",
-     "title": "Species composition and fire: non-additive mixture effects on ground fuel flammability",
+     "doi": "10.1038/nature12872",
+     "title": "Three keys to the radiation of angiosperms into freezing environments",
+     "year": 2014,
+     "journal": "Nature",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1016/j.jtbi.2012.03.008",
+     "title": "An evolutionary attractor model for sapwood cross section in relation to leaf area",
      "year": 2012,
-     "journal": "Frontiers in Plant Science",
+     "journal": "Journal of Theoretical Biology",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1086/519400",
+     "title": "Trait Evolution, Community Assembly, and the Phylogenetic Structure of Ecological Communities",
+     "year": 2007,
+     "journal": "The American Naturalist",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1890/0012-9658(2006)87[1465:attfhf]2.0.co;2",
+     "title": "A trait-based test for habitat filtering: Convex hull volume",
+     "year": 2006,
+     "journal": "Ecology",
      "has_abstract": false
     }
    ]
   },
   {
-   "name": "Fungal and mycorrhizal ecology",
-   "description": "Life histories, evolution and global patterns of plant–microbe interactions and free‐living fungi, including mycorrhizal colonization, mutualism breakdown, and fungal dispersal ecology.",
+   "name": "Mycorrhizae and plant–microbe mutualisms",
+   "description": "Ecology and evolution of arbuscular and ectomycorrhizal fungi and legume–rhizobia, including life-history strategies, symbiosis persistence and loss, global colonization intensity, databases, and links to plant flammability.",
    "works": [
     {
      "doi": "10.1111/nph.20090",
      "title": "Progressing beyond colonization strategies to understand arbuscular mycorrhizal fungal life history",
      "year": 2024,
      "journal": "New Phytologist",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.32942/osf.io/a7f6g",
-     "title": "Fungal functional ecology: Bringing a trait-based approach to plant-associated fungi",
-     "year": 2020,
-     "journal": "Biological Reviews",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1016/j.funeco.2019.100902",
-     "title": "Finding fungal ecological strategies: Is recycling an option?",
-     "year": 2020,
-     "journal": "Fungal Ecology",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1111/oik.07000",
-     "title": "Environmental cues for dispersal in a filamentous fungus in simulated islands",
-     "year": 2020,
-     "journal": "Oikos",
      "has_abstract": true
     },
     {
@@ -642,6 +879,13 @@
      "has_abstract": false
     },
     {
+     "doi": "10.1111/geb.12272",
+     "title": "Global patterns of plant root colonization intensity by mycorrhizal fungi explained by climate and soil chemistry",
+     "year": 2015,
+     "journal": "Global Ecology and Biogeography",
+     "has_abstract": true
+    },
+    {
      "doi": "10.1073/pnas.1424030112",
      "title": "Evolutionary signals of symbiotic persistence in the legume–rhizobia mutualism",
      "year": 2015,
@@ -649,10 +893,10 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/jeb.12401",
-     "title": "Weak phylogenetic signal in physiological traits of methane‐oxidizing bacteria",
+     "doi": "10.1111/1365-2745.12208",
+     "title": "Functional distinctiveness of major plant lineages",
      "year": 2014,
-     "journal": "Journal of Evolutionary Biology",
+     "journal": "Journal of Ecology",
      "has_abstract": true
     },
     {
@@ -672,92 +916,9 @@
    ]
   },
   {
-   "name": "CO2 and water ecophysiology",
-   "description": "Experimental and meta‐analytic studies on plant growth, physiology and trait strategies under glacial to future CO2 levels and varying water availability.",
+   "name": "Open data, software and ML for traits and communities",
+   "description": "Infrastructure, software and machine learning workflows enabling trait extraction from herbaria, taxonomic name alignment, versioned data delivery, and integrated species–traits–environment databases.",
    "works": [
-    {
-     "doi": "10.1111/nph.16702",
-     "title": "When and where soil is important to modify the carbon and water economy of leaves",
-     "year": 2020,
-     "journal": "New Phytologist",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1016/j.flora.2018.11.006",
-     "title": "Hungry and thirsty: Effects of CO2 and limited water availability on plant performance",
-     "year": 2019,
-     "journal": "Flora",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1016/j.ppees.2017.11.003",
-     "title": "Increases in CO 2 from past low to future high levels result in “slower” strategies on the leaf economic spectrum",
-     "year": 2017,
-     "journal": "Perspectives in Plant Ecology, Evolution and Systematics",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1007/s11284-015-1330-y",
-     "title": "Does plant size affect growth responses to water availability at glacial, modern and future CO\n                    <sub>2</sub>\n                    concentrations?",
-     "year": 2016,
-     "journal": "Ecological Research",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1002/ece3.1687",
-     "title": "Winners always win: growth of a wide range of plant species from low to future high <scp>CO</scp><sub>2</sub>",
-     "year": 2015,
-     "journal": "Ecology and Evolution",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/1365-2745.12192",
-     "title": "Understanding the ecosystem implications of the angiosperm rise to dominance: leaf litter decomposability among magnoliids and other basal angiosperms",
-     "year": 2014,
-     "journal": "Journal of Ecology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1002/ece3.836",
-     "title": "Meta‐analysis reveals profound responses of plant traits to glacial <scp>CO</scp><sub>2</sub> levels",
-     "year": 2013,
-     "journal": "Ecology and Evolution",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/j.1365-2486.2011.02451.x",
-     "title": "TRY – a global database of plant traits",
-     "year": 2011,
-     "journal": "Global Change Biology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/j.1365-2486.2010.02294.x",
-     "title": "Taller and larger: shifts in Arctic tundra leaf traits after 16 years of experimental warming",
-     "year": 2011,
-     "journal": "Global Change Biology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1071/fp08216",
-     "title": "Why are non-photosynthetic tissues generally 13C enriched compared with leaves in C3 plants? Review and synthesis of current hypotheses",
-     "year": 2009,
-     "journal": "Functional Plant Biology",
-     "has_abstract": true
-    }
-   ]
-  },
-  {
-   "name": "Biodiversity data tools",
-   "description": "Software, workflows and databases that enable trait, phylogeny and community data integration, taxonomic name alignment, and versioned data delivery.",
-   "works": [
-    {
-     "doi": "10.1002/aps3.70012",
-     "title": "<i>infinitylists</i>: A Shiny application and R package for rapid generation of place‐based species checklists",
-     "year": 2025,
-     "journal": "Applications in Plant Sciences",
-     "has_abstract": true
-    },
     {
      "doi": "10.1071/bt24014",
      "title": "APCalign: an R package workflow and app for aligning and updating flora names to the Australian Plant Census",
@@ -766,17 +927,24 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1038/s41597-019-0344-7",
-     "title": "A global database for metacommunity ecology, integrating species, traits, environment and space",
-     "year": 2020,
-     "journal": "Scientific Data",
+     "doi": "10.1111/1365-2745.14354",
+     "title": "Using machine learning to link climate, phylogeny and leaf area in eucalypts through a 50‐fold expansion of leaf trait datasets",
+     "year": 2024,
+     "journal": "Journal of Ecology",
      "has_abstract": true
     },
     {
-     "doi": "10.1038/s41597-020-0420-z",
-     "title": "Author Correction: A global database for metacommunity ecology, integrating species, traits, environment and space",
-     "year": 2020,
-     "journal": "Scientific Data",
+     "doi": "10.1002/ajb2.16167",
+     "title": "Analyzing trait‐climate relationships within and among taxa using machine learning and herbarium specimens",
+     "year": 2023,
+     "journal": "American Journal of Botany",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1002/ecy.2614",
+     "title": "A global growth‐form database for 143,616 vascular plant species",
+     "year": 2019,
+     "journal": "Ecology",
      "has_abstract": true
     },
     {
@@ -787,10 +955,10 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1111/jbi.12983",
-     "title": "A new metric to assess the predictive accuracy of multinomial land cover models",
-     "year": 2017,
-     "journal": "Journal of Biogeography",
+     "doi": "10.1111/ecog.04481",
+     "title": "What we (don't) know about global plant diversity",
+     "year": 2019,
+     "journal": "Ecography",
      "has_abstract": true
     },
     {
@@ -801,134 +969,127 @@
      "has_abstract": true
     },
     {
-     "doi": "10.1093/bioinformatics/btq166",
-     "title": "Picante: R tools for integrating phylogenies and ecology",
-     "year": 2010,
-     "journal": "Bioinformatics",
-     "has_abstract": true
-    },
-    {
      "doi": "10.1071/fp10097",
      "title": "A unique web resource for physiology, ecology and the environmental sciences: PrometheusWiki",
      "year": 2010,
      "journal": "Functional Plant Biology",
      "has_abstract": true
+    },
+    {
+     "doi": "10.1093/bioinformatics/btq166",
+     "title": "Picante: R tools for integrating phylogenies and ecology",
+     "year": 2010,
+     "journal": "Bioinformatics",
+     "has_abstract": true
     }
    ]
   },
   {
-   "name": "Climate risks and conservation",
-   "description": "Climate change impacts on species distributions and physiology, with applications to conservation planning, translocations and site suitability in terrestrial and marine systems.",
+   "name": "Termites and deadwood decay",
+   "description": "How termites discover and consume wood, their interaction with microbes, and how climate and biogeography shape termite-driven decomposition and carbon cycling across the tropics and drylands.",
    "works": [
     {
-     "doi": "10.1002/oik.12260",
-     "title": "Dress for success: climate pressures predict fur insulation and body size in natural and reintroduced populations of a threatened marsupial",
+     "doi": "10.2139/ssrn.7000384",
+     "title": "Termite discovery disrupts microbial succession and deadwood decay",
      "year": 2026,
+     "journal": "",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/geb.13915",
+     "title": "Biogeographical Variation in Termite Distributions Alters Global Deadwood Decay",
+     "year": 2024,
+     "journal": "Global Ecology and Biogeography",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2435.14494",
+     "title": "Drivers of wood decay in tropical ecosystems: Termites versus microbes along spatial, temporal and experimental precipitation gradients",
+     "year": 2024,
+     "journal": "Functional Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/aec.13555",
+     "title": "Spatial variability in the contribution of termites to the decay of plant detritus",
+     "year": 2024,
+     "journal": "Austral Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.21203/rs.3.rs-1242094/v1",
+     "title": "Temperature sensitivity of termites determines global wood decay rates",
+     "year": 2022,
+     "journal": "",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1126/science.abo3856",
+     "title": "Termite sensitivity to temperature affects global wood decay rates",
+     "year": 2022,
+     "journal": "Science",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/1365-2745.12427",
+     "title": "Termites amplify the effects of wood traits on decomposition rates among multiple bamboo and dicot woody species",
+     "year": 2015,
+     "journal": "Journal of Ecology",
+     "has_abstract": true
+    }
+   ]
+  },
+  {
+   "name": "Fungal functional ecology and dispersal",
+   "description": "Trait-based and experimental studies of non-mycorrhizal fungi, including dispersal cues and allocation, endophyte community structure, competition–cooperation, and links to wood decay.",
+   "works": [
+    {
+     "doi": "10.1111/1365-2435.14025",
+     "title": "Initial wood trait variation overwhelms endophyte community effects for explaining decay trajectories",
+     "year": 2022,
+     "journal": "Functional Ecology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/oik.07000",
+     "title": "Environmental cues for dispersal in a filamentous fungus in simulated islands",
+     "year": 2020,
      "journal": "Oikos",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/gcb.70872",
-     "title": "Estimating the Impacts of Future Extreme Heat on Dryland Threatened Mammals: An Australian Case Study",
-     "year": 2026,
-     "journal": "Global Change Biology",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1071/mf16019",
-     "title": "Modelling the distribution of fish around an artificial reef",
-     "year": 2017,
-     "journal": "Marine and Freshwater Research",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1371/journal.pone.0130629",
-     "title": "A Geographic Mosaic of Climate Change Impacts on Terrestrial Vegetation: Which Areas Are Most at Risk?",
-     "year": 2015,
-     "journal": "PLOS ONE",
+     "doi": "10.1016/j.funeco.2019.100902",
+     "title": "Finding fungal ecological strategies: Is recycling an option?",
+     "year": 2020,
+     "journal": "Fungal Ecology",
      "has_abstract": false
     },
     {
-     "doi": "10.1111/ecog.00780",
-     "title": "Topographic, latitudinal and climatic distribution of\n                    <i>Pinus coulteri</i>\n                    : geographic range limits are not at the edge of the climate envelope",
-     "year": 2015,
-     "journal": "Ecography",
+     "doi": "10.32942/osf.io/a7f6g",
+     "title": "Fungal functional ecology: Bringing a trait-based approach to plant-associated fungi",
+     "year": 2020,
+     "journal": "Biological Reviews",
+     "has_abstract": false
+    },
+    {
+     "doi": "10.1002/ecy.2790",
+     "title": "Good neighbors aplenty: fungal endophytes rarely exhibit competitive exclusion patterns across a span of woody habitats",
+     "year": 2019,
+     "journal": "Ecology",
      "has_abstract": true
     },
     {
-     "doi": "10.1111/ele.12348",
-     "title": "The effects of phenotypic plasticity and local adaptation on forecasts of species range shifts under climate change",
-     "year": 2014,
-     "journal": "Ecology Letters",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/j.1472-4642.2010.00654.x",
-     "title": "The geography of climate change: implications for conservation biogeography",
-     "year": 2010,
-     "journal": "Diversity and Distributions",
+     "doi": "10.1002/ece3.5041",
+     "title": "When to cut your losses: Dispersal allocation in an asexual filamentous fungus in response to competition",
+     "year": 2019,
+     "journal": "Ecology and Evolution",
      "has_abstract": true
     }
    ]
   },
   {
-   "name": "Comparative methods and theory",
-   "description": "Development and application of phylogenetic and comparative frameworks and other general ecological theory spanning taxa and contexts.",
-   "works": [
-    {
-     "doi": "10.1016/j.evolhumbehav.2017.11.004",
-     "title": "Contest competition and men's facial hair: beards may not provide advantages in combat",
-     "year": 2018,
-     "journal": "Evolution and Human Behavior",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1016/j.cub.2017.03.049",
-     "title": "Phylogenetic comparative methods",
-     "year": 2017,
-     "journal": "Current Biology",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1111/2041-210x.12237",
-     "title": "Trees, branches and (square) roots: why evolutionary relatedness is not linearly related to functional distance",
-     "year": 2015,
-     "journal": "Methods in Ecology and Evolution",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1016/j.jtbi.2012.03.008",
-     "title": "An evolutionary attractor model for sapwood cross section in relation to leaf area",
-     "year": 2012,
-     "journal": "Journal of Theoretical Biology",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1086/519400",
-     "title": "Trait Evolution, Community Assembly, and the Phylogenetic Structure of Ecological Communities",
-     "year": 2007,
-     "journal": "The American Naturalist",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1890/0012-9658(2006)87[1465:attfhf]2.0.co;2",
-     "title": "A TRAIT-BASED TEST FOR HABITAT FILTERING: CONVEX HULL VOLUME",
-     "year": 2006,
-     "journal": "Ecology",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.2307/3071768",
-     "title": "Interactions between Herbivorous Fishes and Limiting Nutrients in a Tropical Stream Ecosystem",
-     "year": 2002,
-     "journal": "Ecology",
-     "has_abstract": false
-    }
-   ]
-  },
-  {
-   "name": "Biocrusts and cryptogams",
-   "description": "Ecology of biocrusts, lichens and mosses, including trait chemistry, spectral detection, and past and projected range shifts in drylands.",
+   "name": "Biocrusts, lichens and mosses",
+   "description": "Biological soil crusts and cryptogams: species-level spectroscopy, tissue chemistry and stoichiometry, large-scale resurvey and future range shifts, and synthesis of transplant experiments.",
    "works": [
     {
      "doi": "10.1111/1365-2745.14169",
@@ -968,229 +1129,46 @@
    ]
   },
   {
-   "name": "Ecosystem biogeochemistry",
-   "description": "Land‐use and hydrological impacts on carbon and nutrient pools, and trait‐based shifts in riparian and wetland ecosystems affecting soil chemistry and storage.",
+   "name": "Fire ecology and post-fire biodiversity",
+   "description": "Plant fire-response strategies and seed thermal thresholds, a national fire-trait database, and multi-taxa fauna and flora responses to the 2019–2020 Australian megafires.",
    "works": [
     {
-     "doi": "10.1002/clen.201700497",
-     "title": "Dam Effect on Soil Nutrients and Potentially Toxic Metals in a Reservoir Riparian Zone",
-     "year": 2019,
-     "journal": "CLEAN – Soil, Air, Water",
+     "doi": "10.1111/nph.20464",
+     "title": "Continental‐scale empirical evidence for relationships between fire response strategies and fire frequency",
+     "year": 2025,
+     "journal": "New Phytologist",
      "has_abstract": true
     },
     {
-     "doi": "10.1093/jpe/rtz016",
-     "title": "Strong restrictions on the trait range of co-occurring species in the newly created riparian zone of the Three Gorges Reservoir Area, China",
-     "year": 2019,
-     "journal": "Journal of Plant Ecology",
+     "doi": "10.1038/s41597-025-04705-6",
+     "title": "Fire ecology database for documenting plant responses to fire events in Australia",
+     "year": 2025,
+     "journal": "Scientific Data",
      "has_abstract": true
     },
     {
-     "doi": "10.1007/s10021-019-00373-x",
-     "title": "Natural and Regenerated Saltmarshes Exhibit Similar Soil and Belowground Organic Carbon Stocks, Root Production and Soil Respiration",
-     "year": 2019,
-     "journal": "Ecosystems",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.1016/j.jenvman.2014.12.039",
-     "title": "Impact of land-use on carbon storage as dependent on soil texture: Evidence from a desertified dryland using repeated paired sampling design",
-     "year": 2015,
-     "journal": "Journal of Environmental Management",
-     "has_abstract": false
-    },
-    {
-     "doi": "10.5194/bg-12-457-2015",
-     "title": "Divergence of above- and belowground C and N pool within predominant plant species along two precipitation gradients in North China",
-     "year": 2015,
-     "journal": "Biogeosciences",
-     "has_abstract": true
-    }
-   ]
-  },
-  {
-   "name": "Machine learning and remote sensing",
-   "description": "Automated trait extraction from herbarium images and drone or spectral approaches to scale biodiversity and trait–climate analyses.",
-   "works": [
-    {
-     "doi": "10.2139/ssrn.6631204",
-     "title": "Applying the spectral variability hypothesis to arid shrublands using multispectral drone imagery",
-     "year": 2026,
-     "journal": "",
-     "has_abstract": true
-    },
-    {
-     "doi": "10.1111/1365-2745.14354",
-     "title": "Using machine learning to link climate, phylogeny and leaf area in eucalypts through a 50‐fold expansion of leaf trait datasets",
+     "doi": "10.1002/ajb2.16432",
+     "title": "The landscape genetics of a mass‐flowering fire‐ephemeral plant",
      "year": 2024,
-     "journal": "Journal of Ecology",
+     "journal": "American Journal of Botany",
      "has_abstract": true
     },
     {
-     "doi": "10.1002/ajb2.16167",
-     "title": "Analyzing trait‐climate relationships within and among taxa using machine learning and herbarium specimens",
+     "doi": "10.1111/gcb.16955",
+     "title": "Multi‐taxon biodiversity responses to the 2019–2020 Australian megafires",
      "year": 2023,
-     "journal": "American Journal of Botany",
+     "journal": "Global Change Biology",
+     "has_abstract": true
+    },
+    {
+     "doi": "10.1111/aec.13105",
+     "title": "Using citizen science to measure recolonisation of birds after the Australian 2019–2020 mega‐fires",
+     "year": 2023,
+     "journal": "Austral Ecology",
      "has_abstract": true
     }
    ]
   }
  ],
- "unassigned": [
-  {
-   "doi": "10.1111/nph.18993",
-   "title": "Insect pollination for most of angiosperm evolutionary history",
-   "year": 2023
-  },
-  {
-   "doi": "10.1101/2023.01.31.526530",
-   "title": "Insects pollinated flowering plants for most of angiosperm evolutionary history",
-   "year": 2023
-  },
-  {
-   "doi": "10.1101/2020.05.23.106146",
-   "title": "Sex and Power: sexual dimorphism in trait variability and its eco-evolutionary and statistical implications",
-   "year": 2020
-  },
-  {
-   "doi": "10.7554/elife.63170",
-   "title": "Sexual dimorphism in trait variability and its eco-evolutionary and statistical implications",
-   "year": 2020
-  },
-  {
-   "doi": "10.3390/f11010105",
-   "title": "The Role of Climate Niche, Geofloristic History, Habitat Preference, and Allometry on Wood Density within a California Plant Community",
-   "year": 2020
-  },
-  {
-   "doi": "10.1002/ecy.2790",
-   "title": "Good neighbors aplenty: fungal endophytes rarely exhibit competitive exclusion patterns across a span of woody habitats",
-   "year": 2019
-  },
-  {
-   "doi": "10.32942/osf.io/ur4fe",
-   "title": "How to build a biodiverse city: environmental determinants of bird diversity within and among 1,581 cities",
-   "year": 2019
-  },
-  {
-   "doi": "10.1111/ecog.04481",
-   "title": "What we (don't) know about global plant diversity",
-   "year": 2019
-  },
-  {
-   "doi": "10.1002/ece3.5041",
-   "title": "When to cut your losses: Dispersal allocation in an asexual filamentous fungus in response to competition",
-   "year": 2019
-  },
-  {
-   "doi": "10.1101/404376",
-   "title": "What we (don’t) know about global plant diversity",
-   "year": 2018
-  },
-  {
-   "doi": "10.1111/1365-2435.12722",
-   "title": "A global method for calculating plant <scp>CSR</scp> ecological strategies applied across biomes world‐wide",
-   "year": 2017
-  },
-  {
-   "doi": "10.1038/s41477-017-0006-8",
-   "title": "Towards a universal model for carbon dioxide uptake by plants",
-   "year": 2017
-  },
-  {
-   "doi": "10.1038/srep26850",
-   "title": "Strong but diverging clonality - climate relationships of different plant clades explain weak overall pattern across China",
-   "year": 2016
-  },
-  {
-   "doi": "10.1111/1365-2435.12449",
-   "title": "Burn or rot: leaf traits explain why flammability and decomposability are decoupled across species",
-   "year": 2015
-  },
-  {
-   "doi": "10.1111/geb.12296",
-   "title": "Global effects of soil and climate on leaf photosynthetic traits and rates",
-   "year": 2015
-  },
-  {
-   "doi": "10.1038/nature14394",
-   "title": "Zanne et al. reply",
-   "year": 2015
-  },
-  {
-   "doi": "10.1038/ncomms5087",
-   "title": "A single evolutionary innovation drives the deep evolution of symbiotic N2-fixation in angiosperms",
-   "year": 2014
-  },
-  {
-   "doi": "10.1111/1365-2745.12208",
-   "title": "Functional distinctiveness of major plant lineages",
-   "year": 2014
-  },
-  {
-   "doi": "10.1111/geb.12172",
-   "title": "Global relationship of wood and leaf litter decomposability: the role of functional traits within and across plant organs",
-   "year": 2014
-  },
-  {
-   "doi": "10.1111/1365-2745.12260",
-   "title": "How much of the world is woody?",
-   "year": 2014
-  },
-  {
-   "doi": "10.1038/nature12872",
-   "title": "Three keys to the radiation of angiosperms into freezing environments",
-   "year": 2014
-  },
-  {
-   "doi": "10.1111/nph.12219",
-   "title": "A broader perspective on plant domestication and nutrient and carbon cycling",
-   "year": 2013
-  },
-  {
-   "doi": "10.1111/cobi.12088",
-   "title": "Effects of Growth Form and Functional Traits on Response of Woody Plants to Clearing and Fragmentation of Subtropical Rainforest",
-   "year": 2013
-  },
-  {
-   "doi": "10.1890/12-1602.1",
-   "title": "Leaf traits within communities: Context may affect the mapping of traits to function",
-   "year": 2013
-  },
-  {
-   "doi": "10.1071/bt12225",
-   "title": "New handbook for standardised measurement of plant functional traits worldwide",
-   "year": 2013
-  },
-  {
-   "doi": "10.1111/j.1469-8137.2011.03732.x",
-   "title": "Putting plant resistance traits on the map: a test of the idea that plants are better defended at lower latitudes",
-   "year": 2011
-  },
-  {
-   "doi": "10.1890/07-1134.1",
-   "title": "Community assembly and shifts in plant trait distributions across an environmental gradient in coastal California",
-   "year": 2009
-  },
-  {
-   "doi": "10.1111/j.1461-0248.2008.01259.x",
-   "title": "Global meta‐analysis of wood decomposition rates: a role for trait variation among tree species?",
-   "year": 2009
-  },
-  {
-   "doi": "10.1111/j.1365-2435.2007.01323.x",
-   "title": "Adjustment of structure and function of Hawaiian <i>Metrosideros polymorpha</i> at high vs. low precipitation",
-   "year": 2007
-  },
-  {
-   "doi": "10.1111/j.1469-8137.2006.01712.x",
-   "title": "Wood density and vessel traits as distinct correlates of ecological strategy in 51 California coast range angiosperms",
-   "year": 2006
-  },
-  {
-   "doi": "10.1034/j.1600-0706.2003.11697.x",
-   "title": "Regional and local patterns in plant species richness with respect to resource availability",
-   "year": 2003
-  }
- ]
+ "unassigned": []
 }
