@@ -4,25 +4,27 @@
 Two steps:
   1. Fetch abstracts from Crossref for every work in data/publications.json
      that has a DOI (~90% coverage, including works back to 2001).
-  2. Group them into coherent research themes, either by asking Claude (a
-     tool call, not free-text parsing) or, with --offline, via TF-IDF +
-     k-means -- a lower-quality but zero-dependency, zero-cost fallback that
-     needs no Anthropic API access at all. Both paths write the same JSON
+  2. Group them into coherent research themes, either by asking an OpenAI
+     model (a strict JSON schema, not free-text parsing) or, with --offline,
+     via TF-IDF + k-means -- a lower-quality but zero-dependency, zero-cost
+     fallback that needs no API access at all. Both paths write the same JSON
      shape, so the site layout doesn't care which one produced it.
 
 This is a manual, occasional script -- unlike fetch_publications.py it is NOT
 run by a scheduled workflow. Re-run it by hand whenever the publication list
 has moved on enough to be worth reclustering.
 
-The default (LLM) path requires the `anthropic` package and API credentials
-(ANTHROPIC_API_KEY, or an `ant auth login` profile).
+The default (LLM) path requires the `openai` package and an OPENAI_API_KEY in
+the environment. Never hardcode the key here -- this repo is public.
 
 Run with no arguments:       python3 scripts/cluster_abstracts.py
+Pick a model:                python3 scripts/cluster_abstracts.py --model gpt-5
 Run offline (no API needed): python3 scripts/cluster_abstracts.py --offline
 """
 
 import argparse
 import json
+import os
 import pathlib
 import re
 import sys
@@ -35,7 +37,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLICATIONS = ROOT / "data" / "publications.json"
 OUT = ROOT / "data" / "abstract_clusters.json"
 
-MODEL = "claude-opus-4-8"
+DEFAULT_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5")
 BATCH_SIZE = 20  # Crossref DOI filters are OR'd; keeps the URL comfortably short.
 
 JATS_TAG = re.compile(r"<[^>]+>")
@@ -69,10 +71,11 @@ def fetch_abstracts(dois):
     return found
 
 
-CLUSTER_TOOL = {
+CLUSTER_SCHEMA = {
     "name": "assign_research_clusters",
     "description": "Group the given academic works into coherent research themes.",
-    "input_schema": {
+    "strict": True,
+    "schema": {
         "type": "object",
         "properties": {
             "clusters": {
@@ -103,7 +106,6 @@ CLUSTER_TOOL = {
         "required": ["clusters"],
         "additionalProperties": False,
     },
-    "strict": True,
 }
 
 SYSTEM_PROMPT = """You are helping an ecologist understand the shape of their own \
@@ -165,35 +167,43 @@ def cluster_offline(works, abstracts, k_range=range(6, 13)):
     return clusters
 
 
-def cluster_with_claude(works, abstracts):
+def cluster_with_openai(works, abstracts, model):
     try:
-        import anthropic
+        import openai
     except ImportError:
-        sys.exit("This script needs the `anthropic` package: pip install anthropic")
+        sys.exit("This script needs the `openai` package: pip install openai")
 
     corpus = build_corpus_text(works, abstracts)
-    print(f"Asking {MODEL} to cluster {len(works)} works...", file=sys.stderr)
-    client = anthropic.Anthropic()
+    print(f"Asking {model} to cluster {len(works)} works...", file=sys.stderr)
+    client = openai.OpenAI()  # reads OPENAI_API_KEY from the environment
     try:
-        response = client.messages.create(
-            model=MODEL,
-            max_tokens=8192,
-            thinking={"type": "adaptive"},
-            output_config={"effort": "high"},
-            system=SYSTEM_PROMPT,
-            tools=[CLUSTER_TOOL],
-            tool_choice={"type": "tool", "name": "assign_research_clusters"},
-            messages=[{"role": "user", "content": corpus}],
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": corpus},
+            ],
+            response_format={
+                "type": "json_schema",
+                "json_schema": CLUSTER_SCHEMA,
+            },
         )
-    except anthropic.AuthenticationError:
+    except openai.AuthenticationError:
         sys.exit(
-            "No Anthropic API credentials found. Set ANTHROPIC_API_KEY, or run "
-            "`ant auth login`, then re-run this script. Or pass --offline to "
-            "cluster without the API (lower quality, but free and local)."
+            "No OpenAI API credentials found. Set OPENAI_API_KEY in your "
+            "environment, then re-run this script. Or pass --offline to cluster "
+            "without the API (lower quality, but free and local)."
+        )
+    except openai.NotFoundError:
+        sys.exit(
+            f"Model {model!r} is not available to this API key. Pass a different "
+            "one with --model, or set OPENAI_MODEL."
         )
 
-    tool_use = next(b for b in response.content if b.type == "tool_use")
-    return tool_use.input["clusters"]
+    message = response.choices[0].message
+    if message.refusal:
+        sys.exit(f"The model refused to answer: {message.refusal}")
+    return json.loads(message.content)["clusters"]
 
 
 def build_corpus_text(works, abstracts):
@@ -216,7 +226,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--offline", action="store_true",
-        help="cluster with TF-IDF + k-means instead of Claude -- no API key or network cost beyond Crossref",
+        help="cluster with TF-IDF + k-means instead of the API -- no API key or network cost beyond Crossref",
+    )
+    parser.add_argument(
+        "--model", default=DEFAULT_MODEL,
+        help=f"OpenAI model to cluster with (default: {DEFAULT_MODEL}; also settable via OPENAI_MODEL)",
     )
     args = parser.parse_args()
 
@@ -232,8 +246,8 @@ def main():
         clusters = cluster_offline(works, abstracts)
         method = "tfidf-kmeans (offline fallback, not LLM-based)"
     else:
-        clusters = cluster_with_claude(works, abstracts)
-        method = MODEL
+        clusters = cluster_with_openai(works, abstracts, args.model)
+        method = args.model
 
     by_doi = {w["doi"]: w for w in works}
     assigned_dois = set()
