@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-21",
+ "generated": "2026-07-22",
  "orcid": "0000-0003-4080-4073",
- "count": 169,
- "with_authors": 164,
+ "count": 161,
+ "with_authors": 157,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -21,11 +21,11 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Rachael Gallagher",
+     "name": "Rachael V. Gallagher",
      "me": false
     }
    ],
@@ -44,11 +44,11 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Adrian  G. Fisher",
+     "name": "Adrian G. Fisher",
      "me": false
     },
     {
@@ -121,11 +121,11 @@
    "url": "https://doi.org/10.2139/ssrn.6582147",
    "authors": [
     {
-     "name": "Joshua Lee",
+     "name": "Joshua S. Lee",
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -137,7 +137,7 @@
      "me": false
     },
     {
-     "name": "Rachael Gallagher",
+     "name": "Rachael V. Gallagher",
      "me": false
     }
    ],
@@ -152,7 +152,7 @@
    "url": "https://doi.org/10.2139/ssrn.7000384",
    "authors": [
     {
-     "name": "Baptiste  J. Wijas",
+     "name": "Baptiste J. Wijas",
      "me": false
     },
     {
@@ -160,19 +160,19 @@
      "me": false
     },
     {
-     "name": "Steven  D. Allison",
+     "name": "Steven D. Allison",
      "me": false
     },
     {
-     "name": "Lucas  A. Cernusak",
+     "name": "Lucas A. Cernusak",
      "me": false
     },
     {
-     "name": "Alexander  W. Cheesman",
+     "name": "Alexander W. Cheesman",
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -184,11 +184,11 @@
      "me": false
     },
     {
-     "name": "Jeff  R. Powell",
+     "name": "Jeff R. Powell",
      "me": false
     },
     {
-     "name": "Amy  E. Zanne",
+     "name": "Amy E. Zanne",
      "me": false
     }
    ],
@@ -207,7 +207,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -218,7 +218,7 @@
    "me_index": 1
   },
   {
-   "title": "<i>infinitylists</i>: A Shiny application and R package for rapid generation of place‐based species checklists",
+   "title": "<em>infinitylists</em>: A Shiny application and R package for rapid generation of place‐based species checklists",
    "year": 2025,
    "journal": "Applications in Plant Sciences",
    "type": "journal-article",
@@ -280,7 +280,7 @@
      "me": false
     },
     {
-     "name": "Mark K. J. Ooi",
+     "name": "Mark K.J. Ooi",
      "me": false
     },
     {
@@ -307,11 +307,11 @@
      "me": false
     },
     {
-     "name": "William K Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Corey T Callaghan",
+     "name": "Corey T. Callaghan",
      "me": false
     }
    ],
@@ -350,7 +350,7 @@
      "me": false
     },
     {
-     "name": "Mark K. J. Ooi",
+     "name": "Mark K.J. Ooi",
      "me": false
     }
    ],
@@ -385,7 +385,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -443,7 +443,7 @@
      "me": true
     },
     {
-     "name": "Mark Ooi",
+     "name": "Mark K.J. Ooi",
      "me": false
     },
     {
@@ -635,7 +635,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -690,7 +690,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -736,11 +736,11 @@
      "me": false
     },
     {
-     "name": "Jason Bragg",
+     "name": "Jason G. Bragg",
      "me": false
     },
     {
-     "name": "Mark Ooi",
+     "name": "Mark K.J. Ooi",
      "me": false
     },
     {
@@ -752,7 +752,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -798,7 +798,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -825,7 +825,7 @@
      "me": false
     },
     {
-     "name": "Richard S. P. van Logtestijn",
+     "name": "Richard S. P. van Logtestijn",
      "me": false
     },
     {
@@ -837,7 +837,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -864,38 +864,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
-     "me": true
-    },
-    {
-     "name": "Hervé Sauquet",
-     "me": false
-    }
-   ],
-   "me_index": 3
-  },
-  {
-   "title": "Insects pollinated flowering plants for most of angiosperm evolutionary history",
-   "year": 2023,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.1101/2023.01.31.526530",
-   "url": "https://doi.org/10.1101/2023.01.31.526530",
-   "authors": [
-    {
-     "name": "Ruby E. Stephens",
-     "me": false
-    },
-    {
-     "name": "Rachael V. Gallagher",
-     "me": false
-    },
-    {
-     "name": "Lily Dun",
-     "me": false
-    },
-    {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -949,7 +918,7 @@
    "url": "https://doi.org/10.1111/gcb.16955",
    "authors": [
     {
-     "name": "Simon B. Z. Gorta",
+     "name": "Simon B.Z. Gorta",
      "me": false
     },
     {
@@ -961,7 +930,7 @@
      "me": false
     },
     {
-     "name": "Mark K. J. Ooi",
+     "name": "Mark K.J. Ooi",
      "me": false
     },
     {
@@ -973,7 +942,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -1000,7 +969,7 @@
      "me": false
     },
     {
-     "name": "Elizabeth Wenk",
+     "name": "Elizabeth H. Wenk",
      "me": false
     },
     {
@@ -1043,7 +1012,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -1081,7 +1050,7 @@
    "url": "https://doi.org/10.1111/1365-2435.14025",
    "authors": [
     {
-     "name": "Marissa Lee",
+     "name": "Marissa R. Lee",
      "me": false
     },
     {
@@ -1101,11 +1070,11 @@
      "me": false
     },
     {
-     "name": "Rhiannon Dalrymple",
+     "name": "Rhiannon L. Dalrymple",
      "me": false
     },
     {
-     "name": "Jessica Rigg",
+     "name": "Jessica L. Rigg",
      "me": false
     },
     {
@@ -1120,7 +1089,7 @@
    "me_index": 7
   },
   {
-   "title": "Quantifying research interests in 7,521 mammalian species with <i>h</i>-index: a case study",
+   "title": "Quantifying research interests in 7,521 mammalian species with <em>h</em>-index: a case study",
    "year": 2022,
    "journal": "GigaScience",
    "type": "journal-article",
@@ -1136,7 +1105,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -1147,7 +1116,7 @@
    "me_index": 2
   },
   {
-   "title": "Reply to Robinson et al.: Data integration will form the basis of future abundance estimates",
+   "title": "Reply to Robinson et al.: Data integration will form the basis of future abundance estimates",
    "year": 2022,
    "journal": "Proceedings of the National Academy of Sciences",
    "type": "journal-article",
@@ -1178,7 +1147,7 @@
    "url": "https://doi.org/10.21203/rs.3.rs-1242094/v1",
    "authors": [
     {
-     "name": "Amy Zanne",
+     "name": "Amy E. Zanne",
      "me": false
     },
     {
@@ -1186,23 +1155,23 @@
      "me": false
     },
     {
-     "name": "Jeff Powell",
+     "name": "Jeff R. Powell",
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "James Dalling",
+     "name": "James W. Dalling",
      "me": false
     },
     {
-     "name": "Amy Austin",
+     "name": "Amy T. Austin",
      "me": false
     },
     {
-     "name": "Aimee Classen",
+     "name": "Aimée T. Classen",
      "me": false
     },
     {
@@ -1214,11 +1183,11 @@
      "me": false
     },
     {
-     "name": "Catherine Parr",
+     "name": "Catherine L. Parr",
      "me": false
     },
     {
-     "name": "E. Adair",
+     "name": "E. Carol Adair",
      "me": false
     },
     {
@@ -1234,7 +1203,7 @@
      "me": false
     },
     {
-     "name": "Deborah Apgaua",
+     "name": "Deborah Mattos Guimarães Apgaua",
      "me": false
     },
     {
@@ -1246,15 +1215,15 @@
      "me": false
     },
     {
-     "name": "Stefan Arndt",
+     "name": "Stefan K. Arndt",
      "me": false
     },
     {
-     "name": "Louise Ashton",
+     "name": "Louise A. Ashton",
      "me": false
     },
     {
-     "name": "Nicholas Barber",
+     "name": "Nicholas A. Barber",
      "me": false
     },
     {
@@ -1262,7 +1231,7 @@
      "me": false
     },
     {
-     "name": "Matty Berg",
+     "name": "Matty P. Berg",
      "me": false
     },
     {
@@ -1270,11 +1239,11 @@
      "me": false
     },
     {
-     "name": "Matthias Boer",
+     "name": "Matthias M. Boer",
      "me": false
     },
     {
-     "name": "José Bonet",
+     "name": "José Antonio Bonet",
      "me": false
     },
     {
@@ -1282,7 +1251,7 @@
      "me": false
     },
     {
-     "name": "Tynan Burkhardt",
+     "name": "Tynan J. Burkhardt",
      "me": false
     },
     {
@@ -1294,19 +1263,19 @@
      "me": false
     },
     {
-     "name": "Lucas Cernusak",
+     "name": "Lucas A. Cernusak",
      "me": false
     },
     {
-     "name": "Alexander Cheesman",
+     "name": "Alexander W. Cheesman",
      "me": false
     },
     {
-     "name": "Taina Cirne-Silva",
+     "name": "Tainá M. Cirne-Silva",
      "me": false
     },
     {
-     "name": "Jamie Cleverly",
+     "name": "Jamie R. Cleverly",
      "me": false
     },
     {
@@ -1314,7 +1283,7 @@
      "me": false
     },
     {
-     "name": "Timothy Curran",
+     "name": "Timothy J. Curran",
      "me": false
     },
     {
@@ -1338,7 +1307,7 @@
      "me": false
     },
     {
-     "name": "Romina Fernandez",
+     "name": "Romina D. Fernandez",
      "me": false
     },
     {
@@ -1346,11 +1315,11 @@
      "me": false
     },
     {
-     "name": "Marco Fontes",
+     "name": "Marco A. L. Fontes",
      "me": false
     },
     {
-     "name": "Mark Galatowitsch",
+     "name": "Mark L. Galatowitsch",
      "me": false
     },
     {
@@ -1362,7 +1331,7 @@
      "me": false
     },
     {
-     "name": "Peter Grace",
+     "name": "Peter R. Grace",
      "me": false
     },
     {
@@ -1370,7 +1339,7 @@
      "me": false
     },
     {
-     "name": "Hannah Griffiths",
+     "name": "Hannah M. Griffiths",
      "me": false
     },
     {
@@ -1382,7 +1351,7 @@
      "me": false
     },
     {
-     "name": "Mariet Hefting",
+     "name": "Mariet M. Hefting",
      "me": false
     },
     {
@@ -1390,7 +1359,7 @@
      "me": false
     },
     {
-     "name": "Lindsay Hutley",
+     "name": "Lindsay B. Hutley",
      "me": false
     },
     {
@@ -1406,7 +1375,7 @@
      "me": false
     },
     {
-     "name": "Joost Keuskamp",
+     "name": "Joost A. Keuskamp",
      "me": false
     },
     {
@@ -1426,19 +1395,19 @@
      "me": false
     },
     {
-     "name": "Ravi Mariano",
+     "name": "Ravi F. Mariano",
      "me": false
     },
     {
-     "name": "Wayne Meyer",
+     "name": "Wayne S. Meyer",
      "me": false
     },
     {
-     "name": "Akira Mori",
+     "name": "Akira S. Mori",
      "me": false
     },
     {
-     "name": "Aloysio Moura",
+     "name": "Aloysio S. Moura",
      "me": false
     },
     {
@@ -1450,7 +1419,7 @@
      "me": false
     },
     {
-     "name": "Rafael Oliveira",
+     "name": "Rafael S. Oliveira",
      "me": false
     },
     {
@@ -1470,15 +1439,15 @@
      "me": false
     },
     {
-     "name": "Luis Perez",
+     "name": "Luis I. Perez",
      "me": false
     },
     {
-     "name": "Juan Posada",
+     "name": "Juan M. Posada",
      "me": false
     },
     {
-     "name": "Cecilia Prada",
+     "name": "Cecilia M. Prada",
      "me": false
     },
     {
@@ -1486,7 +1455,7 @@
      "me": false
     },
     {
-     "name": "Suzanne Prober",
+     "name": "Suzanne M. Prober",
      "me": false
     },
     {
@@ -1494,7 +1463,7 @@
      "me": false
     },
     {
-     "name": "Gabriel Quansah",
+     "name": "Gabriel W. Quansah",
      "me": false
     },
     {
@@ -1506,15 +1475,15 @@
      "me": false
     },
     {
-     "name": "Mark Robertson",
+     "name": "Mark P. Robertson",
      "me": false
     },
     {
-     "name": "Lucas Rocha",
+     "name": "Lucas F. Rocha",
      "me": false
     },
     {
-     "name": "Megan Rúa",
+     "name": "Megan A. Rúa",
      "me": false
     },
     {
@@ -1522,19 +1491,19 @@
      "me": false
     },
     {
-     "name": "Richard Silberstein",
+     "name": "Richard P. Silberstein",
      "me": false
     },
     {
-     "name": "Mateus Silva",
+     "name": "Mateus C. Silva",
      "me": false
     },
     {
-     "name": "Flávia Siqueira",
+     "name": "Flávia Freire Siqueira",
      "me": false
     },
     {
-     "name": "Matthew Stillwagon",
+     "name": "Matthew Glenn Stillwagon",
      "me": false
     },
     {
@@ -1542,7 +1511,7 @@
      "me": false
     },
     {
-     "name": "Melanie Taylor",
+     "name": "Melanie K. Taylor",
      "me": false
     },
     {
@@ -1550,7 +1519,7 @@
      "me": false
     },
     {
-     "name": "David Tng",
+     "name": "David Yue Phin Tng",
      "me": false
     },
     {
@@ -1562,11 +1531,11 @@
      "me": false
     },
     {
-     "name": "Michael Ulyshen",
+     "name": "Michael D. Ulyshen",
      "me": false
     },
     {
-     "name": "Oscar Valverde-Barrantes",
+     "name": "Oscar J. Valverde-Barrantes",
      "me": false
     },
     {
@@ -1574,7 +1543,7 @@
      "me": false
     },
     {
-     "name": "Richard van Logtestijn",
+     "name": "Richard Van Logtestijn",
      "me": false
     },
     {
@@ -1582,11 +1551,11 @@
      "me": false
     },
     {
-     "name": "Jason Vogel",
+     "name": "Jason G. Vogel",
      "me": false
     },
     {
-     "name": "Timothy Wardlaw",
+     "name": "Timothy J. Wardlaw",
      "me": false
     },
     {
@@ -1598,7 +1567,7 @@
      "me": false
     },
     {
-     "name": "Michaela Woods",
+     "name": "Michaela J. Woods",
      "me": false
     },
     {
@@ -1606,7 +1575,7 @@
      "me": false
     },
     {
-     "name": "Marcela Méndez",
+     "name": "M. Soledad Méndez",
      "me": false
     }
    ],
@@ -1677,7 +1646,7 @@
      "me": false
     },
     {
-     "name": "Deborah Apgaua",
+     "name": "Deborah Mattos Guimarães Apgaua",
      "me": false
     },
     {
@@ -1753,7 +1722,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -1997,7 +1966,7 @@
      "me": false
     },
     {
-     "name": "David Y. P. Tng",
+     "name": "David Yue Phin Tng",
      "me": false
     },
     {
@@ -2192,7 +2161,7 @@
      "me": false
     },
     {
-     "name": "Guy Taseski",
+     "name": "Guy M. Taseski",
      "me": false
     },
     {
@@ -2293,7 +2262,7 @@
      "me": false
     },
     {
-     "name": "Nigel Andrew",
+     "name": "Nigel R. Andrew",
      "me": false
     },
     {
@@ -2353,7 +2322,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -2477,7 +2446,7 @@
      "me": false
     },
     {
-     "name": "Robin Pakeman",
+     "name": "Robin J. Pakeman",
      "me": false
     },
     {
@@ -2616,342 +2585,11 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
    "me_index": 1
-  },
-  {
-   "title": "Author Correction: A global database for metacommunity ecology, integrating species, traits, environment and space",
-   "year": 2020,
-   "journal": "Scientific Data",
-   "type": "journal-article",
-   "doi": "10.1038/s41597-020-0420-z",
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85080879108&partnerID=MN8TOARS",
-   "authors": [
-    {
-     "name": "Alienor Jeliazkov",
-     "me": false
-    },
-    {
-     "name": "Darko Mijatovic",
-     "me": false
-    },
-    {
-     "name": "Stéphane Chantepie",
-     "me": false
-    },
-    {
-     "name": "Nigel Andrew",
-     "me": false
-    },
-    {
-     "name": "Raphaël Arlettaz",
-     "me": false
-    },
-    {
-     "name": "Luc Barbaro",
-     "me": false
-    },
-    {
-     "name": "Nadia Barsoum",
-     "me": false
-    },
-    {
-     "name": "Alena Bartonova",
-     "me": false
-    },
-    {
-     "name": "Elena Belskaya",
-     "me": false
-    },
-    {
-     "name": "Núria Bonada",
-     "me": false
-    },
-    {
-     "name": "Anik Brind’Amour",
-     "me": false
-    },
-    {
-     "name": "Rodrigo Carvalho",
-     "me": false
-    },
-    {
-     "name": "Helena Castro",
-     "me": false
-    },
-    {
-     "name": "Damian Chmura",
-     "me": false
-    },
-    {
-     "name": "Philippe Choler",
-     "me": false
-    },
-    {
-     "name": "Karen Chong-Seng",
-     "me": false
-    },
-    {
-     "name": "Daniel Cleary",
-     "me": false
-    },
-    {
-     "name": "Anouk Cormont",
-     "me": false
-    },
-    {
-     "name": "William Cornwell",
-     "me": true
-    },
-    {
-     "name": "Ramiro de Campos",
-     "me": false
-    },
-    {
-     "name": "Nicole de Voogd",
-     "me": false
-    },
-    {
-     "name": "Sylvain Doledec",
-     "me": false
-    },
-    {
-     "name": "Joshua Drew",
-     "me": false
-    },
-    {
-     "name": "Frank Dziock",
-     "me": false
-    },
-    {
-     "name": "Anthony Eallonardo",
-     "me": false
-    },
-    {
-     "name": "Melanie J. Edgar",
-     "me": false
-    },
-    {
-     "name": "Fábio Farneda",
-     "me": false
-    },
-    {
-     "name": "Domingo Flores Hernandez",
-     "me": false
-    },
-    {
-     "name": "Cédric Frenette-Dussault",
-     "me": false
-    },
-    {
-     "name": "Guillaume Fried",
-     "me": false
-    },
-    {
-     "name": "Belinda Gallardo",
-     "me": false
-    },
-    {
-     "name": "Heloise Gibb",
-     "me": false
-    },
-    {
-     "name": "Thiago Gonçalves-Souza",
-     "me": false
-    },
-    {
-     "name": "Janet Higuti",
-     "me": false
-    },
-    {
-     "name": "Jean-Yves Humbert",
-     "me": false
-    },
-    {
-     "name": "Boris R. Krasnov",
-     "me": false
-    },
-    {
-     "name": "Eric Le Saux",
-     "me": false
-    },
-    {
-     "name": "Zoe Lindo",
-     "me": false
-    },
-    {
-     "name": "Adria Lopez-Baucells",
-     "me": false
-    },
-    {
-     "name": "Elizabeth Lowe",
-     "me": false
-    },
-    {
-     "name": "Bryndis Marteinsdottir",
-     "me": false
-    },
-    {
-     "name": "Koen Martens",
-     "me": false
-    },
-    {
-     "name": "Peter Meffert",
-     "me": false
-    },
-    {
-     "name": "Andres Mellado-Díaz",
-     "me": false
-    },
-    {
-     "name": "Myles H. M. Menz",
-     "me": false
-    },
-    {
-     "name": "Christoph F. J. Meyer",
-     "me": false
-    },
-    {
-     "name": "Julia Ramos Miranda",
-     "me": false
-    },
-    {
-     "name": "David Mouillot",
-     "me": false
-    },
-    {
-     "name": "Alessandro Ossola",
-     "me": false
-    },
-    {
-     "name": "Robin Pakeman",
-     "me": false
-    },
-    {
-     "name": "Sandrine Pavoine",
-     "me": false
-    },
-    {
-     "name": "Burak Pekin",
-     "me": false
-    },
-    {
-     "name": "Joan Pino",
-     "me": false
-    },
-    {
-     "name": "Arnaud Pocheville",
-     "me": false
-    },
-    {
-     "name": "Francesco Pomati",
-     "me": false
-    },
-    {
-     "name": "Peter Poschlod",
-     "me": false
-    },
-    {
-     "name": "Honor C. Prentice",
-     "me": false
-    },
-    {
-     "name": "Oliver Purschke",
-     "me": false
-    },
-    {
-     "name": "Valerie Raevel",
-     "me": false
-    },
-    {
-     "name": "Triin Reitalu",
-     "me": false
-    },
-    {
-     "name": "Willem Renema",
-     "me": false
-    },
-    {
-     "name": "Ignacio Ribera",
-     "me": false
-    },
-    {
-     "name": "Natalie Robinson",
-     "me": false
-    },
-    {
-     "name": "Bjorn Robroek",
-     "me": false
-    },
-    {
-     "name": "Ricardo Rocha",
-     "me": false
-    },
-    {
-     "name": "Sen-Her Shieh",
-     "me": false
-    },
-    {
-     "name": "Rebecca Spake",
-     "me": false
-    },
-    {
-     "name": "Monika Staniaszek-Kik",
-     "me": false
-    },
-    {
-     "name": "Michal Stanko",
-     "me": false
-    },
-    {
-     "name": "Francisco Leonardo Tejerina-Garro",
-     "me": false
-    },
-    {
-     "name": "Cajo ter Braak",
-     "me": false
-    },
-    {
-     "name": "Mark C. Urban",
-     "me": false
-    },
-    {
-     "name": "Roel van Klink",
-     "me": false
-    },
-    {
-     "name": "Sébastien Villéger",
-     "me": false
-    },
-    {
-     "name": "Ruut Wegman",
-     "me": false
-    },
-    {
-     "name": "Martin J. Westgate",
-     "me": false
-    },
-    {
-     "name": "Jonas Wolff",
-     "me": false
-    },
-    {
-     "name": "Jan Żarnowiec",
-     "me": false
-    },
-    {
-     "name": "Maxim Zolotarev",
-     "me": false
-    },
-    {
-     "name": "Jonathan M. Chase",
-     "me": false
-    }
-   ],
-   "me_index": 18
   },
   {
    "title": "Environmental cues for dispersal in a filamentous fungus in simulated islands",
@@ -3024,7 +2662,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85075435168&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Amy Zanne",
+     "name": "Amy E. Zanne",
      "me": false
     },
     {
@@ -3036,7 +2674,7 @@
      "me": false
     },
     {
-     "name": "Carlos Aguilar-Trigueros",
+     "name": "Carlos A Aguilar-Trigueros",
      "me": false
     },
     {
@@ -3056,7 +2694,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -3075,23 +2713,23 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85081615059&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "H. J. D. Thomas",
+     "name": "Haydn J. D. Thomas",
      "me": false
     },
     {
-     "name": "A. D. Bjorkman",
+     "name": "Anne D. Bjorkman",
      "me": false
     },
     {
-     "name": "I. H. Myers-Smith",
+     "name": "Isla H. Myers-Smith",
      "me": false
     },
     {
-     "name": "S. C. Elmendorf",
+     "name": "Sarah C. Elmendorf",
      "me": false
     },
     {
-     "name": "J. Kattge",
+     "name": "Jens Kattge",
      "me": false
     },
     {
@@ -3099,191 +2737,191 @@
      "me": false
     },
     {
-     "name": "M. Vellend",
+     "name": "Mark Vellend",
      "me": false
     },
     {
-     "name": "D. Blok",
+     "name": "Daan Blok",
      "me": false
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "B. C. Forbes",
+     "name": "Bruce C. Forbes",
      "me": false
     },
     {
-     "name": "G. H. R. Henry",
+     "name": "Gregory H. R. Henry",
      "me": false
     },
     {
-     "name": "R. D. Hollister",
+     "name": "Robert D. Hollister",
      "me": false
     },
     {
-     "name": "S. Normand",
+     "name": "Signe Normand",
      "me": false
     },
     {
-     "name": "J. S. Prevéy",
+     "name": "Janet S. Prevéy",
      "me": false
     },
     {
-     "name": "C. Rixen",
+     "name": "Christian Rixen",
      "me": false
     },
     {
-     "name": "G. Schaepman-Strub",
+     "name": "Gabriela Schaepman-Strub",
      "me": false
     },
     {
-     "name": "M. Wilmking",
+     "name": "Martin Wilmking",
      "me": false
     },
     {
-     "name": "S. Wipf",
+     "name": "Sonja Wipf",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "P. S. A. Beck",
+     "name": "Pieter S. A. Beck",
      "me": false
     },
     {
-     "name": "D. Georges",
+     "name": "Damien Georges",
      "me": false
     },
     {
-     "name": "S. J. Goetz",
+     "name": "Scott J. Goetz",
      "me": false
     },
     {
-     "name": "K. C. Guay",
+     "name": "Kevin C. Guay",
      "me": false
     },
     {
-     "name": "N. Rüger",
+     "name": "Nadja Rüger",
      "me": false
     },
     {
-     "name": "N. A. Soudzilovskaia",
+     "name": "Nadejda A. Soudzilovskaia",
      "me": false
     },
     {
-     "name": "M. J. Spasojevic",
+     "name": "Marko J. Spasojevic",
      "me": false
     },
     {
-     "name": "J. M. Alatalo",
+     "name": "Juha M. Alatalo",
      "me": false
     },
     {
-     "name": "H. D. Alexander",
+     "name": "Heather D. Alexander",
      "me": false
     },
     {
-     "name": "A. Anadon-Rosell",
+     "name": "Alba Anadon-Rosell",
      "me": false
     },
     {
-     "name": "S. Angers-Blondin",
+     "name": "Sandra Angers-Blondin",
      "me": false
     },
     {
-     "name": "M. te Beest",
+     "name": "Mariska te Beest",
      "me": false
     },
     {
-     "name": "L. T. Berner",
+     "name": "Logan Berner",
      "me": false
     },
     {
-     "name": "R. G. Björk",
+     "name": "Robert G. Björk",
      "me": false
     },
     {
-     "name": "A. Buchwal",
+     "name": "Agata Buchwal",
      "me": false
     },
     {
-     "name": "A. Buras",
+     "name": "Allan Buras",
      "me": false
     },
     {
-     "name": "M. Carbognani",
+     "name": "Michele Carbognani",
      "me": false
     },
     {
-     "name": "K. S. Christie",
+     "name": "Katherine Christie",
      "me": false
     },
     {
-     "name": "L. S. Collier",
+     "name": "Laura Siegwart Collier",
      "me": false
     },
     {
-     "name": "E. J. Cooper",
+     "name": "Elisabeth J. Cooper",
      "me": false
     },
     {
-     "name": "B. Elberling",
+     "name": "Bo Elberling",
      "me": false
     },
     {
-     "name": "A. Eskelinen",
+     "name": "Anu Eskelinen",
      "me": false
     },
     {
-     "name": "E. R. Frei",
+     "name": "Esther R. Frei",
      "me": false
     },
     {
-     "name": "O. Grau",
+     "name": "Oriol Grau",
      "me": false
     },
     {
-     "name": "P. Grogan",
+     "name": "Paul Grogan",
      "me": false
     },
     {
-     "name": "M. Hallinger",
+     "name": "Martin Hallinger",
      "me": false
     },
     {
-     "name": "M. M. P. D. Heijmans",
+     "name": "Monique M. P. D. Heijmans",
      "me": false
     },
     {
-     "name": "L. Hermanutz",
+     "name": "Luise Hermanutz",
      "me": false
     },
     {
-     "name": "J. M. G. Hudson",
+     "name": "James Hudson",
      "me": false
     },
     {
-     "name": "J. F. Johnstone",
+     "name": "Jill F. Johnstone",
      "me": false
     },
     {
-     "name": "K. Hülber",
+     "name": "Karl Hülber",
      "me": false
     },
     {
-     "name": "M. Iturrate-Garcia",
+     "name": "Maitane Iturrate-Garcia",
      "me": false
     },
     {
-     "name": "C. M. Iversen",
+     "name": "Colleen M. Iversen",
      "me": false
     },
     {
-     "name": "F. Jaroszynska",
+     "name": "Francesca Jaroszynska",
      "me": false
     },
     {
@@ -3291,167 +2929,167 @@
      "me": false
     },
     {
-     "name": "A. Kulonen",
+     "name": "Aino Kulonen",
      "me": false
     },
     {
-     "name": "L. J. Lamarque",
+     "name": "Laurent J. Lamarque",
      "me": false
     },
     {
-     "name": "T. C. Lantz",
+     "name": "Trevor Lantz",
      "me": false
     },
     {
-     "name": "E. Lévesque",
+     "name": "Esther Lévesque",
      "me": false
     },
     {
-     "name": "C. J. Little",
+     "name": "Chelsea J. Little",
      "me": false
     },
     {
-     "name": "A. Michelsen",
+     "name": "Anders Michelsen",
      "me": false
     },
     {
-     "name": "A. Milbau",
+     "name": "Ann Milbau",
      "me": false
     },
     {
-     "name": "J. Nabe-Nielsen",
+     "name": "Jacob Nabe-Nielsen",
      "me": false
     },
     {
-     "name": "S. S. Nielsen",
+     "name": "Sigrid Schøler Nielsen",
      "me": false
     },
     {
-     "name": "J. M. Ninot",
+     "name": "Josep M. Ninot",
      "me": false
     },
     {
-     "name": "S. F. Oberbauer",
+     "name": "Steven F. Oberbauer",
      "me": false
     },
     {
-     "name": "J. Olofsson",
+     "name": "Johan Olofsson",
      "me": false
     },
     {
-     "name": "V. G. Onipchenko",
+     "name": "Vladimir G. Onipchenko",
      "me": false
     },
     {
-     "name": "A. Petraglia",
+     "name": "Alessandro Petraglia",
      "me": false
     },
     {
-     "name": "S. B. Rumpf",
+     "name": "Sabine B. Rumpf",
      "me": false
     },
     {
-     "name": "R. Shetti",
+     "name": "Rohan Shetti",
      "me": false
     },
     {
-     "name": "J. D. M. Speed",
+     "name": "James D. M. Speed",
      "me": false
     },
     {
-     "name": "K. N. Suding",
+     "name": "Katharine N. Suding",
      "me": false
     },
     {
-     "name": "K. D. Tape",
+     "name": "Ken D. Tape",
      "me": false
     },
     {
-     "name": "M. Tomaselli",
+     "name": "Marcello Tomaselli",
      "me": false
     },
     {
-     "name": "A. J. Trant",
+     "name": "Andrew Trant",
      "me": false
     },
     {
-     "name": "U. A. Treier",
+     "name": "Urs A. Treier",
      "me": false
     },
     {
-     "name": "M. Tremblay",
+     "name": "Maxime Tremblay",
      "me": false
     },
     {
-     "name": "S. E. Venn",
+     "name": "Susanna Venn",
      "me": false
     },
     {
-     "name": "T. Vowles",
+     "name": "Tage Vowles",
      "me": false
     },
     {
-     "name": "S. Weijers",
+     "name": "Stef Weijers",
      "me": false
     },
     {
-     "name": "P. A. Wookey",
+     "name": "Philip A. Wookey",
      "me": false
     },
     {
-     "name": "T. J. Zamin",
+     "name": "Tara Zamin",
      "me": false
     },
     {
-     "name": "M. Bahn",
+     "name": "Michael Bahn",
      "me": false
     },
     {
-     "name": "B. Blonder",
+     "name": "Benjamin Blonder",
      "me": false
     },
     {
-     "name": "P. M. van Bodegom",
+     "name": "Peter M. van Bodegom",
      "me": false
     },
     {
-     "name": "B. Bond-Lamberty",
+     "name": "Benjamin Bond-Lamberty",
      "me": false
     },
     {
-     "name": "G. Campetella",
+     "name": "Giandiego Campetella",
      "me": false
     },
     {
-     "name": "B. E. L. Cerabolini",
+     "name": "Bruno E. L. Cerabolini",
      "me": false
     },
     {
-     "name": "F. S. Chapin",
+     "name": "Francis Stuart Chapin",
      "me": false
     },
     {
-     "name": "J. M. Craine",
+     "name": "Joseph M. Craine",
      "me": false
     },
     {
-     "name": "M. Dainese",
+     "name": "Matteo Dainese",
      "me": false
     },
     {
-     "name": "W. A. Green",
+     "name": "Walton A. Green",
      "me": false
     },
     {
-     "name": "S. Jansen",
+     "name": "Steven Jansen",
      "me": false
     },
     {
-     "name": "M. Kleyer",
+     "name": "Michael Kleyer",
      "me": false
     },
     {
-     "name": "P. Manning",
+     "name": "Peter Manning",
      "me": false
     },
     {
@@ -3459,98 +3097,43 @@
      "me": false
     },
     {
-     "name": "Y. Onoda",
+     "name": "Yusuke Onoda",
      "me": false
     },
     {
-     "name": "W. A. Ozinga",
+     "name": "Wim A. Ozinga",
      "me": false
     },
     {
-     "name": "J. Peñuelas",
+     "name": "Josep Peñuelas",
      "me": false
     },
     {
-     "name": "P. Poschlod",
+     "name": "Peter Poschlod",
      "me": false
     },
     {
-     "name": "P. B. Reich",
+     "name": "Peter B. Reich",
      "me": false
     },
     {
-     "name": "B. Sandel",
+     "name": "Brody Sandel",
      "me": false
     },
     {
-     "name": "B. S. Schamp",
+     "name": "Brandon Schamp",
      "me": false
     },
     {
-     "name": "S. N. Sheremetiev",
+     "name": "Serge Sheremetiev",
      "me": false
     },
     {
-     "name": "F. T. de Vries",
+     "name": "Franciska T. de Vries",
      "me": false
     }
    ],
    "me_index": 18
-  },
-  {
-   "title": "Sex and Power: sexual dimorphism in trait variability and its eco-evolutionary and statistical implications",
-   "year": 2020,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.1101/2020.05.23.106146",
-   "url": "https://doi.org/10.1101/2020.05.23.106146",
-   "authors": [
-    {
-     "name": "S.R.K. Zajitschek",
-     "me": false
-    },
-    {
-     "name": "F. Zajitschek",
-     "me": false
-    },
-    {
-     "name": "R. Bonduriansky",
-     "me": false
-    },
-    {
-     "name": "R.C. Brooks",
-     "me": false
-    },
-    {
-     "name": "W. Cornwell",
-     "me": true
-    },
-    {
-     "name": "D.S. Falster",
-     "me": false
-    },
-    {
-     "name": "M. Lagisz",
-     "me": false
-    },
-    {
-     "name": "J. Mason",
-     "me": false
-    },
-    {
-     "name": "A. M. Senior",
-     "me": false
-    },
-    {
-     "name": "D. A. W. Noble",
-     "me": false
-    },
-    {
-     "name": "S. Nakagawa",
-     "me": false
-    }
-   ],
-   "me_index": 4
   },
   {
    "title": "Sexual dimorphism in trait variability and its eco-evolutionary and statistical implications",
@@ -3577,11 +3160,11 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Daniel S Falster",
+     "name": "Daniel S. Falster",
      "me": false
     },
     {
@@ -3675,7 +3258,7 @@
      "me": false
     },
     {
-     "name": "Gijsbert D. A. Werner",
+     "name": "Gijsbert DA Werner",
      "me": false
     },
     {
@@ -4151,7 +3734,7 @@
      "me": false
     },
     {
-     "name": "F. Stuart Chapin",
+     "name": "Francis Stuart Chapin",
      "me": false
     },
     {
@@ -4203,11 +3786,11 @@
      "me": false
     },
     {
-     "name": "David Coomes",
+     "name": "David A. Coomes",
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -4223,7 +3806,7 @@
      "me": false
     },
     {
-     "name": "Joseph Craine",
+     "name": "Joseph M. Craine",
      "me": false
     },
     {
@@ -4531,7 +4114,7 @@
      "me": false
     },
     {
-     "name": "Rachael Gallagher",
+     "name": "Rachael V. Gallagher",
      "me": false
     },
     {
@@ -4815,7 +4398,7 @@
      "me": false
     },
     {
-     "name": "Benjamin Jackson",
+     "name": "Benjamin G. Jackson",
      "me": false
     },
     {
@@ -5563,7 +5146,7 @@
      "me": false
     },
     {
-     "name": "Vladimir Onipchenko",
+     "name": "Vladimir G. Onipchenko",
      "me": false
     },
     {
@@ -5775,7 +5358,7 @@
      "me": false
     },
     {
-     "name": "Sarah Richardson",
+     "name": "Sarah J. Richardson",
      "me": false
     },
     {
@@ -6007,7 +5590,7 @@
      "me": false
     },
     {
-     "name": "Mateus Silva",
+     "name": "Mateus C. Silva",
      "me": false
     },
     {
@@ -6031,11 +5614,11 @@
      "me": false
     },
     {
-     "name": "Pamela Soltis",
+     "name": "Pamela S. Soltis",
      "me": false
     },
     {
-     "name": "Douglas Soltis",
+     "name": "Douglas E. Soltis",
      "me": false
     },
     {
@@ -6063,7 +5646,7 @@
      "me": false
     },
     {
-     "name": "Marko Spasojevic",
+     "name": "Marko J. Spasojevic",
      "me": false
     },
     {
@@ -6075,7 +5658,7 @@
      "me": false
     },
     {
-     "name": "James Stegen",
+     "name": "James C. Stegen",
      "me": false
     },
     {
@@ -6119,11 +5702,11 @@
      "me": false
     },
     {
-     "name": "Emily Swaine",
+     "name": "Emily K. Swaine",
      "me": false
     },
     {
-     "name": "Nathan Swenson",
+     "name": "Nathan G. Swenson",
      "me": false
     },
     {
@@ -6371,7 +5954,7 @@
      "me": false
     },
     {
-     "name": "Matthew Waldram",
+     "name": "Matthew S. Waldram",
      "me": false
     },
     {
@@ -6439,7 +6022,7 @@
      "me": false
     },
     {
-     "name": "Elizabeth Wenk",
+     "name": "Elizabeth H. Wenk",
      "me": false
     },
     {
@@ -6479,7 +6062,7 @@
      "me": false
     },
     {
-     "name": "S. Joseph Wright",
+     "name": "Stuart Joseph Wright",
      "me": false
     },
     {
@@ -6582,7 +6165,7 @@
      "me": false
     },
     {
-     "name": "I. Colin Prentice",
+     "name": "Iain Colin Prentice",
      "me": false
     },
     {
@@ -6610,7 +6193,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -6695,15 +6278,15 @@
      "me": false
     },
     {
-     "name": "Jeff R Powell",
+     "name": "Jeff R. Powell",
      "me": false
     },
     {
-     "name": "William K Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Matthias C Rillig",
+     "name": "Matthias C. Rillig",
      "me": false
     }
    ],
@@ -6722,7 +6305,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -6753,19 +6336,19 @@
    "url": "https://doi.org/10.1093/gigascience/giz035",
    "authors": [
     {
-     "name": "Daniel S Falster",
+     "name": "Daniel S. Falster",
      "me": false
     },
     {
-     "name": "Richard G FitzJohn",
+     "name": "Richard G. FitzJohn",
      "me": false
     },
     {
-     "name": "Matthew W Pennell",
+     "name": "Matthew W. Pennell",
      "me": false
     },
     {
-     "name": "William K Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -6852,7 +6435,7 @@
      "me": false
     },
     {
-     "name": "Simon B. Z. Gorta",
+     "name": "Simon B.Z. Gorta",
      "me": false
     },
     {
@@ -6998,7 +6581,7 @@
      "me": true
     },
     {
-     "name": "Mitchell Lyons",
+     "name": "Mitchell B. Lyons",
      "me": false
     },
     {
@@ -7007,41 +6590,6 @@
     },
     {
      "name": "Amy E. Zanne",
-     "me": false
-    }
-   ],
-   "me_index": 3
-  },
-  {
-   "title": "How to build a biodiverse city: environmental determinants of bird diversity within and among 1,581 cities",
-   "year": 2019,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.32942/osf.io/ur4fe",
-   "url": "https://doi.org/10.32942/OSF.IO/UR4FE",
-   "authors": [
-    {
-     "name": "Corey Callaghan",
-     "me": false
-    },
-    {
-     "name": "Ailstair Poore",
-     "me": false
-    },
-    {
-     "name": "Richard Major",
-     "me": false
-    },
-    {
-     "name": "Will Cornwell",
-     "me": true
-    },
-    {
-     "name": "John Wilshire",
-     "me": false
-    },
-    {
-     "name": "Mitchell Lyons",
      "me": false
     }
    ],
@@ -7064,7 +6612,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -7154,7 +6702,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -7287,7 +6835,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -7318,47 +6866,47 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85056643627&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "H. J. D. Thomas",
+     "name": "Haydn J. D. Thomas",
      "me": false
     },
     {
-     "name": "I. H. Myers‐Smith",
+     "name": "Isla H. Myers‐Smith",
      "me": false
     },
     {
-     "name": "A. D. Bjorkman",
+     "name": "Anne D. Bjorkman",
      "me": false
     },
     {
-     "name": "S. C. Elmendorf",
+     "name": "Sarah C. Elmendorf",
      "me": false
     },
     {
-     "name": "D. Blok",
+     "name": "Daan Blok",
      "me": false
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "B. C. Forbes",
+     "name": "Bruce C. Forbes",
      "me": false
     },
     {
-     "name": "R. D. Hollister",
+     "name": "Robert D. Hollister",
      "me": false
     },
     {
-     "name": "S. Normand",
+     "name": "Signe Normand",
      "me": false
     },
     {
-     "name": "J. S. Prevéy",
+     "name": "Janet S. Prevéy",
      "me": false
     },
     {
-     "name": "C. Rixen",
+     "name": "Christian Rixen",
      "me": false
     },
     {
@@ -7366,31 +6914,31 @@
      "me": false
     },
     {
-     "name": "M. Wilmking",
+     "name": "Martin Wilmking",
      "me": false
     },
     {
-     "name": "S. Wipf",
+     "name": "Sonja Wipf",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "J. Kattge",
+     "name": "Jens Kattge",
      "me": false
     },
     {
-     "name": "S. J. Goetz",
+     "name": "Scott J. Goetz",
      "me": false
     },
     {
-     "name": "K. C. Guay",
+     "name": "Kevin C. Guay",
      "me": false
     },
     {
-     "name": "J. M. Alatalo",
+     "name": "Juha M. Alatalo",
      "me": false
     },
     {
@@ -7402,71 +6950,71 @@
      "me": false
     },
     {
-     "name": "L. T. Berner",
+     "name": "Logan Berner",
      "me": false
     },
     {
-     "name": "R. G. Björk",
+     "name": "Robert G. Björk",
      "me": false
     },
     {
-     "name": "A. Buchwal",
+     "name": "Agata Buchwal",
      "me": false
     },
     {
-     "name": "A. Buras",
+     "name": "Allan Buras",
      "me": false
     },
     {
-     "name": "M. Carbognani",
+     "name": "Michele Carbognani",
      "me": false
     },
     {
-     "name": "K. Christie",
+     "name": "Katherine Christie",
      "me": false
     },
     {
-     "name": "L. Siegwart Collier",
+     "name": "Laura Siegwart Collier",
      "me": false
     },
     {
-     "name": "E. J. Cooper",
+     "name": "Elisabeth J. Cooper",
      "me": false
     },
     {
-     "name": "A. Eskelinen",
+     "name": "Anu Eskelinen",
      "me": false
     },
     {
-     "name": "E. R. Frei",
+     "name": "Esther R. Frei",
      "me": false
     },
     {
-     "name": "O. Grau",
+     "name": "Oriol Grau",
      "me": false
     },
     {
-     "name": "P. Grogan",
+     "name": "Paul Grogan",
      "me": false
     },
     {
-     "name": "M. Hallinger",
+     "name": "Martin Hallinger",
      "me": false
     },
     {
-     "name": "M. M. P. D. Heijmans",
+     "name": "Monique M. P. D. Heijmans",
      "me": false
     },
     {
-     "name": "L. Hermanutz",
+     "name": "Luise Hermanutz",
      "me": false
     },
     {
-     "name": "J. M. G. Hudson",
+     "name": "James Hudson",
      "me": false
     },
     {
-     "name": "K. Hülber",
+     "name": "Karl Hülber",
      "me": false
     },
     {
@@ -7474,43 +7022,43 @@
      "me": false
     },
     {
-     "name": "C. M. Iversen",
+     "name": "Colleen M. Iversen",
      "me": false
     },
     {
-     "name": "F. Jaroszynska",
+     "name": "Francesca Jaroszynska",
      "me": false
     },
     {
-     "name": "J. F. Johnstone",
+     "name": "Jill F. Johnstone",
      "me": false
     },
     {
-     "name": "E. Kaarlejärvi",
+     "name": "Elina Kaarlejärvi",
      "me": false
     },
     {
-     "name": "A. Kulonen",
+     "name": "Aino Kulonen",
      "me": false
     },
     {
-     "name": "L. J. Lamarque",
+     "name": "Laurent J. Lamarque",
      "me": false
     },
     {
-     "name": "E. Lévesque",
+     "name": "Esther Lévesque",
      "me": false
     },
     {
-     "name": "C. J. Little",
+     "name": "Chelsea J. Little",
      "me": false
     },
     {
-     "name": "A. Michelsen",
+     "name": "Anders Michelsen",
      "me": false
     },
     {
-     "name": "A. Milbau",
+     "name": "Ann Milbau",
      "me": false
     },
     {
@@ -7518,103 +7066,103 @@
      "me": false
     },
     {
-     "name": "S. S. Nielsen",
+     "name": "Sigrid Schøler Nielsen",
      "me": false
     },
     {
-     "name": "J. M. Ninot",
+     "name": "Josep M. Ninot",
      "me": false
     },
     {
-     "name": "S. F. Oberbauer",
+     "name": "Steven F. Oberbauer",
      "me": false
     },
     {
-     "name": "J. Olofsson",
+     "name": "Johan Olofsson",
      "me": false
     },
     {
-     "name": "V. G. Onipchenko",
+     "name": "Vladimir G. Onipchenko",
      "me": false
     },
     {
-     "name": "A. Petraglia",
+     "name": "Alessandro Petraglia",
      "me": false
     },
     {
-     "name": "S. B. Rumpf",
+     "name": "Sabine B. Rumpf",
      "me": false
     },
     {
-     "name": "P. R. Semenchuk",
+     "name": "Philipp Semenchuk",
      "me": false
     },
     {
-     "name": "N. A. Soudzilovskaia",
+     "name": "Nadejda A. Soudzilovskaia",
      "me": false
     },
     {
-     "name": "M. J. Spasojevic",
+     "name": "Marko J. Spasojevic",
      "me": false
     },
     {
-     "name": "J. D. M. Speed",
+     "name": "James D. M. Speed",
      "me": false
     },
     {
-     "name": "K. D. Tape",
+     "name": "Ken D. Tape",
      "me": false
     },
     {
-     "name": "M. te Beest",
+     "name": "Mariska te Beest",
      "me": false
     },
     {
-     "name": "M. Tomaselli",
+     "name": "Marcello Tomaselli",
      "me": false
     },
     {
-     "name": "A. Trant",
+     "name": "Andrew Trant",
      "me": false
     },
     {
-     "name": "U. A. Treier",
+     "name": "Urs A. Treier",
      "me": false
     },
     {
-     "name": "S. Venn",
+     "name": "Susanna Venn",
      "me": false
     },
     {
-     "name": "T. Vowles",
+     "name": "Tage Vowles",
      "me": false
     },
     {
-     "name": "S. Weijers",
+     "name": "Stef Weijers",
      "me": false
     },
     {
-     "name": "T. Zamin",
+     "name": "Tara Zamin",
      "me": false
     },
     {
-     "name": "O. K. Atkin",
+     "name": "Owen Atkin",
      "me": false
     },
     {
-     "name": "M. Bahn",
+     "name": "Michael Bahn",
      "me": false
     },
     {
-     "name": "B. Blonder",
+     "name": "Benjamin Blonder",
      "me": false
     },
     {
-     "name": "G. Campetella",
+     "name": "Giandiego Campetella",
      "me": false
     },
     {
-     "name": "B. E. L. Cerabolini",
+     "name": "Bruno E. L. Cerabolini",
      "me": false
     },
     {
@@ -7622,27 +7170,27 @@
      "me": false
     },
     {
-     "name": "M. Dainese",
+     "name": "Matteo Dainese",
      "me": false
     },
     {
-     "name": "F. T. de Vries",
+     "name": "Franciska T. de Vries",
      "me": false
     },
     {
-     "name": "S. Díaz",
+     "name": "Sandra Díaz",
      "me": false
     },
     {
-     "name": "W. Green",
+     "name": "Walton A. Green",
      "me": false
     },
     {
-     "name": "R. B. Jackson",
+     "name": "Robert B. Jackson",
      "me": false
     },
     {
-     "name": "P. Manning",
+     "name": "Peter Manning",
      "me": false
     },
     {
@@ -7650,27 +7198,27 @@
      "me": false
     },
     {
-     "name": "W. A. Ozinga",
+     "name": "Wim A. Ozinga",
      "me": false
     },
     {
-     "name": "J. Peñuelas",
+     "name": "Josep Peñuelas",
      "me": false
     },
     {
-     "name": "P. B. Reich",
+     "name": "Peter B. Reich",
      "me": false
     },
     {
-     "name": "B. Schamp",
+     "name": "Brandon Schamp",
      "me": false
     },
     {
-     "name": "S. Sheremetev",
+     "name": "Serge Sheremetev",
      "me": false
     },
     {
-     "name": "P. M. van Bodegom",
+     "name": "Peter M. van Bodegom",
      "me": false
     }
    ],
@@ -7802,11 +7350,11 @@
      "me": false
     },
     {
-     "name": "Todd Dawson",
+     "name": "Todd E. Dawson",
      "me": false
     },
     {
-     "name": "David Ellsworth",
+     "name": "David S. Ellsworth",
      "me": false
     },
     {
@@ -7814,7 +7362,7 @@
      "me": false
     },
     {
-     "name": "Howard Griffiths",
+     "name": "Howard G. Griffiths",
      "me": false
     },
     {
@@ -7838,7 +7386,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -8335,7 +7883,7 @@
      "me": false
     },
     {
-     "name": "Julia Klein",
+     "name": "Julia A. Klein",
      "me": false
     },
     {
@@ -8375,7 +7923,7 @@
      "me": false
     },
     {
-     "name": "F. Stuart Chapin",
+     "name": "Francis Stuart Chapin",
      "me": false
     },
     {
@@ -8383,7 +7931,7 @@
      "me": true
     },
     {
-     "name": "Joseph Craine",
+     "name": "Joseph M. Craine",
      "me": false
     },
     {
@@ -8403,7 +7951,7 @@
      "me": false
     },
     {
-     "name": "Walton Green",
+     "name": "Walton A. Green",
      "me": false
     },
     {
@@ -8474,15 +8022,15 @@
      "me": false
     },
     {
-     "name": "Johannes HC Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "William K Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Nadejda A Soudzilovskaia",
+     "name": "Nadejda A. Soudzilovskaia",
      "me": false
     },
     {
@@ -8494,41 +8042,14 @@
      "me": false
     },
     {
-     "name": "E Toby Kiers",
+     "name": "E. Toby Kiers",
      "me": false
     }
    ],
    "me_index": 2
   },
   {
-   "title": "What we (don’t) know about global plant diversity",
-   "year": 2018,
-   "journal": "",
-   "type": "other",
-   "doi": "10.1101/404376",
-   "url": "https://doi.org/10.1101/404376",
-   "authors": [
-    {
-     "name": "William K. Cornwell",
-     "me": true
-    },
-    {
-     "name": "William D. Pearse",
-     "me": false
-    },
-    {
-     "name": "Rhiannon L. Dalrymple",
-     "me": false
-    },
-    {
-     "name": "Amy Zanne",
-     "me": false
-    }
-   ],
-   "me_index": 0
-  },
-  {
-   "title": "A global method for calculating plant <scp>CSR</scp> ecological strategies applied across biomes world‐wide",
+   "title": "A global method for calculating plant CSR ecological strategies applied across biomes world‐wide",
    "year": 2017,
    "journal": "Functional Ecology",
    "type": "journal-article",
@@ -8592,7 +8113,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -8730,7 +8251,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85029233760&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -8781,7 +8302,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -8824,7 +8345,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -8886,7 +8407,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85019123915&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -8932,7 +8453,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85024127862&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Jeff Powell",
+     "name": "Jeff R. Powell",
      "me": false
     },
     {
@@ -8940,7 +8461,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -8959,7 +8480,7 @@
      "me": false
     },
     {
-     "name": "I. Colin Prentice",
+     "name": "Iain Colin Prentice",
      "me": false
     },
     {
@@ -9013,7 +8534,7 @@
    "me_index": 2
   },
   {
-   "title": "Does plant size affect growth responses to water availability at glacial, modern and future CO\n                    <sub>2</sub>\n                    concentrations?",
+   "title": "Does plant size affect growth responses to water availability at glacial, modern and future CO <sub>2</sub> concentrations?",
    "year": 2016,
    "journal": "Ecological Research",
    "type": "journal-article",
@@ -9021,7 +8542,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84959167414&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Jin‐Chun Liu",
+     "name": "Jin Chun Liu",
      "me": false
     },
     {
@@ -9041,7 +8562,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9079,7 +8600,7 @@
    "me_index": 3
   },
   {
-   "title": "Species mixture effects on flammability across plant phylogeny: the importance of litter particle size and the special role for non‐<i>Pinus</i> Pinaceae",
+   "title": "Species mixture effects on flammability across plant phylogeny: the importance of litter particle size and the special role for non‐<em>Pinus</em> Pinaceae",
    "year": 2016,
    "journal": "Ecology and Evolution",
    "type": "journal-article",
@@ -9103,7 +8624,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9138,7 +8659,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9196,7 +8717,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -9205,121 +8726,6 @@
     }
    ],
    "me_index": 4
-  },
-  {
-   "title": "Correction: Corrigendum: Three keys to the radiation of angiosperms into freezing environments",
-   "year": 2015,
-   "journal": "Nature",
-   "type": "journal-article",
-   "doi": "10.1038/nature14371",
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84930196009&partnerID=MN8TOARS",
-   "authors": [
-    {
-     "name": "Amy E. Zanne",
-     "me": false
-    },
-    {
-     "name": "David C. Tank",
-     "me": false
-    },
-    {
-     "name": "William K. Cornwell",
-     "me": true
-    },
-    {
-     "name": "Jonathan M. Eastman",
-     "me": false
-    },
-    {
-     "name": "Stephen A. Smith",
-     "me": false
-    },
-    {
-     "name": "Richard G. FitzJohn",
-     "me": false
-    },
-    {
-     "name": "Daniel J. McGlinn",
-     "me": false
-    },
-    {
-     "name": "Brian C. O'Meara",
-     "me": false
-    },
-    {
-     "name": "Angela T. Moles",
-     "me": false
-    },
-    {
-     "name": "Peter B. Reich",
-     "me": false
-    },
-    {
-     "name": "Dana L. Royer",
-     "me": false
-    },
-    {
-     "name": "Douglas E. Soltis",
-     "me": false
-    },
-    {
-     "name": "Peter F. Stevens",
-     "me": false
-    },
-    {
-     "name": "Mark Westoby",
-     "me": false
-    },
-    {
-     "name": "Ian J. Wright",
-     "me": false
-    },
-    {
-     "name": "Lonnie Aarssen",
-     "me": false
-    },
-    {
-     "name": "Robert I. Bertin",
-     "me": false
-    },
-    {
-     "name": "Andre Calaminus",
-     "me": false
-    },
-    {
-     "name": "Rafaël Govaerts",
-     "me": false
-    },
-    {
-     "name": "Frank Hemmings",
-     "me": false
-    },
-    {
-     "name": "Michelle R. Leishman",
-     "me": false
-    },
-    {
-     "name": "Jacek Oleksyn",
-     "me": false
-    },
-    {
-     "name": "Pamela S. Soltis",
-     "me": false
-    },
-    {
-     "name": "Nathan G. Swenson",
-     "me": false
-    },
-    {
-     "name": "Laura Warman",
-     "me": false
-    },
-    {
-     "name": "Jeremy M. Beaulieu",
-     "me": false
-    }
-   ],
-   "me_index": 2
   },
   {
    "title": "Decomposition of 51 semidesert species from wide-ranging phylogeny is faster in standing and sand-buried than in surface leaf litters: implications for carbon and nutrient dynamics",
@@ -9358,7 +8764,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9373,27 +8779,27 @@
    "url": null,
    "authors": [
     {
-     "name": "X. H. Ye",
+     "name": "Xuehua Ye",
      "me": false
     },
     {
-     "name": "X. Pan",
+     "name": "Xu Pan",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "S. Q. Gao",
+     "name": "Shuqin Gao",
      "me": false
     },
     {
-     "name": "M. Dong",
+     "name": "Ming Dong",
      "me": false
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9408,7 +8814,7 @@
    "url": null,
    "authors": [
     {
-     "name": "Gijsbert D. A. Werner",
+     "name": "Gijsbert DA Werner",
      "me": false
     },
     {
@@ -9416,7 +8822,7 @@
      "me": true
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -9478,7 +8884,7 @@
      "me": false
     },
     {
-     "name": "Guo-Fang Liu",
+     "name": "Guofang Liu",
      "me": false
     },
     {
@@ -9486,7 +8892,7 @@
      "me": false
     },
     {
-     "name": "Xue-Hua Ye",
+     "name": "Xuehua Ye",
      "me": false
     },
     {
@@ -9525,7 +8931,7 @@
      "me": false
     },
     {
-     "name": "I. Colin Prentice",
+     "name": "Iain Colin Prentice",
      "me": false
     },
     {
@@ -9541,11 +8947,11 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "David Ellsworth",
+     "name": "David S. Ellsworth",
      "me": false
     },
     {
@@ -9612,7 +9018,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -9705,11 +9111,11 @@
      "me": false
     },
     {
-     "name": "Yukun Hu",
+     "name": "Yu-Kun Hu",
      "me": false
     },
     {
-     "name": "Richardus S. P. Van Logtestijn",
+     "name": "Richard S. P. van Logtestijn",
      "me": false
     },
     {
@@ -9745,14 +9151,14 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
    "me_index": 1
   },
   {
-   "title": "Topographic, latitudinal and climatic distribution of\n                    <i>Pinus coulteri</i>\n                    : geographic range limits are not at the edge of the climate envelope",
+   "title": "Topographic, latitudinal and climatic distribution of <em>Pinus coulteri</em> : geographic range limits are not at the edge of the climate envelope",
    "year": 2015,
    "journal": "Ecography",
    "type": "journal-article",
@@ -9817,7 +9223,7 @@
    "me_index": 1
   },
   {
-   "title": "Winners always win: growth of a wide range of plant species from low to future high <scp>CO</scp><sub>2</sub>",
+   "title": "Winners always win: growth of a wide range of plant species from low to future high CO<sub>2</sub>",
    "year": 2015,
    "journal": "Ecology and Evolution",
    "type": "journal-article",
@@ -9837,7 +9243,7 @@
      "me": true
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -9916,7 +9322,7 @@
      "me": false
     },
     {
-     "name": "Lonnie Aarssen",
+     "name": "Lonnie W. Aarssen",
      "me": false
     },
     {
@@ -9932,7 +9338,7 @@
      "me": false
     },
     {
-     "name": "Frank Hemmings",
+     "name": "Frank A. Hemmings",
      "me": false
     },
     {
@@ -9971,7 +9377,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84902305766&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Gijsbert D. A. Werner",
+     "name": "Gijsbert DA Werner",
      "me": false
     },
     {
@@ -10013,122 +9419,7 @@
    "me_index": 0
   },
   {
-   "title": "Erratum: Corrigendum: Three keys to the radiation of angiosperms into freezing environments",
-   "year": 2014,
-   "journal": "Nature",
-   "type": "journal-article",
-   "doi": "10.1038/nature13842",
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84908133556&partnerID=MN8TOARS",
-   "authors": [
-    {
-     "name": "Amy E. Zanne",
-     "me": false
-    },
-    {
-     "name": "David C. Tank",
-     "me": false
-    },
-    {
-     "name": "William K. Cornwell",
-     "me": true
-    },
-    {
-     "name": "Jonathan M. Eastman",
-     "me": false
-    },
-    {
-     "name": "Stephen A. Smith",
-     "me": false
-    },
-    {
-     "name": "Richard G. FitzJohn",
-     "me": false
-    },
-    {
-     "name": "Daniel J. McGlinn",
-     "me": false
-    },
-    {
-     "name": "Brian C. O’Meara",
-     "me": false
-    },
-    {
-     "name": "Angela T. Moles",
-     "me": false
-    },
-    {
-     "name": "Peter B. Reich",
-     "me": false
-    },
-    {
-     "name": "Dana L. Royer",
-     "me": false
-    },
-    {
-     "name": "Douglas E. Soltis",
-     "me": false
-    },
-    {
-     "name": "Peter F. Stevens",
-     "me": false
-    },
-    {
-     "name": "Mark Westoby",
-     "me": false
-    },
-    {
-     "name": "Ian J. Wright",
-     "me": false
-    },
-    {
-     "name": "Lonnie Aarssen",
-     "me": false
-    },
-    {
-     "name": "Robert I. Bertin",
-     "me": false
-    },
-    {
-     "name": "Andre Calaminus",
-     "me": false
-    },
-    {
-     "name": "Rafaël Govaerts",
-     "me": false
-    },
-    {
-     "name": "Frank Hemmings",
-     "me": false
-    },
-    {
-     "name": "Michelle R. Leishman",
-     "me": false
-    },
-    {
-     "name": "Jacek Oleksyn",
-     "me": false
-    },
-    {
-     "name": "Pamela S. Soltis",
-     "me": false
-    },
-    {
-     "name": "Nathan G. Swenson",
-     "me": false
-    },
-    {
-     "name": "Laura Warman",
-     "me": false
-    },
-    {
-     "name": "Jeremy M. Beaulieu",
-     "me": false
-    }
-   ],
-   "me_index": 2
-  },
-  {
-   "title": "Experimental evidence that the <scp>O</scp>rnstein‐<scp>U</scp>hlenbeck model best describes the evolution of leaf litter decomposability",
+   "title": "Experimental evidence that the Ornstein‐Uhlenbeck model best describes the evolution of leaf litter decomposability",
    "year": 2014,
    "journal": "Ecology and Evolution",
    "type": "journal-article",
@@ -10140,19 +9431,19 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "Wei‐Wei Zhao",
+     "name": "Weiwei Zhao",
      "me": false
     },
     {
-     "name": "Guo‐Fang Liu",
+     "name": "Guofang Liu",
      "me": false
     },
     {
-     "name": "Yu‐Kun Hu",
+     "name": "Yu-Kun Hu",
      "me": false
     },
     {
@@ -10227,7 +9518,7 @@
      "me": false
     },
     {
-     "name": "Lonnie Aarssen",
+     "name": "Lonnie W. Aarssen",
      "me": false
     },
     {
@@ -10302,7 +9593,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -10396,7 +9687,7 @@
    "me_index": 5
   },
   {
-   "title": "Interactions between Fine Wood Decomposition  and Flammability",
+   "title": "Interactions between Fine Wood Decomposition and Flammability",
    "year": 2014,
    "journal": "Forests",
    "type": "journal-article",
@@ -10416,11 +9707,11 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Johannes Cornelissen",
+     "name": "Johannes (Hans) H.C. Cornelissen",
      "me": false
     }
    ],
@@ -10459,7 +9750,7 @@
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -10498,7 +9789,7 @@
    "url": null,
    "authors": [
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -10577,7 +9868,7 @@
      "me": false
     },
     {
-     "name": "Lonnie Aarssen",
+     "name": "Lonnie W. Aarssen",
      "me": false
     },
     {
@@ -10593,7 +9884,7 @@
      "me": false
     },
     {
-     "name": "Frank Hemmings",
+     "name": "Frank A. Hemmings",
      "me": false
     },
     {
@@ -10660,7 +9951,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -10679,11 +9970,11 @@
      "me": false
     },
     {
-     "name": "P. M. van Bodegom",
+     "name": "Peter M. van Bodegom",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -10762,7 +10053,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -10822,7 +10113,7 @@
      "me": false
     },
     {
-     "name": "Vladimir Onipchenko",
+     "name": "Vladimir G. Onipchenko",
      "me": false
     },
     {
@@ -10850,7 +10141,7 @@
      "me": false
     },
     {
-     "name": "Enio E. Sosinski",
+     "name": "Enio Egon Sosinski",
      "me": false
     },
     {
@@ -10882,7 +10173,7 @@
      "me": false
     },
     {
-     "name": "Hongxiang Zhang",
+     "name": "Hong‐Xiang Zhang",
      "me": false
     },
     {
@@ -10909,7 +10200,7 @@
      "me": true
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -11015,7 +10306,7 @@
      "me": false
     },
     {
-     "name": "Bente J. Graae",
+     "name": "Bente Jessen Graae",
      "me": false
     },
     {
@@ -11035,7 +10326,7 @@
      "me": false
     },
     {
-     "name": "Pablo L. Peri",
+     "name": "Pablo Luis Peri",
      "me": false
     },
     {
@@ -11067,7 +10358,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -11154,43 +10445,43 @@
    "url": null,
    "authors": [
     {
-     "name": "R. M. KOOYMAN",
+     "name": "Robert M. Kooyman",
      "me": false
     },
     {
-     "name": "A. E. ZANNE",
+     "name": "Amy E. Zanne",
      "me": false
     },
     {
-     "name": "R. V. GALLAGHER",
+     "name": "Rachael V. Gallagher",
      "me": false
     },
     {
-     "name": "W. CORNWELL",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "M. ROSSETTO",
+     "name": "Maurizio Rossetto",
      "me": false
     },
     {
-     "name": "P. O'CONNOR",
+     "name": "P. O'Connor",
      "me": false
     },
     {
-     "name": "E. A. PARKES",
+     "name": "E. A. Parkes",
      "me": false
     },
     {
-     "name": "C. F. CATTERALL",
+     "name": "C. F. Catterall",
      "me": false
     },
     {
-     "name": "S. W. LAFFAN",
+     "name": "Shawn W. Laffan",
      "me": false
     },
     {
-     "name": "C. H. LUSK",
+     "name": "C. H. Lusk",
      "me": false
     }
    ],
@@ -11267,7 +10558,7 @@
    "me_index": 1
   },
   {
-   "title": "Meta‐analysis reveals profound responses of plant traits to glacial <scp>CO</scp><sub>2</sub> levels",
+   "title": "Meta‐analysis reveals profound responses of plant traits to glacial CO<sub>2</sub> levels",
    "year": 2013,
    "journal": "Ecology and Evolution",
    "type": "journal-article",
@@ -11275,19 +10566,19 @@
    "url": null,
    "authors": [
     {
-     "name": "A. A. Temme",
+     "name": "Andries A. Temme",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "R. Aerts",
+     "name": "Rien Aerts",
      "me": false
     }
    ],
@@ -11306,19 +10597,19 @@
      "me": false
     },
     {
-     "name": "S. Díaz",
+     "name": "Sandra Díaz",
      "me": false
     },
     {
-     "name": "E. Garnier",
+     "name": "Eric Garnier",
      "me": false
     },
     {
-     "name": "S. Lavorel",
+     "name": "Sandra Lavorel",
      "me": false
     },
     {
-     "name": "H. Poorter",
+     "name": "Hendrik Poorter",
      "me": false
     },
     {
@@ -11330,15 +10621,15 @@
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "J. M. Craine",
+     "name": "Joseph M. Craine",
      "me": false
     },
     {
-     "name": "D. E. Gurvich",
+     "name": "Diego E. Gurvich",
      "me": false
     },
     {
@@ -11346,11 +10637,11 @@
      "me": false
     },
     {
-     "name": "E. J. Veneklaas",
+     "name": "Erik J. Veneklaas",
      "me": false
     },
     {
-     "name": "P. B. Reich",
+     "name": "Peter B. Reich",
      "me": false
     },
     {
@@ -11358,7 +10649,7 @@
      "me": false
     },
     {
-     "name": "I. J. Wright",
+     "name": "Ian J. Wright",
      "me": false
     },
     {
@@ -11370,7 +10661,7 @@
      "me": false
     },
     {
-     "name": "J. G. Pausas",
+     "name": "Juli G. Pausas",
      "me": false
     },
     {
@@ -11378,7 +10669,7 @@
      "me": false
     },
     {
-     "name": "N. Buchmann",
+     "name": "Nina Buchmann",
      "me": false
     },
     {
@@ -11394,7 +10685,7 @@
      "me": false
     },
     {
-     "name": "K. Thompson",
+     "name": "Ken Thompson",
      "me": false
     },
     {
@@ -11410,19 +10701,19 @@
      "me": false
     },
     {
-     "name": "L. Sack",
+     "name": "Lawren Sack",
      "me": false
     },
     {
-     "name": "B. Blonder",
+     "name": "Benjamin Blonder",
      "me": false
     },
     {
-     "name": "P. Poschlod",
+     "name": "Peter Poschlod",
      "me": false
     },
     {
-     "name": "M. V. Vaieretti",
+     "name": "M. Victoria Vaieretti",
      "me": false
     },
     {
@@ -11438,7 +10729,7 @@
      "me": false
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -11465,7 +10756,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -11477,7 +10768,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -11515,7 +10806,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84865764707&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Robert Kooyman",
+     "name": "Robert M. Kooyman",
      "me": false
     },
     {
@@ -11527,7 +10818,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -11542,11 +10833,11 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84856513088&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "V. Brovkin",
+     "name": "Victor Brovkin",
      "me": false
     },
     {
-     "name": "P. M. van Bodegom",
+     "name": "Peter M. van Bodegom",
      "me": false
     },
     {
@@ -11554,19 +10845,19 @@
      "me": false
     },
     {
-     "name": "C. Wirth",
+     "name": "Christian Wirth",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "J. H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "J. Kattge",
+     "name": "Jens Kattge",
      "me": false
     }
    ],
@@ -11660,7 +10951,7 @@
      "me": false
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     }
    ],
@@ -11675,7 +10966,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79961198093&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Robert Kooyman",
+     "name": "Robert M. Kooyman",
      "me": false
     },
     {
@@ -11683,7 +10974,7 @@
      "me": false
     },
     {
-     "name": "William Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -11754,7 +11045,7 @@
      "me": false
     },
     {
-     "name": "Bente J. Graae",
+     "name": "Bente Jessen Graae",
      "me": false
     },
     {
@@ -11774,7 +11065,7 @@
      "me": false
     },
     {
-     "name": "Pablo L. Peri",
+     "name": "Pablo Luis Peri",
      "me": false
     },
     {
@@ -11905,15 +11196,15 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-78650800988&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "J. M. G. HUDSON",
+     "name": "James Hudson",
      "me": false
     },
     {
-     "name": "G. H. R. HENRY",
+     "name": "Gregory H. R. Henry",
      "me": false
     },
     {
-     "name": "W. K. CORNWELL",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
@@ -11928,543 +11219,543 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79957965204&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "J. KATTGE",
+     "name": "Jens Kattge",
      "me": false
     },
     {
-     "name": "S. DÍAZ",
+     "name": "Sandra Díaz",
      "me": false
     },
     {
-     "name": "S. LAVOREL",
+     "name": "Sandra Lavorel",
      "me": false
     },
     {
-     "name": "I. C. PRENTICE",
+     "name": "Iain Colin Prentice",
      "me": false
     },
     {
-     "name": "P. LEADLEY",
+     "name": "Paul Leadley",
      "me": false
     },
     {
-     "name": "G. BÖNISCH",
+     "name": "Gerhard Bönisch",
      "me": false
     },
     {
-     "name": "E. GARNIER",
+     "name": "Eric Garnier",
      "me": false
     },
     {
-     "name": "M. WESTOBY",
+     "name": "Mark Westoby",
      "me": false
     },
     {
-     "name": "P. B. REICH",
+     "name": "Peter B. Reich",
      "me": false
     },
     {
-     "name": "I. J. WRIGHT",
+     "name": "Ian J. Wright",
      "me": false
     },
     {
-     "name": "J. H. C. CORNELISSEN",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "C. VIOLLE",
+     "name": "Cyrille Violle",
      "me": false
     },
     {
-     "name": "S. P. HARRISON",
+     "name": "Sandy P. Harrison",
      "me": false
     },
     {
-     "name": "P. M. Van BODEGOM",
+     "name": "Peter M. van Bodegom",
      "me": false
     },
     {
-     "name": "M. REICHSTEIN",
+     "name": "Markus Reichstein",
      "me": false
     },
     {
-     "name": "B. J. ENQUIST",
+     "name": "Brian J. Enquist",
      "me": false
     },
     {
-     "name": "N. A. SOUDZILOVSKAIA",
+     "name": "Nadejda A. Soudzilovskaia",
      "me": false
     },
     {
-     "name": "D. D. ACKERLY",
+     "name": "David D. Ackerly",
      "me": false
     },
     {
-     "name": "M. ANAND",
+     "name": "Madhur Anand",
      "me": false
     },
     {
-     "name": "O. ATKIN",
+     "name": "Owen Atkin",
      "me": false
     },
     {
-     "name": "M. BAHN",
+     "name": "Michael Bahn",
      "me": false
     },
     {
-     "name": "T. R. BAKER",
+     "name": "Timothy Baker",
      "me": false
     },
     {
-     "name": "D. BALDOCCHI",
+     "name": "Dennis Baldocchi",
      "me": false
     },
     {
-     "name": "R. BEKKER",
+     "name": "Renee Bekker",
      "me": false
     },
     {
-     "name": "C. C. BLANCO",
+     "name": "Carolina Blanco",
      "me": false
     },
     {
-     "name": "B. BLONDER",
+     "name": "Benjamin Blonder",
      "me": false
     },
     {
-     "name": "W. J. BOND",
+     "name": "William Bond",
      "me": false
     },
     {
-     "name": "R. BRADSTOCK",
+     "name": "R. Bradstock",
      "me": false
     },
     {
-     "name": "D. E. BUNKER",
+     "name": "Daniel E. Bunker",
      "me": false
     },
     {
-     "name": "F. CASANOVES",
+     "name": "Fernando Casanoves",
      "me": false
     },
     {
-     "name": "J. CAVENDER‐BARES",
+     "name": "Jeannine Cavender‐Bares",
      "me": false
     },
     {
-     "name": "J. Q. CHAMBERS",
+     "name": "J. Q. Chambers",
      "me": false
     },
     {
-     "name": "F. S. CHAPIN III",
+     "name": "F. S. Chapin III",
      "me": false
     },
     {
-     "name": "J. CHAVE",
+     "name": "J. Chave",
      "me": false
     },
     {
-     "name": "D. COOMES",
+     "name": "David A. Coomes",
      "me": false
     },
     {
-     "name": "W. K. CORNWELL",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "J. M. CRAINE",
+     "name": "Joseph M. Craine",
      "me": false
     },
     {
-     "name": "B. H. DOBRIN",
+     "name": "B. H. Dobrin",
      "me": false
     },
     {
-     "name": "L. DUARTE",
+     "name": "Leandro Duarte",
      "me": false
     },
     {
-     "name": "W. DURKA",
+     "name": "Walter Durka",
      "me": false
     },
     {
-     "name": "J. ELSER",
+     "name": "James Elser",
      "me": false
     },
     {
-     "name": "G. ESSER",
+     "name": "Gerd Esser",
      "me": false
     },
     {
-     "name": "M. ESTIARTE",
+     "name": "Marc Estiarte",
      "me": false
     },
     {
-     "name": "W. F. FAGAN",
+     "name": "William F. Fagan",
      "me": false
     },
     {
-     "name": "J. FANG",
+     "name": "Jingyun Fang",
      "me": false
     },
     {
-     "name": "F. FERNÁNDEZ‐MÉNDEZ",
+     "name": "F. Fernández‐méndez",
      "me": false
     },
     {
-     "name": "A. FIDELIS",
+     "name": "Alessandra Fidelis",
      "me": false
     },
     {
-     "name": "B. FINEGAN",
+     "name": "Bryan Finegan",
      "me": false
     },
     {
-     "name": "O. FLORES",
+     "name": "O. Flores",
      "me": false
     },
     {
-     "name": "H. FORD",
+     "name": "H. Ford",
      "me": false
     },
     {
-     "name": "D. FRANK",
+     "name": "Dorothea Frank",
      "me": false
     },
     {
-     "name": "G. T. FRESCHET",
+     "name": "Grégoire T. Freschet",
      "me": false
     },
     {
-     "name": "N. M. FYLLAS",
+     "name": "Nikolaos M. Fyllas",
      "me": false
     },
     {
-     "name": "R. V. GALLAGHER",
+     "name": "Rachael V. Gallagher",
      "me": false
     },
     {
-     "name": "W. A. GREEN",
+     "name": "Walton A. Green",
      "me": false
     },
     {
-     "name": "A. G. GUTIERREZ",
+     "name": "Alvaro G. Gutierrez",
      "me": false
     },
     {
-     "name": "T. HICKLER",
+     "name": "Thomas Hickler",
      "me": false
     },
     {
-     "name": "S. I. HIGGINS",
+     "name": "S. I. Higgins",
      "me": false
     },
     {
-     "name": "J. G. HODGSON",
+     "name": "J. G. Hodgson",
      "me": false
     },
     {
-     "name": "A. JALILI",
+     "name": "A. Jalili",
      "me": false
     },
     {
-     "name": "S. JANSEN",
+     "name": "Steven Jansen",
      "me": false
     },
     {
-     "name": "C. A. JOLY",
+     "name": "Carlos Alfredo Joly",
      "me": false
     },
     {
-     "name": "A. J. KERKHOFF",
+     "name": "Andrew Kerkhoff",
      "me": false
     },
     {
-     "name": "D. KIRKUP",
+     "name": "D. Kirkup",
      "me": false
     },
     {
-     "name": "K. KITAJIMA",
+     "name": "Kaoru Kitajima",
      "me": false
     },
     {
-     "name": "M. KLEYER",
+     "name": "Michael Kleyer",
      "me": false
     },
     {
-     "name": "S. KLOTZ",
+     "name": "Stefan Klotz",
      "me": false
     },
     {
-     "name": "J. M. H. KNOPS",
+     "name": "Johannes M. H. Knops",
      "me": false
     },
     {
-     "name": "K. KRAMER",
+     "name": "Koen Kramer",
      "me": false
     },
     {
-     "name": "I. KÜHN",
+     "name": "Ingolf Kühn",
      "me": false
     },
     {
-     "name": "H. KUROKAWA",
+     "name": "Hiroko Kurokawa",
      "me": false
     },
     {
-     "name": "D. LAUGHLIN",
+     "name": "Daniel Laughlin",
      "me": false
     },
     {
-     "name": "T. D. LEE",
+     "name": "Tali Lee",
      "me": false
     },
     {
-     "name": "M. LEISHMAN",
+     "name": "Michelle R. Leishman",
      "me": false
     },
     {
-     "name": "F. LENS",
+     "name": "Frederic Lens",
      "me": false
     },
     {
-     "name": "T. LENZ",
+     "name": "T. Lenz",
      "me": false
     },
     {
-     "name": "S. L. LEWIS",
+     "name": "Simon L. Lewis",
      "me": false
     },
     {
-     "name": "J. LLOYD",
+     "name": "J. Lloyd",
      "me": false
     },
     {
-     "name": "J. LLUSIÀ",
+     "name": "Joan Llusià",
      "me": false
     },
     {
-     "name": "F. LOUAULT",
+     "name": "Frédérique Louault",
      "me": false
     },
     {
-     "name": "S. MA",
+     "name": "Siyan Ma",
      "me": false
     },
     {
-     "name": "M. D. MAHECHA",
+     "name": "M. D. Mahecha",
      "me": false
     },
     {
-     "name": "P. MANNING",
+     "name": "Peter Manning",
      "me": false
     },
     {
-     "name": "T. MASSAD",
+     "name": "Tara Joy Massad",
      "me": false
     },
     {
-     "name": "B. E. MEDLYN",
+     "name": "Belinda Medlyn",
      "me": false
     },
     {
-     "name": "J. MESSIER",
+     "name": "Julie Messier",
      "me": false
     },
     {
-     "name": "A. T. MOLES",
+     "name": "Angela T. Moles",
      "me": false
     },
     {
-     "name": "S. C. MÜLLER",
+     "name": "Sandra Cristina Müller",
      "me": false
     },
     {
-     "name": "K. NADROWSKI",
+     "name": "K. Nadrowski",
      "me": false
     },
     {
-     "name": "S. NAEEM",
+     "name": "S. Naeem",
      "me": false
     },
     {
-     "name": "Ü. NIINEMETS",
+     "name": "ü. Niinemets",
      "me": false
     },
     {
-     "name": "S. NÖLLERT",
+     "name": "S. Nöllert",
      "me": false
     },
     {
-     "name": "A. NÜSKE",
+     "name": "A. Nüske",
      "me": false
     },
     {
-     "name": "R. OGAYA",
+     "name": "Romà Ogaya",
      "me": false
     },
     {
-     "name": "J. OLEKSYN",
+     "name": "Jacek Oleksyn",
      "me": false
     },
     {
-     "name": "V. G. ONIPCHENKO",
+     "name": "Vladimir G. Onipchenko",
      "me": false
     },
     {
-     "name": "Y. ONODA",
+     "name": "Yusuke Onoda",
      "me": false
     },
     {
-     "name": "J. ORDOÑEZ",
+     "name": "Jenny C. Ordoñez",
      "me": false
     },
     {
-     "name": "G. OVERBECK",
+     "name": "Gerhard E. Overbeck",
      "me": false
     },
     {
-     "name": "W. A. OZINGA",
+     "name": "Wim A. Ozinga",
      "me": false
     },
     {
-     "name": "S. PATIÑO",
+     "name": "S. Patiño",
      "me": false
     },
     {
-     "name": "S. PAULA",
+     "name": "Susana Paula",
      "me": false
     },
     {
-     "name": "J. G. PAUSAS",
+     "name": "Juli G. Pausas",
      "me": false
     },
     {
-     "name": "J. PEÑUELAS",
+     "name": "Josep Peñuelas",
      "me": false
     },
     {
-     "name": "O. L. PHILLIPS",
+     "name": "Oliver L. Phillips",
      "me": false
     },
     {
-     "name": "V. PILLAR",
+     "name": "Valério D. Pillar",
      "me": false
     },
     {
-     "name": "H. POORTER",
+     "name": "Hendrik Poorter",
      "me": false
     },
     {
-     "name": "L. POORTER",
+     "name": "L. Poorter",
      "me": false
     },
     {
-     "name": "P. POSCHLOD",
+     "name": "Peter Poschlod",
      "me": false
     },
     {
-     "name": "A. PRINZING",
+     "name": "Andreas Prinzing",
      "me": false
     },
     {
-     "name": "R. PROULX",
+     "name": "R. Proulx",
      "me": false
     },
     {
-     "name": "A. RAMMIG",
+     "name": "Anja Rammig",
      "me": false
     },
     {
-     "name": "S. REINSCH",
+     "name": "S. Reinsch",
      "me": false
     },
     {
-     "name": "B. REU",
+     "name": "B. Reu",
      "me": false
     },
     {
-     "name": "L. SACK",
+     "name": "Lawren Sack",
      "me": false
     },
     {
-     "name": "B. SALGADO‐NEGRET",
+     "name": "Beatriz Salgado‐Negret",
      "me": false
     },
     {
-     "name": "J. SARDANS",
+     "name": "Jordi Sardans",
      "me": false
     },
     {
-     "name": "S. SHIODERA",
+     "name": "Satomi Shiodera",
      "me": false
     },
     {
-     "name": "B. SHIPLEY",
+     "name": "Bill Shipley",
      "me": false
     },
     {
-     "name": "A. SIEFERT",
+     "name": "Andrew Siefert",
      "me": false
     },
     {
-     "name": "E. SOSINSKI",
+     "name": "Enio Egon Sosinski",
      "me": false
     },
     {
-     "name": "J.‐F. SOUSSANA",
+     "name": "J.‐f. Soussana",
      "me": false
     },
     {
-     "name": "E. SWAINE",
+     "name": "Emily K. Swaine",
      "me": false
     },
     {
-     "name": "N. SWENSON",
+     "name": "Nathan G. Swenson",
      "me": false
     },
     {
-     "name": "K. THOMPSON",
+     "name": "Ken Thompson",
      "me": false
     },
     {
-     "name": "P. THORNTON",
+     "name": "Peter E. Thornton",
      "me": false
     },
     {
-     "name": "M. WALDRAM",
+     "name": "Matthew S. Waldram",
      "me": false
     },
     {
-     "name": "E. WEIHER",
+     "name": "Evan Weiher",
      "me": false
     },
     {
-     "name": "M. WHITE",
+     "name": "M. White",
      "me": false
     },
     {
-     "name": "S. WHITE",
+     "name": "S. White",
      "me": false
     },
     {
-     "name": "S. J. WRIGHT",
+     "name": "Stuart Joseph Wright",
      "me": false
     },
     {
-     "name": "B. YGUEL",
+     "name": "Benjamin Yguel",
      "me": false
     },
     {
-     "name": "S. ZAEHLE",
+     "name": "S. Zaehle",
      "me": false
     },
     {
-     "name": "A. E. ZANNE",
+     "name": "Amy E. Zanne",
      "me": false
     },
     {
-     "name": "C. WIRTH",
+     "name": "Christian Wirth",
      "me": false
     }
    ],
@@ -12502,7 +11793,7 @@
      "me": false
     },
     {
-     "name": "Will K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -12526,7 +11817,7 @@
      "me": false
     },
     {
-     "name": "Adrienne Nicotra",
+     "name": "Adrienne B. Nicotra",
      "me": false
     }
    ],
@@ -12604,11 +11895,11 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-77952910868&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Robert Kooyman",
+     "name": "Robert M. Kooyman",
      "me": false
     },
     {
-     "name": "Will Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
@@ -12627,7 +11918,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-77953154156&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "D. D. Ackerly",
+     "name": "David D. Ackerly",
      "me": false
     },
     {
@@ -12635,11 +11926,11 @@
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "S. B. Weiss",
+     "name": "Stuart B. Weiss",
      "me": false
     },
     {
@@ -12651,7 +11942,7 @@
      "me": false
     },
     {
-     "name": "N. J. B. Kraft",
+     "name": "Nathan J. B. Kraft",
      "me": false
     }
    ],
@@ -12720,43 +12011,43 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-70149114589&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "WILLIAM K. CORNWELL",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "JOHANNES H. C. CORNELISSEN",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
-     "name": "STEVEN D. ALLISON",
+     "name": "Steven D. Allison",
      "me": false
     },
     {
-     "name": "JÜRGEN BAUHUS",
+     "name": "Jürgen Bauhus",
      "me": false
     },
     {
-     "name": "PAUL EGGLETON",
+     "name": "Paul Eggleton",
      "me": false
     },
     {
-     "name": "CAROLINE M. PRESTON",
+     "name": "Caroline M. Preston",
      "me": false
     },
     {
-     "name": "FIONA SCARFF",
+     "name": "Fiona Scarff",
      "me": false
     },
     {
-     "name": "JAMES T. WEEDON",
+     "name": "James T. Weedon",
      "me": false
     },
     {
-     "name": "CHRISTIAN WIRTH",
+     "name": "Christian Wirth",
      "me": false
     },
     {
-     "name": "AMY E. ZANNE",
+     "name": "Amy E. Zanne",
      "me": false
     }
    ],
@@ -12842,7 +12133,7 @@
      "me": true
     },
     {
-     "name": "Johannes H. C. Cornelissen",
+     "name": "Johannes H.C. Cornelissen",
      "me": false
     },
     {
@@ -12969,18 +12260,18 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33846556296&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "D. D. Ackerly",
+     "name": "David D. Ackerly",
      "me": false
     },
     {
-     "name": "W. K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     }
    ],
    "me_index": 1
   },
   {
-   "title": "Adjustment of structure and function of Hawaiian <i>Metrosideros polymorpha</i> at high vs. low precipitation",
+   "title": "Adjustment of structure and function of Hawaiian <em>Metrosideros polymorpha</em> at high vs. low precipitation",
    "year": 2007,
    "journal": "Functional Ecology",
    "type": "journal-article",
@@ -12988,23 +12279,23 @@
    "url": null,
    "authors": [
     {
-     "name": "W. K. CORNWELL",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "R. BHASKAR",
+     "name": "Radika Bhaskar",
      "me": false
     },
     {
-     "name": "L. SACK",
+     "name": "Lawren Sack",
      "me": false
     },
     {
-     "name": "S. CORDELL",
+     "name": "S. Cordell",
      "me": false
     },
     {
-     "name": "C. K. LUNCH",
+     "name": "C. K. Lunch",
      "me": false
     }
    ],
@@ -13029,26 +12320,26 @@
    "url": null,
    "authors": [
     {
-     "name": "Nathan J. B. Kraft",
+     "name": "Nathan J. B. Kraft",
      "me": false
     },
     {
-     "name": "William K. Cornwell",
+     "name": "William K. Cornwell",
      "me": true
     },
     {
-     "name": "Campbell O. Webb",
+     "name": "Campbell O. Webb",
      "me": false
     },
     {
-     "name": "David D. Ackerly",
+     "name": "David D. Ackerly",
      "me": false
     }
    ],
    "me_index": 1
   },
   {
-   "title": "A TRAIT-BASED TEST FOR HABITAT FILTERING: CONVEX HULL VOLUME",
+   "title": "A trait-based test for habitat filtering: Convex hull volume",
    "year": 2006,
    "journal": "Ecology",
    "type": "journal-article",
@@ -13164,16 +12455,6 @@
     }
    ],
    "me_index": 4
-  },
-  {
-   "title": "Occurrence of arbuscular mycorrhizal fungi in a phosphorus-poor wetland and mycorrhizal response to phosphorus fertilization",
-   "year": 2001,
-   "journal": "",
-   "type": "journal-article",
-   "doi": null,
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0042124605&partnerID=MN8TOARS",
-   "authors": [],
-   "me_index": -1
   },
   {
    "title": "Occurrence of arbuscular mycorrhizal fungi in a phosphorus‐poor wetland and mycorrhizal response to phosphorus fertilization",

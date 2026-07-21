@@ -200,7 +200,7 @@
             </div>
             <div class="biblio-rank-desc">{{ .description }}</div>
             <div class="biblio-rank-examples">
-              {{ range $i, $w := first 2 .works }}{{ if $i }} &middot; {{ end }}{{ $w.title }} ({{ $w.year }}){{ end }}
+              {{ range $i, $w := first 2 .works }}{{ if $i }} &middot; {{ end }}{{ $w.title | safeHTML }} ({{ $w.year }}){{ end }}
             </div>
           </li>
         {{ end }}

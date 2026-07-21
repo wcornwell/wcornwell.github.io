@@ -15,8 +15,49 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}"
           integrity="{{ $css.Data.Integrity }}">
 
+    {{/* Summary stats. Counting happens here rather than in the fetch script so
+         the numbers can never drift from the list actually being rendered. */}}
+    {{ $firstAuthored := 0 }}
+    {{ $journals := slice }}
+    {{ $coauthors := slice }}
+    {{ range $pubs }}
+      {{ if eq (int .me_index) 0 }}{{ $firstAuthored = add $firstAuthored 1 }}{{ end }}
+      {{ with .journal }}{{ $journals = $journals | append . }}{{ end }}
+      {{ range .authors }}
+        {{ if and (not .me) .name }}
+          {{ $coauthors = $coauthors | append (lower .name) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{/* Data arrives sorted newest-first, so the span runs last to first. */}}
+    {{ $newest := (index $pubs 0).year }}
+    {{ $oldest := (index $pubs (sub (len $pubs) 1)).year }}
+
+    <dl class="pubs-stats">
+      <div class="pubs-stat">
+        <dt>Publications</dt>
+        <dd>{{ len $pubs }}</dd>
+      </div>
+      <div class="pubs-stat">
+        <dt>First-authored</dt>
+        <dd>{{ $firstAuthored }}</dd>
+      </div>
+      <div class="pubs-stat">
+        <dt>Journals</dt>
+        <dd>{{ len (uniq $journals) }}</dd>
+      </div>
+      <div class="pubs-stat">
+        <dt>Co-authors</dt>
+        <dd>{{ len (uniq $coauthors) }}</dd>
+      </div>
+      <div class="pubs-stat pubs-stat--span">
+        <dt>Spanning</dt>
+        <dd>{{ $oldest }}–{{ $newest }}</dd>
+      </div>
+    </dl>
+
     <p class="pubs-meta">
-      {{ len $pubs }} works · updated {{ $data.generated }} from
+      Updated {{ $data.generated }} from
       <a href="https://orcid.org/{{ $data.orcid }}" rel="noopener">ORCID</a>
     </p>
 
@@ -37,9 +78,9 @@
             <li class="pub">
               <div class="pub-title">
                 {{ if $link }}
-                  <a href="{{ $link }}" rel="noopener">{{ .title }}</a>
+                  <a href="{{ $link }}" rel="noopener">{{ .title | safeHTML }}</a>
                 {{ else }}
-                  {{ .title }}
+                  {{ .title | safeHTML }}
                 {{ end }}
                 {{ if eq .type "preprint" }}<span class="pub-tag">preprint</span>{{ end }}
               </div>

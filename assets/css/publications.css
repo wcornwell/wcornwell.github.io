@@ -109,6 +109,54 @@
   margin-top: 0.15rem;
 }
 
+/* Summary stats bar. auto-fit keeps the tiles on one row on desktop and lets
+   them wrap to two or three per row on narrow screens without a breakpoint. */
+.pubs-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: 0.5rem;
+  margin: 1.25rem 0 0.5rem;
+  padding: 0;
+}
+
+.pubs-stat {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 8px);
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+}
+
+.pubs-stat dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.65;
+  margin: 0 0 0.2rem;
+}
+
+.pubs-stat dd {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary);
+  /* Keeps "2001–2026" from overflowing a tile sized for a 3-digit count. */
+  font-variant-numeric: tabular-nums;
+}
+
+/* The year span is twice as wide as a count, so it gets its own size. */
+.pubs-stat--span dd {
+  font-size: 1.15rem;
+  padding-top: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .pubs-stat dd {
+    font-size: 1.25rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pub {
     transition: none;
