@@ -1,8 +1,8 @@
 {
  "generated": "2026-07-21",
  "orcid": "0000-0003-4080-4073",
- "count": 168,
- "with_authors": 160,
+ "count": 169,
+ "with_authors": 164,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -2079,6 +2079,41 @@
    "me_index": 2
   },
   {
+   "title": "How to build a biodiverse city: environmental determinants of bird diversity within and among 1581 cities",
+   "year": 2021,
+   "journal": "Biodiversity and Conservation",
+   "type": "journal-article",
+   "doi": "10.1007/s10531-020-02088-1",
+   "url": "http://dx.doi.org/10.1007/s10531-020-02088-1",
+   "authors": [
+    {
+     "name": "Corey T. Callaghan",
+     "me": false
+    },
+    {
+     "name": "Alistair G. B. Poore",
+     "me": false
+    },
+    {
+     "name": "Richard E. Major",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "John H. Wilshire",
+     "me": false
+    },
+    {
+     "name": "Mitchell B. Lyons",
+     "me": false
+    }
+   ],
+   "me_index": 3
+  },
+  {
    "title": "Is color data from citizen science photographs reliable for biodiversity research?",
    "year": 2021,
    "journal": "Ecology and Evolution",
@@ -2571,12 +2606,21 @@
   {
    "title": "A systematic review of transplant experiments in lichens and bryophytes",
    "year": 2020,
-   "journal": "Bryologist",
+   "journal": "The Bryologist",
    "type": "journal-article",
-   "doi": null,
+   "doi": "10.1639/0007-2745-123.3.443",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85095722902&partnerID=MN8TOARS",
-   "authors": [],
-   "me_index": -1
+   "authors": [
+    {
+     "name": "Max Mallen-Cooper",
+     "me": false
+    },
+    {
+     "name": "Will K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 1
   },
   {
    "title": "Author Correction: A global database for metacommunity ecology, integrating species, traits, environment and space",
@@ -13004,14 +13048,27 @@
    "me_index": 1
   },
   {
-   "title": "A trait-based test for habitat filtering: Convex hull volume",
+   "title": "A TRAIT-BASED TEST FOR HABITAT FILTERING: CONVEX HULL VOLUME",
    "year": 2006,
-   "journal": "",
+   "journal": "Ecology",
    "type": "journal-article",
-   "doi": null,
+   "doi": "10.1890/0012-9658(2006)87[1465:attfhf]2.0.co;2",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33646685333&partnerID=MN8TOARS",
-   "authors": [],
-   "me_index": -1
+   "authors": [
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Dylan W. Schwilk",
+     "me": false
+    },
+    {
+     "name": "David D. Ackerly",
+     "me": false
+    }
+   ],
+   "me_index": 0
   },
   {
    "title": "Causes and consequences of functional trait diversity: plant community assembly and leaf decomposition",
@@ -13066,14 +13123,47 @@
    "me_index": 0
   },
   {
-   "title": "Interactions between herbivorous fishes and limiting nutrients in a tropical stream ecosystem",
+   "title": "Interactions between Herbivorous Fishes and Limiting Nutrients in a Tropical Stream Ecosystem",
    "year": 2002,
-   "journal": "",
+   "journal": "Ecology",
    "type": "journal-article",
-   "doi": null,
-   "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0006470472&partnerID=MN8TOARS",
-   "authors": [],
-   "me_index": -1
+   "doi": "10.2307/3071768",
+   "url": "http://dx.doi.org/10.1890/0012-9658(2002)083[1831:IBHFAL]2.0.CO;2",
+   "authors": [
+    {
+     "name": "Alexander S. Flecker",
+     "me": false
+    },
+    {
+     "name": "Brad W. Taylor",
+     "me": false
+    },
+    {
+     "name": "Emily S. Bernhardt",
+     "me": false
+    },
+    {
+     "name": "James M. Hood",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Shawn R. Cassatt",
+     "me": false
+    },
+    {
+     "name": "Michael J. Vanni",
+     "me": false
+    },
+    {
+     "name": "Naomi S. Altman",
+     "me": false
+    }
+   ],
+   "me_index": 4
   },
   {
    "title": "Occurrence of arbuscular mycorrhizal fungi in a phosphorus-poor wetland and mycorrhizal response to phosphorus fertilization",

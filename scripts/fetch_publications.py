@@ -32,6 +32,15 @@ ME_GIVEN_INITIAL = "w"
 # Crossref DOI filters are OR'd; 20 keeps the URL comfortably short.
 BATCH_SIZE = 20
 
+# ORCID's DOI-field validator rejects legacy ESA-style DOIs containing
+# "()[]:;", so these can never be entered there directly. Patched in here by
+# exact title match instead; the existing Crossref enrichment step then fills
+# in authors/journal for them normally, same as any ORCID-sourced DOI.
+DOI_PATCHES = {
+    "A trait-based test for habitat filtering: Convex hull volume":
+        "10.1890/0012-9658(2006)87[1465:attfhf]2.0.co;2",
+}
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "publications.json"
 
@@ -142,6 +151,11 @@ def main():
     print("Fetching ORCID works...", file=sys.stderr)
     works = fetch_orcid()
     print(f"  {len(works)} works", file=sys.stderr)
+
+    for w in works:
+        patch_doi = DOI_PATCHES.get(w["title"])
+        if patch_doi and not w["doi"]:
+            w["doi"] = patch_doi
 
     dois = [w["doi"] for w in works if w["doi"]]
     print(f"Enriching {len(dois)} DOIs from Crossref...", file=sys.stderr)

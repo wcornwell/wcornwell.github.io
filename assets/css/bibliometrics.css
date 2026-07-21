@@ -1,0 +1,290 @@
+/* Styles for layouts/bibliometrics.html.
+   Chrome (ink, borders, surfaces) inherits PaperMod's theme variables, same
+   as publications.css. The three series colours are new custom properties,
+   validated as a categorical triple (CVD ΔE >= 8, normal-vision ΔE >= 15 on
+   both surfaces) -- see the dataviz skill's palette reference. */
+
+.biblio-intro {
+  margin-bottom: 1.5rem;
+}
+
+.biblio-chart {
+  --series-first: #2a78d6;
+  --series-mid: #eb6834;
+  --series-last: #1baf7a;
+
+  /* Full 8-slot categorical palette (theme-mix-by-year chart, up to 7 themes
+     + "Other") plus single-hue fills for the rank list and bubble chart. */
+  --cluster-0: #2a78d6;
+  --cluster-1: #eb6834;
+  --cluster-2: #1baf7a;
+  --cluster-3: #eda100;
+  --cluster-4: #e87ba4;
+  --cluster-5: #008300;
+  --cluster-6: #4a3aa7;
+  --cluster-other: #898781;
+  --rank-fill: #2a78d6;
+  --bubble-fill: #2a78d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .biblio-chart {
+    --series-first: #3987e5;
+    --series-mid: #d95926;
+    --series-last: #199e70;
+
+    --cluster-0: #3987e5;
+    --cluster-1: #d95926;
+    --cluster-2: #199e70;
+    --cluster-3: #c98500;
+    --cluster-4: #d55181;
+    --cluster-5: #008300;
+    --cluster-6: #9085e9;
+    --cluster-other: #898781;
+    --rank-fill: #3987e5;
+    --bubble-fill: #3987e5;
+  }
+}
+
+:root[data-theme="dark"] .biblio-chart {
+  --series-first: #3987e5;
+  --series-mid: #d95926;
+  --series-last: #199e70;
+
+  --cluster-0: #3987e5;
+  --cluster-1: #d95926;
+  --cluster-2: #199e70;
+  --cluster-3: #c98500;
+  --cluster-4: #d55181;
+  --cluster-5: #008300;
+  --cluster-6: #9085e9;
+  --cluster-other: #898781;
+  --rank-fill: #3987e5;
+  --bubble-fill: #3987e5;
+}
+
+.biblio-chart h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.biblio-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.biblio-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.biblio-swatch {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2px;
+  flex: none;
+}
+
+.biblio-swatch-first { background: var(--series-first); }
+.biblio-swatch-mid { background: var(--series-mid); }
+.biblio-swatch-last { background: var(--series-last); }
+
+.biblio-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.biblio-seg-first { fill: var(--series-first); }
+.biblio-seg-mid { fill: var(--series-mid); }
+.biblio-seg-last { fill: var(--series-last); }
+
+.biblio-gap { fill: var(--entry); }
+
+.biblio-bar-group:hover .biblio-seg,
+.biblio-bar-group:focus .biblio-seg {
+  filter: brightness(1.12);
+}
+
+.biblio-bar-group:focus {
+  outline: none;
+}
+
+.biblio-bar-group:focus .biblio-seg:first-of-type {
+  filter: brightness(1.12) drop-shadow(0 0 0 1px var(--primary));
+}
+
+.biblio-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.biblio-baseline {
+  stroke: var(--secondary);
+  stroke-width: 1;
+}
+
+.biblio-axis-label,
+.biblio-year-label {
+  fill: var(--secondary);
+  font-size: 9px;
+}
+
+.biblio-year-label {
+  font-size: 8px;
+}
+
+.biblio-table-toggle {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.biblio-table-toggle summary {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.biblio-table-wrap {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.biblio-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.biblio-table th,
+.biblio-table td {
+  padding: 0.3rem 0.6rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+}
+
+.biblio-table th:first-child,
+.biblio-table td:first-child {
+  text-align: left;
+}
+
+.biblio-caveat {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  border-left: 3px solid var(--border);
+  padding-left: 0.9rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.biblio-chart-note {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* --- Ranked list --- */
+
+.biblio-rank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.biblio-rank-row {
+  margin-bottom: 1.1rem;
+}
+
+.biblio-rank-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.biblio-rank-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--secondary);
+  font-weight: 400;
+  flex: none;
+}
+
+.biblio-rank-bar-track {
+  background: var(--code-bg);
+  border-radius: 4px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.biblio-rank-bar-fill {
+  background: var(--rank-fill);
+  height: 100%;
+  border-radius: 4px;
+}
+
+.biblio-rank-desc {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-bottom: 0.2rem;
+}
+
+.biblio-rank-examples {
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* --- Theme mix by year: 8-slot categorical palette --- */
+
+.biblio-cluster-seg-0 { fill: var(--cluster-0); }
+.biblio-cluster-seg-1 { fill: var(--cluster-1); }
+.biblio-cluster-seg-2 { fill: var(--cluster-2); }
+.biblio-cluster-seg-3 { fill: var(--cluster-3); }
+.biblio-cluster-seg-4 { fill: var(--cluster-4); }
+.biblio-cluster-seg-5 { fill: var(--cluster-5); }
+.biblio-cluster-seg-6 { fill: var(--cluster-6); }
+.biblio-cluster-seg-other { fill: var(--cluster-other); }
+
+.biblio-cluster-swatch-0 { background: var(--cluster-0); }
+.biblio-cluster-swatch-1 { background: var(--cluster-1); }
+.biblio-cluster-swatch-2 { background: var(--cluster-2); }
+.biblio-cluster-swatch-3 { background: var(--cluster-3); }
+.biblio-cluster-swatch-4 { background: var(--cluster-4); }
+.biblio-cluster-swatch-5 { background: var(--cluster-5); }
+.biblio-cluster-swatch-6 { background: var(--cluster-6); }
+.biblio-cluster-swatch-other { background: var(--cluster-other); }
+
+.biblio-bar-group:hover .biblio-cluster-seg,
+.biblio-bar-group:focus .biblio-cluster-seg {
+  filter: brightness(1.12);
+}
+
+/* --- Bubble layout --- */
+
+.biblio-bubble {
+  fill: var(--bubble-fill);
+  fill-opacity: 0.75;
+  stroke: var(--bubble-fill);
+  stroke-width: 1;
+}
+
+.biblio-bubble-label {
+  fill: var(--primary);
+  font-size: 9px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .biblio-seg,
+  .biblio-cluster-seg {
+    transition: none;
+  }
+}
