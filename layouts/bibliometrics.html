@@ -17,161 +17,6 @@
           integrity="{{ $css.Data.Integrity }}">
   {{ end }}
 
-  {{ if $pubs }}
-    {{/* Bucket every work by year and by Will's position in the author list:
-         solo/first-author, an interior "middle" slot, or last-author (the
-         senior/PI slot). me_index and year arrive as float64 from JSON. */}}
-    {{ $years := slice }}
-    {{ range $pubs }}{{ $years = $years | append .year }}{{ end }}
-    {{ $sortedYears := sort (uniq $years) }}
-
-    {{ $totals := newScratch }}
-    {{ $rows := slice }}
-    {{ range $sortedYears }}
-      {{ $year := . }}
-      {{ $counts := newScratch }}
-      {{ range where $pubs "year" $year }}
-        {{ $n := len .authors }}
-        {{ $idx := int .me_index }}
-        {{ $role := "mid" }}
-        {{ if or (eq $n 1) (eq $idx 0) }}
-          {{ $role = "first" }}
-        {{ else if eq $idx (sub $n 1) }}
-          {{ $role = "last" }}
-        {{ end }}
-        {{ $counts.Add $role 1 }}
-      {{ end }}
-      {{ $first := $counts.Get "first" | default 0 }}
-      {{ $mid := $counts.Get "mid" | default 0 }}
-      {{ $last := $counts.Get "last" | default 0 }}
-      {{ $total := add (add $first $mid) $last }}
-      {{ $rows = $rows | append (dict "year" (int $year) "first" $first "mid" $mid "last" $last "total" $total) }}
-      {{ if gt $total ($totals.Get "max" | default 0) }}{{ $totals.Set "max" $total }}{{ end }}
-    {{ end }}
-    {{ $max := $totals.Get "max" }}
-
-    {{/* Chart geometry, in SVG user units. */}}
-    {{ $plotLeft := 46.0 }}
-    {{ $plotRight := 750.0 }}
-    {{ $plotTop := 40.0 }}
-    {{ $plotBottom := 260.0 }}
-    {{ $plotWidth := sub $plotRight $plotLeft }}
-    {{ $plotHeight := sub $plotBottom $plotTop }}
-    {{ $n := len $rows }}
-    {{ $band := div $plotWidth (float $n) }}
-    {{ $barW := math.Min 22.0 (sub $band 5.0) }}
-    {{ $scale := div $plotHeight (float $max) }}
-
-    {{/* Clean y-axis ticks in steps of 5, up to the smallest multiple of 5 at or above max. */}}
-    {{ $yTicks := slice 0 }}
-    {{ $t := 5 }}
-    {{ range $i := seq 0 20 }}
-      {{ if le $t $max }}{{ $yTicks = $yTicks | append $t }}{{ $t = add $t 5 }}{{ end }}
-    {{ end }}
-    {{ if lt (index $yTicks (sub (len $yTicks) 1)) $max }}{{ $yTicks = $yTicks | append $t }}{{ end }}
-
-    <section class="biblio-chart">
-      <h2>Publications per year, by authorship role</h2>
-
-      <div class="biblio-legend">
-        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-first"></i>First author (or sole author)</span>
-        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-mid"></i>Middle author</span>
-        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-last"></i>Last author</span>
-      </div>
-
-      <svg class="biblio-svg" viewBox="0 0 800 320" role="img"
-           aria-label="Stacked bar chart of publications per year from {{ (index $rows 0).year }} to {{ (index $rows (sub $n 1)).year }}, split into first-author, middle-author, and last-author works. Exact figures are in the table below the chart.">
-
-        {{/* Gridlines + y-axis ticks. */}}
-        {{ range $yTicks }}
-          {{ $ty := sub $plotBottom (mul (float .) $scale) }}
-          <line class="biblio-grid" x1="{{ $plotLeft }}" x2="{{ $plotRight }}"
-                y1="{{ printf "%.1f" $ty }}" y2="{{ printf "%.1f" $ty }}"></line>
-          <text class="biblio-axis-label" x="{{ sub $plotLeft 8.0 }}" y="{{ printf "%.1f" (add $ty 3.0) }}"
-                text-anchor="end">{{ . }}</text>
-        {{ end }}
-        <line class="biblio-baseline" x1="{{ $plotLeft }}" x2="{{ $plotRight }}"
-              y1="{{ $plotBottom }}" y2="{{ $plotBottom }}"></line>
-
-        {{ range $i, $row := $rows }}
-          {{ $x := add $plotLeft (mul (float $i) $band) }}
-          {{ $cx := add $x (div $band 2.0) }}
-          {{ $barX := sub $cx (div $barW 2.0) }}
-
-          {{ $hasFirst := gt $row.first 0 }}
-          {{ $hasMid := gt $row.mid 0 }}
-          {{ $hasLast := gt $row.last 0 }}
-
-          {{ $fh := mul (float $row.first) $scale }}
-          {{ $mh := mul (float $row.mid) $scale }}
-          {{ $lh := mul (float $row.last) $scale }}
-
-          {{ $yFirstTop := sub $plotBottom $fh }}
-          {{ $yMidTop := sub $yFirstTop $mh }}
-          {{ $yLastTop := sub $yMidTop $lh }}
-
-          {{/* The topmost non-zero segment gets a rounded data-end; the rest stay square. */}}
-          {{ $topRole := "first" }}
-          {{ if $hasLast }}{{ $topRole = "last" }}{{ else if $hasMid }}{{ $topRole = "mid" }}{{ end }}
-
-          <g class="biblio-bar-group" tabindex="0">
-            {{ if $hasFirst }}
-            <rect class="biblio-seg biblio-seg-first" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yFirstTop }}"
-                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $fh }}"
-                  {{ if eq $topRole "first" }}rx="3"{{ end }}>
-              <title>{{ $row.year }} · first author (or sole author) · {{ $row.first }} paper{{ if ne $row.first 1 }}s{{ end }}</title>
-            </rect>
-            {{ end }}
-            {{ if $hasMid }}
-            <rect class="biblio-seg biblio-seg-mid" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yMidTop }}"
-                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $mh }}"
-                  {{ if eq $topRole "mid" }}rx="3"{{ end }}>
-              <title>{{ $row.year }} · middle author · {{ $row.mid }} paper{{ if ne $row.mid 1 }}s{{ end }}</title>
-            </rect>
-            {{ end }}
-            {{ if $hasLast }}
-            <rect class="biblio-seg biblio-seg-last" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yLastTop }}"
-                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $lh }}" rx="3">
-              <title>{{ $row.year }} · last author · {{ $row.last }} paper{{ if ne $row.last 1 }}s{{ end }}</title>
-            </rect>
-            {{ end }}
-
-            {{/* 2px surface-color dividers between adjacent stacked segments. */}}
-            {{ if and $hasFirst (or $hasMid $hasLast) }}
-            <rect class="biblio-gap" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" (sub $yFirstTop 1.0) }}"
-                  width="{{ printf "%.1f" $barW }}" height="2"></rect>
-            {{ end }}
-            {{ if and $hasMid $hasLast }}
-            <rect class="biblio-gap" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" (sub $yMidTop 1.0) }}"
-                  width="{{ printf "%.1f" $barW }}" height="2"></rect>
-            {{ end }}
-
-            <text class="biblio-year-label" x="{{ printf "%.1f" $cx }}" y="{{ add $plotBottom 12.0 }}"
-                  text-anchor="end" transform="rotate(-60 {{ printf "%.1f" $cx }} {{ add $plotBottom 12.0 }})">{{ $row.year }}</text>
-          </g>
-        {{ end }}
-      </svg>
-
-      <details class="biblio-table-toggle">
-        <summary>View exact numbers</summary>
-        <div class="biblio-table-wrap">
-          <table class="biblio-table">
-            <thead>
-              <tr><th scope="col">Year</th><th scope="col">First author</th><th scope="col">Middle author</th><th scope="col">Last author</th><th scope="col">Total</th></tr>
-            </thead>
-            <tbody>
-              {{ range $rows }}
-              <tr><td>{{ .year }}</td><td>{{ .first }}</td><td>{{ .mid }}</td><td>{{ .last }}</td><td>{{ .total }}</td></tr>
-              {{ end }}
-            </tbody>
-          </table>
-        </div>
-      </details>
-    </section>
-  {{ else }}
-    <p>No publication data found. Run <code>python3 scripts/fetch_publications.py</code>.</p>
-  {{ end }}
-
   {{ if $clusters }}
     {{/* Driven off the recorded method so this caption cannot describe one
          clustering run while the data came from the other. */}}
@@ -398,6 +243,161 @@
         {{ end }}
       </svg>
     </section>
+  {{ end }}
+
+  {{ if $pubs }}
+    {{/* Bucket every work by year and by Will's position in the author list:
+         solo/first-author, an interior "middle" slot, or last-author (the
+         senior/PI slot). me_index and year arrive as float64 from JSON. */}}
+    {{ $years := slice }}
+    {{ range $pubs }}{{ $years = $years | append .year }}{{ end }}
+    {{ $sortedYears := sort (uniq $years) }}
+
+    {{ $totals := newScratch }}
+    {{ $rows := slice }}
+    {{ range $sortedYears }}
+      {{ $year := . }}
+      {{ $counts := newScratch }}
+      {{ range where $pubs "year" $year }}
+        {{ $n := len .authors }}
+        {{ $idx := int .me_index }}
+        {{ $role := "mid" }}
+        {{ if or (eq $n 1) (eq $idx 0) }}
+          {{ $role = "first" }}
+        {{ else if eq $idx (sub $n 1) }}
+          {{ $role = "last" }}
+        {{ end }}
+        {{ $counts.Add $role 1 }}
+      {{ end }}
+      {{ $first := $counts.Get "first" | default 0 }}
+      {{ $mid := $counts.Get "mid" | default 0 }}
+      {{ $last := $counts.Get "last" | default 0 }}
+      {{ $total := add (add $first $mid) $last }}
+      {{ $rows = $rows | append (dict "year" (int $year) "first" $first "mid" $mid "last" $last "total" $total) }}
+      {{ if gt $total ($totals.Get "max" | default 0) }}{{ $totals.Set "max" $total }}{{ end }}
+    {{ end }}
+    {{ $max := $totals.Get "max" }}
+
+    {{/* Chart geometry, in SVG user units. */}}
+    {{ $plotLeft := 46.0 }}
+    {{ $plotRight := 750.0 }}
+    {{ $plotTop := 40.0 }}
+    {{ $plotBottom := 260.0 }}
+    {{ $plotWidth := sub $plotRight $plotLeft }}
+    {{ $plotHeight := sub $plotBottom $plotTop }}
+    {{ $n := len $rows }}
+    {{ $band := div $plotWidth (float $n) }}
+    {{ $barW := math.Min 22.0 (sub $band 5.0) }}
+    {{ $scale := div $plotHeight (float $max) }}
+
+    {{/* Clean y-axis ticks in steps of 5, up to the smallest multiple of 5 at or above max. */}}
+    {{ $yTicks := slice 0 }}
+    {{ $t := 5 }}
+    {{ range $i := seq 0 20 }}
+      {{ if le $t $max }}{{ $yTicks = $yTicks | append $t }}{{ $t = add $t 5 }}{{ end }}
+    {{ end }}
+    {{ if lt (index $yTicks (sub (len $yTicks) 1)) $max }}{{ $yTicks = $yTicks | append $t }}{{ end }}
+
+    <section class="biblio-chart">
+      <h2>Publications per year, by authorship role</h2>
+
+      <div class="biblio-legend">
+        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-first"></i>First author (or sole author)</span>
+        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-mid"></i>Middle author</span>
+        <span class="biblio-legend-item"><i class="biblio-swatch biblio-swatch-last"></i>Last author</span>
+      </div>
+
+      <svg class="biblio-svg" viewBox="0 0 800 320" role="img"
+           aria-label="Stacked bar chart of publications per year from {{ (index $rows 0).year }} to {{ (index $rows (sub $n 1)).year }}, split into first-author, middle-author, and last-author works. Exact figures are in the table below the chart.">
+
+        {{/* Gridlines + y-axis ticks. */}}
+        {{ range $yTicks }}
+          {{ $ty := sub $plotBottom (mul (float .) $scale) }}
+          <line class="biblio-grid" x1="{{ $plotLeft }}" x2="{{ $plotRight }}"
+                y1="{{ printf "%.1f" $ty }}" y2="{{ printf "%.1f" $ty }}"></line>
+          <text class="biblio-axis-label" x="{{ sub $plotLeft 8.0 }}" y="{{ printf "%.1f" (add $ty 3.0) }}"
+                text-anchor="end">{{ . }}</text>
+        {{ end }}
+        <line class="biblio-baseline" x1="{{ $plotLeft }}" x2="{{ $plotRight }}"
+              y1="{{ $plotBottom }}" y2="{{ $plotBottom }}"></line>
+
+        {{ range $i, $row := $rows }}
+          {{ $x := add $plotLeft (mul (float $i) $band) }}
+          {{ $cx := add $x (div $band 2.0) }}
+          {{ $barX := sub $cx (div $barW 2.0) }}
+
+          {{ $hasFirst := gt $row.first 0 }}
+          {{ $hasMid := gt $row.mid 0 }}
+          {{ $hasLast := gt $row.last 0 }}
+
+          {{ $fh := mul (float $row.first) $scale }}
+          {{ $mh := mul (float $row.mid) $scale }}
+          {{ $lh := mul (float $row.last) $scale }}
+
+          {{ $yFirstTop := sub $plotBottom $fh }}
+          {{ $yMidTop := sub $yFirstTop $mh }}
+          {{ $yLastTop := sub $yMidTop $lh }}
+
+          {{/* The topmost non-zero segment gets a rounded data-end; the rest stay square. */}}
+          {{ $topRole := "first" }}
+          {{ if $hasLast }}{{ $topRole = "last" }}{{ else if $hasMid }}{{ $topRole = "mid" }}{{ end }}
+
+          <g class="biblio-bar-group" tabindex="0">
+            {{ if $hasFirst }}
+            <rect class="biblio-seg biblio-seg-first" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yFirstTop }}"
+                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $fh }}"
+                  {{ if eq $topRole "first" }}rx="3"{{ end }}>
+              <title>{{ $row.year }} · first author (or sole author) · {{ $row.first }} paper{{ if ne $row.first 1 }}s{{ end }}</title>
+            </rect>
+            {{ end }}
+            {{ if $hasMid }}
+            <rect class="biblio-seg biblio-seg-mid" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yMidTop }}"
+                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $mh }}"
+                  {{ if eq $topRole "mid" }}rx="3"{{ end }}>
+              <title>{{ $row.year }} · middle author · {{ $row.mid }} paper{{ if ne $row.mid 1 }}s{{ end }}</title>
+            </rect>
+            {{ end }}
+            {{ if $hasLast }}
+            <rect class="biblio-seg biblio-seg-last" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" $yLastTop }}"
+                  width="{{ printf "%.1f" $barW }}" height="{{ printf "%.1f" $lh }}" rx="3">
+              <title>{{ $row.year }} · last author · {{ $row.last }} paper{{ if ne $row.last 1 }}s{{ end }}</title>
+            </rect>
+            {{ end }}
+
+            {{/* 2px surface-color dividers between adjacent stacked segments. */}}
+            {{ if and $hasFirst (or $hasMid $hasLast) }}
+            <rect class="biblio-gap" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" (sub $yFirstTop 1.0) }}"
+                  width="{{ printf "%.1f" $barW }}" height="2"></rect>
+            {{ end }}
+            {{ if and $hasMid $hasLast }}
+            <rect class="biblio-gap" x="{{ printf "%.1f" $barX }}" y="{{ printf "%.1f" (sub $yMidTop 1.0) }}"
+                  width="{{ printf "%.1f" $barW }}" height="2"></rect>
+            {{ end }}
+
+            <text class="biblio-year-label" x="{{ printf "%.1f" $cx }}" y="{{ add $plotBottom 12.0 }}"
+                  text-anchor="end" transform="rotate(-60 {{ printf "%.1f" $cx }} {{ add $plotBottom 12.0 }})">{{ $row.year }}</text>
+          </g>
+        {{ end }}
+      </svg>
+
+      <details class="biblio-table-toggle">
+        <summary>View exact numbers</summary>
+        <div class="biblio-table-wrap">
+          <table class="biblio-table">
+            <thead>
+              <tr><th scope="col">Year</th><th scope="col">First author</th><th scope="col">Middle author</th><th scope="col">Last author</th><th scope="col">Total</th></tr>
+            </thead>
+            <tbody>
+              {{ range $rows }}
+              <tr><td>{{ .year }}</td><td>{{ .first }}</td><td>{{ .mid }}</td><td>{{ .last }}</td><td>{{ .total }}</td></tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+  {{ else }}
+    <p>No publication data found. Run <code>python3 scripts/fetch_publications.py</code>.</p>
   {{ end }}
 </main>
 {{ end }}
