@@ -9,3 +9,6 @@ Gemfile.lock
 resources/
 __pycache__/
 .claude/settings.local.json
+# stray working files dropped in the repo root (grant PDFs etc.);
+# PDFs meant for the site live under static/ and are still tracked
+/*.pdf
