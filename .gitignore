@@ -12,3 +12,6 @@ __pycache__/
 # stray working files dropped in the repo root (grant PDFs etc.);
 # PDFs meant for the site live under static/ and are still tracked
 /*.pdf
+# local abstract cache for scripts/cluster_abstracts.py -- publisher copyright
+# (Elsevier/Scopus especially), and this repo is public. Never commit it.
+data/abstracts.local.json

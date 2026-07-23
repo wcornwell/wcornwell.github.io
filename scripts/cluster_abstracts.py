@@ -2,8 +2,11 @@
 """Build data/abstract_clusters.json: thematic clusters of the publication list.
 
 Two steps:
-  1. Fetch abstracts from Crossref for every work in data/publications.json
-     that has a DOI (~90% coverage, including works back to 2001).
+  1. Fetch an abstract for every work in data/publications.json that has a
+     DOI, cascading Crossref -> OpenAlex -> Scopus and only asking each source
+     about the DOIs still missing. No single source suffices: Crossref holds
+     none for Elsevier, Nature or PLOS, and OpenAlex fills most but not all of
+     that gap. See SOURCES.
   2. Group them into coherent research themes, either by asking an OpenAI
      model (a strict JSON schema, not free-text parsing) or, with --offline,
      via TF-IDF + k-means -- a lower-quality but zero-dependency, zero-cost
@@ -23,6 +26,7 @@ Run offline (no API needed): python3 scripts/cluster_abstracts.py --offline
 """
 
 import argparse
+import collections
 import json
 import os
 import pathlib
@@ -37,14 +41,31 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PUBLICATIONS = ROOT / "data" / "publications.json"
 OUT = ROOT / "data" / "abstract_clusters.json"
 
+# Local-only abstract cache. Gitignored on purpose: these are publisher
+# copyright (Elsevier via Scopus especially) and this repo is public, so the
+# text must never be committed. Caching them locally is still worth it -- a
+# cold cascade is ~170 HTTP requests and Scopus alone is one request per DOI.
+CACHE = ROOT / "data" / "abstracts.local.json"
+
 DEFAULT_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5")
 BATCH_SIZE = 20  # Crossref DOI filters are OR'd; keeps the URL comfortably short.
+OPENALEX_BATCH_SIZE = 25  # OpenAlex caps an OR'd filter list at 50.
 
 JATS_TAG = re.compile(r"<[^>]+>")
 
 
-def fetch_abstracts(dois):
-    """Return {doi: abstract_text} for every DOI Crossref has an abstract for."""
+def clean_abstract(text):
+    """Strip JATS/HTML markup and collapse whitespace; return None if nothing's left."""
+    if not text:
+        return None
+    text = JATS_TAG.sub(" ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    # Some publishers deposit a bare "Abstract" heading and no body.
+    return text if len(text) > 40 else None
+
+
+def fetch_crossref_abstracts(dois):
+    """Return {doi: abstract} for every DOI Crossref has an abstract for."""
     found = {}
     for i in range(0, len(dois), BATCH_SIZE):
         batch = dois[i:i + BATCH_SIZE]
@@ -61,14 +82,172 @@ def fetch_abstracts(dois):
             print(f"  batch failed, continuing without it: {exc}", file=sys.stderr)
             continue
         for item in msg.get("items", []):
-            abstract = item.get("abstract")
-            if abstract:
-                text = JATS_TAG.sub(" ", abstract)
-                text = re.sub(r"\s+", " ", text).strip()
-                if text:
-                    found[item["DOI"].lower()] = text
+            text = clean_abstract(item.get("abstract"))
+            if text:
+                found[item["DOI"].lower()] = text
         time.sleep(0.2)
     return found
+
+
+def inverted_index_to_text(index):
+    """Rebuild plain text from OpenAlex's {word: [positions]} abstract encoding."""
+    if not index:
+        return None
+    words = {}
+    for word, positions in index.items():
+        for p in positions:
+            words[p] = word
+    return " ".join(words[p] for p in sorted(words))
+
+
+def fetch_openalex_abstracts(dois):
+    """Return {doi: abstract} from OpenAlex. No API key; be polite with mailto.
+
+    OpenAlex stores abstracts as an inverted index rather than running text --
+    a workaround for the fact that it may not redistribute publisher abstracts
+    verbatim. Reconstructing it is lossy in one specific way: repeated
+    whitespace and paragraph breaks are gone. That is irrelevant here, since
+    the text is only ever fed to a clustering model, never displayed.
+    """
+    found = {}
+    for i in range(0, len(dois), OPENALEX_BATCH_SIZE):
+        batch = dois[i:i + OPENALEX_BATCH_SIZE]
+        params = urllib.parse.urlencode({
+            "filter": "doi:" + "|".join(batch),  # OpenAlex ORs on "|", not ","
+            "select": "doi,abstract_inverted_index",
+            "per-page": len(batch),
+            "mailto": CONTACT,
+        })
+        print(f"  openalex abstracts {i + 1}-{i + len(batch)} of {len(dois)}", file=sys.stderr)
+        try:
+            results = get_json(f"https://api.openalex.org/works?{params}")["results"]
+        except Exception as exc:
+            print(f"  batch failed, continuing without it: {exc}", file=sys.stderr)
+            continue
+        for item in results:
+            text = clean_abstract(inverted_index_to_text(item.get("abstract_inverted_index")))
+            if text:
+                # OpenAlex returns the DOI as a full https://doi.org/ URL.
+                doi = (item.get("doi") or "").replace("https://doi.org/", "").lower()
+                if doi:
+                    found[doi] = text
+        time.sleep(0.2)
+    return found
+
+
+def fetch_scopus_abstracts(dois):
+    """Return {doi: abstract} from Scopus, which covers Elsevier's own journals.
+
+    Skipped entirely unless ELSEVIER_API_KEY is set (get one at
+    dev.elsevier.com). The key alone is not always enough: abstract retrieval
+    is entitlement-based, so it generally needs an institutional subscription
+    and a request originating from the campus network (or an InstToken).
+
+    Unlike the other two tiers this endpoint takes one DOI per request, so it
+    is deliberately last -- by the time we get here only a handful remain.
+    """
+    key = os.environ.get("ELSEVIER_API_KEY")
+    if not key:
+        print("  skipping scopus (no ELSEVIER_API_KEY set)", file=sys.stderr)
+        return {}
+    headers = {"X-ELS-APIKey": key, "Accept": "application/json"}
+    found = {}
+    for n, doi in enumerate(dois, 1):
+        print(f"  scopus abstract {n} of {len(dois)}", file=sys.stderr)
+        try:
+            body = get_json(
+                f"https://api.elsevier.com/content/abstract/doi/{urllib.parse.quote(doi)}",
+                headers=headers, retries=1,
+            )
+        except Exception as exc:
+            # 401/403/404 are all routine here (no entitlement, not indexed).
+            print(f"  {doi}: {exc}", file=sys.stderr)
+            continue
+        core = body.get("abstracts-retrieval-response", {}).get("coredata", {})
+        text = clean_abstract(core.get("dc:description"))
+        if text:
+            found[doi] = text
+        time.sleep(0.3)
+    return found
+
+
+# Tried in order, each one only asked about the DOIs still missing. Crossref
+# leads because it is authoritative and cheap; Scopus trails because it needs
+# a key, an entitlement, and one request per work.
+SOURCES = [
+    ("crossref", fetch_crossref_abstracts),
+    ("openalex", fetch_openalex_abstracts),
+    ("scopus", fetch_scopus_abstracts),
+]
+
+
+def load_cache():
+    """Read the local abstract cache: {doi: {"abstract", "source", "fetched"}}."""
+    if not CACHE.exists():
+        return {}
+    try:
+        return json.loads(CACHE.read_text())
+    except (json.JSONDecodeError, OSError) as exc:
+        # A corrupt cache is never worth failing the run over; just refetch.
+        print(f"  ignoring unreadable cache ({exc})", file=sys.stderr)
+        return {}
+
+
+def save_cache(cache):
+    CACHE.parent.mkdir(exist_ok=True)
+    CACHE.write_text(json.dumps(cache, indent=1, ensure_ascii=False) + "\n")
+    print(f"  cached {len(cache)} abstracts in {CACHE.relative_to(ROOT)} "
+          "(gitignored, never committed)", file=sys.stderr)
+
+
+def fetch_abstracts(dois, use_cache=True):
+    """Cascade through SOURCES. Returns ({doi: abstract}, {doi: source_name}).
+
+    No single source is close to complete: Crossref carries no abstract for
+    Elsevier, Nature or (despite being open access) PLOS, so a Crossref-only
+    fetch leaves ~24% of the list clustered on its title alone.
+
+    Anything already in the local cache is not refetched. Only genuinely new
+    DOIs hit the network, so a re-run after adding a paper or two costs a
+    couple of requests rather than ~170.
+    """
+    found, provenance = {}, {}
+    # Always load the cache, even with use_cache=False. It is the base we write
+    # back, so a refetch that comes up empty (these APIs are patchy, and a
+    # failed batch is logged and skipped rather than fatal) can only ever add
+    # to the cache, never shrink it. Coverage ratchets upward.
+    cache = load_cache()
+    if use_cache:
+        for doi in dois:
+            entry = cache.get(doi)
+            if entry and entry.get("abstract"):
+                found[doi] = entry["abstract"]
+                provenance[doi] = entry.get("source", "cache")
+        if found:
+            print(f"Reusing {len(found)} cached abstracts from "
+                  f"{CACHE.relative_to(ROOT)}", file=sys.stderr)
+
+    for name, fetch in SOURCES:
+        missing = [d for d in dois if d not in found]
+        if not missing:
+            break
+        print(f"Fetching abstracts from {name} ({len(missing)} still missing)...",
+              file=sys.stderr)
+        got = fetch(missing)
+        for doi, text in got.items():
+            if doi not in found:
+                found[doi] = text
+                provenance[doi] = name
+            cache[doi] = {
+                "abstract": text,
+                "source": name,
+                "fetched": time.strftime("%Y-%m-%d"),
+            }
+        print(f"  {name} added {len(got)}; {len(found)}/{len(dois)} now covered",
+              file=sys.stderr)
+
+    save_cache(cache)
+    return found, provenance
 
 
 CLUSTER_SCHEMA = {
@@ -326,15 +505,23 @@ def main():
         "--model", default=DEFAULT_MODEL,
         help=f"OpenAI model to cluster with (default: {DEFAULT_MODEL}; also settable via OPENAI_MODEL)",
     )
+    parser.add_argument(
+        "--refetch-abstracts", action="store_true",
+        help="ignore the local abstract cache and re-query every source",
+    )
     args = parser.parse_args()
 
     data = json.loads(PUBLICATIONS.read_text())
     works = [w for w in data["publications"] if w.get("doi")]
     print(f"{len(works)} works with a DOI", file=sys.stderr)
 
-    print("Fetching abstracts from Crossref...", file=sys.stderr)
-    abstracts = fetch_abstracts([w["doi"] for w in works])
-    print(f"  {len(abstracts)}/{len(works)} have an abstract", file=sys.stderr)
+    abstracts, provenance = fetch_abstracts(
+        [w["doi"] for w in works], use_cache=not args.refetch_abstracts
+    )
+    by_source = collections.Counter(provenance.values())
+    print(f"{len(abstracts)}/{len(works)} have an abstract "
+          f"({', '.join(f'{n} {s}' for s, n in by_source.most_common()) or 'none'})",
+          file=sys.stderr)
 
     if args.offline:
         clusters = cluster_offline(works, abstracts)
@@ -367,6 +554,7 @@ def main():
                 "year": w["year"],
                 "journal": w.get("journal"),
                 "has_abstract": doi in abstracts,
+                "abstract_source": provenance.get(doi),
             })
         cluster_works.sort(key=lambda w: -(w["year"] or 0))
         out_clusters.append({
@@ -402,6 +590,7 @@ def main():
         "model": method,
         "source_works": len(works),
         "works_with_abstract": len(abstracts),
+        "abstract_sources": dict(by_source.most_common()),
         "clusters": out_clusters,
         "unassigned": unassigned,
     }

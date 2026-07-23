@@ -234,11 +234,19 @@ def fetch_orcid():
     for group in data["group"]:
         s = best_summary(group)
 
-        doi = None
-        for ext in group.get("external-ids", {}).get("external-id", []):
-            if ext.get("external-id-type") == "doi" and ext.get("external-id-value"):
-                doi = ext["external-id-value"].strip().lower()
-                break
+        # A group merges every source's summary for one work, so it can carry
+        # several DOIs -- typically the preprint and the version of record.
+        # Order is not meaningful, so take the published one rather than the
+        # first: the preprint DOI often resolves to no abstract and no author
+        # list. (Seen on the 2017 Pedobiologia mycorrhizal flammability paper,
+        # whose group lists the EcoEvoRxiv DOI ahead of the Elsevier one.)
+        dois = [
+            ext["external-id-value"].strip().lower()
+            for ext in group.get("external-ids", {}).get("external-id", [])
+            if ext.get("external-id-type") == "doi" and ext.get("external-id-value")
+        ]
+        published = [d for d in dois if not d.startswith(PREPRINT_DOI_PREFIXES)]
+        doi = (published or dois or [None])[0]
 
         year = ((s.get("publication-date") or {}).get("year") or {}).get("value")
         url_val = (s.get("url") or {}).get("value")

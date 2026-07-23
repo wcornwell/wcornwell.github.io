@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-22",
+ "generated": "2026-07-23",
  "orcid": "0000-0003-4080-4073",
  "count": 161,
  "with_authors": 157,
@@ -2654,11 +2654,11 @@
    "me_index": 5
   },
   {
-   "title": "Fungal functional ecology: Bringing a trait-based approach to plant-associated fungi",
+   "title": "Fungal functional ecology: bringing a trait‐based approach to plant‐associated fungi",
    "year": 2020,
    "journal": "Biological Reviews",
    "type": "journal-article",
-   "doi": "10.32942/osf.io/a7f6g",
+   "doi": "10.1111/brv.12570",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85075435168&partnerID=MN8TOARS",
    "authors": [
     {
@@ -2670,11 +2670,11 @@
      "me": false
     },
     {
-     "name": "Michelle Afkhami",
+     "name": "Michelle E. Afkhami",
      "me": false
     },
     {
-     "name": "Carlos A Aguilar-Trigueros",
+     "name": "Carlos A. Aguilar‐Trigueros",
      "me": false
     },
     {
@@ -2682,11 +2682,11 @@
      "me": false
     },
     {
-     "name": "Jennifer Bhatnagar",
+     "name": "Jennifer M. Bhatnagar",
      "me": false
     },
     {
-     "name": "Posy Busby",
+     "name": "Posy E. Busby",
      "me": false
     },
     {
@@ -2698,7 +2698,59 @@
      "me": true
     },
     {
-     "name": "Thomas Crowther",
+     "name": "Thomas W. Crowther",
+     "me": false
+    },
+    {
+     "name": "Habacuc Flores‐Moreno",
+     "me": false
+    },
+    {
+     "name": "Dimitrios Floudas",
+     "me": false
+    },
+    {
+     "name": "Romina Gazis",
+     "me": false
+    },
+    {
+     "name": "David Hibbett",
+     "me": false
+    },
+    {
+     "name": "Peter Kennedy",
+     "me": false
+    },
+    {
+     "name": "Daniel L. Lindner",
+     "me": false
+    },
+    {
+     "name": "Daniel S. Maynard",
+     "me": false
+    },
+    {
+     "name": "Amy M. Milo",
+     "me": false
+    },
+    {
+     "name": "Rolf Henrik Nilsson",
+     "me": false
+    },
+    {
+     "name": "Jeff R. Powell",
+     "me": false
+    },
+    {
+     "name": "Mark Schildhauer",
+     "me": false
+    },
+    {
+     "name": "Jonathan Schilling",
+     "me": false
+    },
+    {
+     "name": "Kathleen K. Treseder",
      "me": false
     }
    ],
@@ -3258,7 +3310,7 @@
      "me": false
     },
     {
-     "name": "Gijsbert DA Werner",
+     "name": "Gijsbert D. A. Werner",
      "me": false
     },
     {
@@ -8012,13 +8064,13 @@
   {
    "title": "Symbiont switching and alternative resource acquisition strategies drive mutualism breakdown",
    "year": 2018,
-   "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+   "journal": "Proceedings of the National Academy of Sciences",
    "type": "journal-article",
-   "doi": "10.1101/242834",
+   "doi": "10.1073/pnas.1721629115",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85046971563&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Gijsbert DA Werner",
+     "name": "Gijsbert D. A. Werner",
      "me": false
     },
     {
@@ -8038,7 +8090,7 @@
      "me": false
     },
     {
-     "name": "Stuart A West",
+     "name": "Stuart A. West",
      "me": false
     },
     {
@@ -8449,7 +8501,7 @@
    "year": 2017,
    "journal": "Pedobiologia",
    "type": "journal-article",
-   "doi": "10.32942/osf.io/u7bhv",
+   "doi": "10.1016/j.pedobi.2017.07.001",
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85024127862&partnerID=MN8TOARS",
    "authors": [
     {
@@ -8457,7 +8509,7 @@
      "me": false
     },
     {
-     "name": "Rohan Riley",
+     "name": "Rohan C. Riley",
      "me": false
     },
     {
@@ -8814,7 +8866,7 @@
    "url": null,
    "authors": [
     {
-     "name": "Gijsbert DA Werner",
+     "name": "Gijsbert D. A. Werner",
      "me": false
     },
     {
@@ -9377,7 +9429,7 @@
    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84902305766&partnerID=MN8TOARS",
    "authors": [
     {
-     "name": "Gijsbert DA Werner",
+     "name": "Gijsbert D. A. Werner",
      "me": false
     },
     {
