@@ -1,8 +1,8 @@
 {
- "generated": "2026-07-23",
+ "generated": "2026-08-09",
  "orcid": "0000-0003-4080-4073",
- "count": 161,
- "with_authors": 157,
+ "count": 162,
+ "with_authors": 158,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -53,6 +53,49 @@
     },
     {
      "name": "Thomas Mesaglio",
+     "me": false
+    }
+   ],
+   "me_index": 1
+  },
+  {
+   "title": "Contrasting climate signals between native and introduced annual and perennial floras",
+   "year": 2026,
+   "journal": "",
+   "type": "preprint",
+   "doi": "10.64898/2026.07.31.741935",
+   "url": "https://doi.org/10.64898/2026.07.31.741935",
+   "authors": [
+    {
+     "name": "Elizabeth H. Wenk",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Ruby E. Stephens",
+     "me": false
+    },
+    {
+     "name": "David Coleman",
+     "me": false
+    },
+    {
+     "name": "Thomas Mesaglio",
+     "me": false
+    },
+    {
+     "name": "Isaac Towers",
+     "me": false
+    },
+    {
+     "name": "Sophie Yang",
+     "me": false
+    },
+    {
+     "name": "Daniel S. Falster",
      "me": false
     }
    ],
