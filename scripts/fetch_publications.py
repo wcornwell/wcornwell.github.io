@@ -58,11 +58,13 @@ DOI_PATCHES = {
 # entries on the page. These are matched mechanically rather than cleaned up in
 # ORCID because new preprints keep arriving with every paper.
 PREPRINT_DOI_PREFIXES = (
-    "10.1101/",     # bioRxiv / medRxiv
+    "10.1101/",     # bioRxiv / medRxiv (legacy prefix)
+    "10.64898/",    # openRxiv: bioRxiv / medRxiv from 2026
     "10.32942/",    # EcoEvoRxiv
     "10.31220/",    # agriRxiv
     "10.31223/",    # ESSOAr / EarthArXiv
     "10.22541/",    # Authorea
+    "10.2139/",     # SSRN (incl. Elsevier's Preprints with The Lancet / Cell Press Sneak Peek)
 )
 
 # Titles starting with these are publisher corrections, not distinct works.
