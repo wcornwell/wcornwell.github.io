@@ -29,7 +29,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           # Keep in sync with the Hugo version used locally (see CLAUDE.md).
-          hugo-version: '0.163.3'
+          hugo-version: '0.166.0'
           extended: true
 
       - name: Build with Hugo
