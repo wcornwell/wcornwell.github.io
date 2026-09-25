@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-06",
+ "generated": "2026-09-25",
  "orcid": "0000-0003-4080-4073",
- "count": 162,
- "with_authors": 158,
+ "count": 169,
+ "with_authors": 165,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -34,10 +34,10 @@
   {
    "title": "Applying the spectral variability hypothesis to arid shrublands using multispectral drone imagery",
    "year": 2026,
-   "journal": "",
-   "type": "preprint",
-   "doi": "10.2139/ssrn.6631204",
-   "url": "https://doi.org/10.2139/ssrn.6631204",
+   "journal": "Journal of Arid Environments",
+   "type": "journal-article",
+   "doi": "10.1016/j.jaridenv.2026.105683",
+   "url": "http://dx.doi.org/10.1016/j.jaridenv.2026.105683",
    "authors": [
     {
      "name": "Adele Gemmell",
@@ -57,6 +57,441 @@
     }
    ],
    "me_index": 1
+  },
+  {
+   "title": "Beyond species means – the intraspecific contribution to global wood density variation",
+   "year": 2026,
+   "journal": "New Phytologist",
+   "type": "journal-article",
+   "doi": "10.1111/nph.70860",
+   "url": "http://dx.doi.org/10.1111/nph.70860",
+   "authors": [
+    {
+     "name": "Fabian Jörg Fischer",
+     "me": false
+    },
+    {
+     "name": "Jérôme Chave",
+     "me": false
+    },
+    {
+     "name": "Amy E. Zanne",
+     "me": false
+    },
+    {
+     "name": "Tommaso Jucker",
+     "me": false
+    },
+    {
+     "name": "Alex Fajardo",
+     "me": false
+    },
+    {
+     "name": "Adeline Fayolle",
+     "me": false
+    },
+    {
+     "name": "Renato Augusto Ferreira de Lima",
+     "me": false
+    },
+    {
+     "name": "Ghislain Vieilledent",
+     "me": false
+    },
+    {
+     "name": "Hans Beeckman",
+     "me": false
+    },
+    {
+     "name": "Wannes Hubau",
+     "me": false
+    },
+    {
+     "name": "Tom De Mil",
+     "me": false
+    },
+    {
+     "name": "Daniel Wallenus",
+     "me": false
+    },
+    {
+     "name": "Ana María Aldana",
+     "me": false
+    },
+    {
+     "name": "Esteban Alvarez‐Dávila",
+     "me": false
+    },
+    {
+     "name": "Luciana F. Alves",
+     "me": false
+    },
+    {
+     "name": "Deborah Mattos Guimarães Apgaua",
+     "me": false
+    },
+    {
+     "name": "Fátima Arcanjo",
+     "me": false
+    },
+    {
+     "name": "Jean-François Bastin",
+     "me": false
+    },
+    {
+     "name": "Andrii Bilous",
+     "me": false
+    },
+    {
+     "name": "Philippe Birnbaum",
+     "me": false
+    },
+    {
+     "name": "Volodymyr Blyshchyk",
+     "me": false
+    },
+    {
+     "name": "Joli Borah",
+     "me": false
+    },
+    {
+     "name": "Vanessa Boukili",
+     "me": false
+    },
+    {
+     "name": "Jesús Julio Camarero",
+     "me": false
+    },
+    {
+     "name": "Luisa Casas",
+     "me": false
+    },
+    {
+     "name": "Roberto Cazzolla Gatti",
+     "me": false
+    },
+    {
+     "name": "Jeffrey Q. Chambers",
+     "me": false
+    },
+    {
+     "name": "Ezequiel Chimbioputo Fabiano",
+     "me": false
+    },
+    {
+     "name": "Brendan Choat",
+     "me": false
+    },
+    {
+     "name": "Georgina Conti",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Javid Ahmad Dar",
+     "me": false
+    },
+    {
+     "name": "Ashesh Kumar Das",
+     "me": false
+    },
+    {
+     "name": "Magnus Dobler",
+     "me": false
+    },
+    {
+     "name": "Dao Dougabka",
+     "me": false
+    },
+    {
+     "name": "David P. Edwards",
+     "me": false
+    },
+    {
+     "name": "Robert Evans",
+     "me": false
+    },
+    {
+     "name": "Daniel S. Falster",
+     "me": false
+    },
+    {
+     "name": "Philip Fearnside",
+     "me": false
+    },
+    {
+     "name": "Olivier Flores",
+     "me": false
+    },
+    {
+     "name": "Nikolaos M. Fyllas",
+     "me": false
+    },
+    {
+     "name": "Jean Gérard",
+     "me": false
+    },
+    {
+     "name": "Rosa C. Goodman",
+     "me": false
+    },
+    {
+     "name": "Daniel Guibal",
+     "me": false
+    },
+    {
+     "name": "L. Francisco Henao‐Diaz",
+     "me": false
+    },
+    {
+     "name": "Vincent Hervé",
+     "me": false
+    },
+    {
+     "name": "Peter Hietz",
+     "me": false
+    },
+    {
+     "name": "Jürgen Homeier",
+     "me": false
+    },
+    {
+     "name": "Thomas Ibanez",
+     "me": false
+    },
+    {
+     "name": "Jugo Ilic",
+     "me": false
+    },
+    {
+     "name": "Steven Jansen",
+     "me": false
+    },
+    {
+     "name": "Rinku Moni Kalita",
+     "me": false
+    },
+    {
+     "name": "Tanaka Kenzo",
+     "me": false
+    },
+    {
+     "name": "Liana Kindermann",
+     "me": false
+    },
+    {
+     "name": "Subashree Kothandaraman",
+     "me": false
+    },
+    {
+     "name": "Martyna Kotowska",
+     "me": false
+    },
+    {
+     "name": "Yasuhiro Kubota",
+     "me": false
+    },
+    {
+     "name": "Patrick Langbour",
+     "me": false
+    },
+    {
+     "name": "James Lawson",
+     "me": false
+    },
+    {
+     "name": "André Luiz Alves de Lima",
+     "me": false
+    },
+    {
+     "name": "Roman Mathias Link",
+     "me": false
+    },
+    {
+     "name": "Anja Linstädter",
+     "me": false
+    },
+    {
+     "name": "Rosana López",
+     "me": false
+    },
+    {
+     "name": "Cate Macinnis‐Ng",
+     "me": false
+    },
+    {
+     "name": "Luiz Fernando S. Magnago",
+     "me": false
+    },
+    {
+     "name": "Adam R. Martin",
+     "me": false
+    },
+    {
+     "name": "Ashley M. Matheny",
+     "me": false
+    },
+    {
+     "name": "James K. McCarthy",
+     "me": false
+    },
+    {
+     "name": "Regis B. Miller",
+     "me": false
+    },
+    {
+     "name": "Arun Jyoti Nath",
+     "me": false
+    },
+    {
+     "name": "Bruce Walker Nelson",
+     "me": false
+    },
+    {
+     "name": "Marco Njana",
+     "me": false
+    },
+    {
+     "name": "Euler Melo Nogueira",
+     "me": false
+    },
+    {
+     "name": "Alexandre A. de Oliveira",
+     "me": false
+    },
+    {
+     "name": "Rafael S. Oliveira",
+     "me": false
+    },
+    {
+     "name": "Mark E. Olson",
+     "me": false
+    },
+    {
+     "name": "Yusuke Onoda",
+     "me": false
+    },
+    {
+     "name": "Keryn Paul",
+     "me": false
+    },
+    {
+     "name": "Daniel Piotto",
+     "me": false
+    },
+    {
+     "name": "Phil Radtke",
+     "me": false
+    },
+    {
+     "name": "Onja Razafindratsima",
+     "me": false
+    },
+    {
+     "name": "Tahiana Ramananantoandro",
+     "me": false
+    },
+    {
+     "name": "Jennifer Read",
+     "me": false
+    },
+    {
+     "name": "Sarah J. Richardson",
+     "me": false
+    },
+    {
+     "name": "Enrique G. de la Riva",
+     "me": false
+    },
+    {
+     "name": "Oris Rodríguez‐Reyes",
+     "me": false
+    },
+    {
+     "name": "Samir G. Rolim",
+     "me": false
+    },
+    {
+     "name": "Victor Rolo",
+     "me": false
+    },
+    {
+     "name": "Julieta A. Rosell",
+     "me": false
+    },
+    {
+     "name": "Roberto Salguero‐Gómez",
+     "me": false
+    },
+    {
+     "name": "Nadia S. Santini",
+     "me": false
+    },
+    {
+     "name": "Bernhard Schuldt",
+     "me": false
+    },
+    {
+     "name": "Luitgard Schwendenmann",
+     "me": false
+    },
+    {
+     "name": "Arne Sellin",
+     "me": false
+    },
+    {
+     "name": "Timothy Staples",
+     "me": false
+    },
+    {
+     "name": "Pablo R. Stevenson",
+     "me": false
+    },
+    {
+     "name": "Somaiah Sundarapandian",
+     "me": false
+    },
+    {
+     "name": "Masha T. van der Sande",
+     "me": false
+    },
+    {
+     "name": "Bernard Thibaut",
+     "me": false
+    },
+    {
+     "name": "David Yue Phin Tng",
+     "me": false
+    },
+    {
+     "name": "José Marcelo Domingues Torezan",
+     "me": false
+    },
+    {
+     "name": "Boris Villanueva",
+     "me": false
+    },
+    {
+     "name": "Aaron Weiskittel",
+     "me": false
+    },
+    {
+     "name": "Jessie Wells",
+     "me": false
+    },
+    {
+     "name": "Stuart Joseph Wright",
+     "me": false
+    },
+    {
+     "name": "Kasia Zieminska",
+     "me": false
+    }
+   ],
+   "me_index": 30
   },
   {
    "title": "Contrasting climate signals between native and introduced annual and perennial floras",
@@ -156,12 +591,66 @@
    "me_index": 1
   },
   {
-   "title": "Predicting decay in functional diversity in plant communities under future climates",
+   "title": "Heatwaves increase sub-leaf-scale heterogeneity in leaf temperature",
    "year": 2026,
    "journal": "",
    "type": "preprint",
-   "doi": "10.2139/ssrn.6582147",
-   "url": "https://doi.org/10.2139/ssrn.6582147",
+   "doi": "10.22541/authorea.15005633/v1",
+   "url": "http://dx.doi.org/10.22541/authorea.15005633/v1",
+   "authors": [
+    {
+     "name": "Xuemeng Mu",
+     "me": false
+    },
+    {
+     "name": "Mark K.J. Ooi",
+     "me": false
+    },
+    {
+     "name": "Rocco F. Notarnicola",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 3
+  },
+  {
+   "title": "Long unobserved and recently discovered: towards a better understanding of protected‐area species dynamics using curated species lists",
+   "year": 2026,
+   "journal": "Ecography",
+   "type": "journal-article",
+   "doi": "10.1002/ecog.08294",
+   "url": "http://dx.doi.org/10.1002/ecog.08294",
+   "authors": [
+    {
+     "name": "Thomas Mesaglio",
+     "me": false
+    },
+    {
+     "name": "Elizabeth H. Wenk",
+     "me": false
+    },
+    {
+     "name": "Hervé Sauquet",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 3
+  },
+  {
+   "title": "Predicting decay in functional diversity in plant communities under future climates",
+   "year": 2026,
+   "journal": "Ecological Indicators",
+   "type": "journal-article",
+   "doi": "10.1016/j.ecolind.2026.115545",
+   "url": "http://dx.doi.org/10.1016/j.ecolind.2026.115545",
    "authors": [
     {
      "name": "Joshua S. Lee",
@@ -261,6 +750,76 @@
    "me_index": 1
   },
   {
+   "title": "The Sounds of the Australian Summer: A Continental‐Scale Inventory of Cicada Ecoacoustics",
+   "year": 2026,
+   "journal": "Austral Ecology",
+   "type": "journal-article",
+   "doi": "10.1111/aec.70272",
+   "url": "http://dx.doi.org/10.1111/aec.70272",
+   "authors": [
+    {
+     "name": "Thomas Mesaglio",
+     "me": false
+    },
+    {
+     "name": "Kate D. L. Umbers",
+     "me": false
+    },
+    {
+     "name": "Nathan J. Emery",
+     "me": false
+    },
+    {
+     "name": "Christie Foster",
+     "me": false
+    },
+    {
+     "name": "Benjamin A. McBurney",
+     "me": false
+    },
+    {
+     "name": "Joel Poyitt",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 6
+  },
+  {
+   "title": "What’s in flower? Phenological temperature sensitivities in a restricted alpine flora",
+   "year": 2026,
+   "journal": "",
+   "type": "preprint",
+   "doi": "10.32942/x2bh65",
+   "url": "http://dx.doi.org/10.32942/x2bh65",
+   "authors": [
+    {
+     "name": "Casey Kirchhoff",
+     "me": false
+    },
+    {
+     "name": "Ken Green",
+     "me": false
+    },
+    {
+     "name": "Susanna Venn",
+     "me": false
+    },
+    {
+     "name": "David A. Keith",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 4
+  },
+  {
    "title": "<em>infinitylists</em>: A Shiny application and R package for rapid generation of place‐based species checklists",
    "year": 2025,
    "journal": "Applications in Plant Sciences",
@@ -286,6 +845,469 @@
     }
    ],
    "me_index": 3
+  },
+  {
+   "title": "A global map of wood density",
+   "year": 2025,
+   "journal": "",
+   "type": "preprint",
+   "doi": "10.1101/2025.08.25.671920",
+   "url": "http://dx.doi.org/10.1101/2025.08.25.671920",
+   "authors": [
+    {
+     "name": "Fabian Jörg Fischer",
+     "me": false
+    },
+    {
+     "name": "Jérôme Chave",
+     "me": false
+    },
+    {
+     "name": "Amy E. Zanne",
+     "me": false
+    },
+    {
+     "name": "Tommaso Jucker",
+     "me": false
+    },
+    {
+     "name": "Alex Fajardo",
+     "me": false
+    },
+    {
+     "name": "Adeline Fayolle",
+     "me": false
+    },
+    {
+     "name": "Renato Augusto Ferreira de Lima",
+     "me": false
+    },
+    {
+     "name": "Ghislain Vieilledent",
+     "me": false
+    },
+    {
+     "name": "Hans Beeckman",
+     "me": false
+    },
+    {
+     "name": "Wannes Hubau",
+     "me": false
+    },
+    {
+     "name": "Tom De Mil",
+     "me": false
+    },
+    {
+     "name": "Daniel Wallenus",
+     "me": false
+    },
+    {
+     "name": "Ana María Aldana",
+     "me": false
+    },
+    {
+     "name": "Esteban Alvarez-Dávila",
+     "me": false
+    },
+    {
+     "name": "Luciana F. Alves",
+     "me": false
+    },
+    {
+     "name": "Deborah Mattos Guimarães Apgaua",
+     "me": false
+    },
+    {
+     "name": "Fátima Arcanjo",
+     "me": false
+    },
+    {
+     "name": "Jean-François Bastin",
+     "me": false
+    },
+    {
+     "name": "Andrii Bilous",
+     "me": false
+    },
+    {
+     "name": "Philippe Birnbaum",
+     "me": false
+    },
+    {
+     "name": "Volodymyr Blyshchyk",
+     "me": false
+    },
+    {
+     "name": "Joli Borah",
+     "me": false
+    },
+    {
+     "name": "Vanessa Boukili",
+     "me": false
+    },
+    {
+     "name": "Jesús Julio Camarero",
+     "me": false
+    },
+    {
+     "name": "Luisa Casas",
+     "me": false
+    },
+    {
+     "name": "Roberto Cazzolla Gatti",
+     "me": false
+    },
+    {
+     "name": "Jeffrey Q. Chambers",
+     "me": false
+    },
+    {
+     "name": "Ezequiel Chimbioputo Fabiano",
+     "me": false
+    },
+    {
+     "name": "Brendan Choat",
+     "me": false
+    },
+    {
+     "name": "Edgar Cifuentes",
+     "me": false
+    },
+    {
+     "name": "Georgina Conti",
+     "me": false
+    },
+    {
+     "name": "David A. Coomes",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Javid Ahmad Dar",
+     "me": false
+    },
+    {
+     "name": "Ashesh Kumar Das",
+     "me": false
+    },
+    {
+     "name": "Magnus Dobler",
+     "me": false
+    },
+    {
+     "name": "Dao Dougabka",
+     "me": false
+    },
+    {
+     "name": "David P. Edwards",
+     "me": false
+    },
+    {
+     "name": "Urs Eggli",
+     "me": false
+    },
+    {
+     "name": "Robert Evans",
+     "me": false
+    },
+    {
+     "name": "Daniel S. Falster",
+     "me": false
+    },
+    {
+     "name": "Philip Fearnside",
+     "me": false
+    },
+    {
+     "name": "Olivier Flores",
+     "me": false
+    },
+    {
+     "name": "Nikolaos M. Fyllas",
+     "me": false
+    },
+    {
+     "name": "Jean Gérard",
+     "me": false
+    },
+    {
+     "name": "Rosa C. Goodman",
+     "me": false
+    },
+    {
+     "name": "Daniel Guibal",
+     "me": false
+    },
+    {
+     "name": "L. Francisco Henao-Diaz",
+     "me": false
+    },
+    {
+     "name": "Vincent Hervé",
+     "me": false
+    },
+    {
+     "name": "Peter Hietz",
+     "me": false
+    },
+    {
+     "name": "Jürgen Homeier",
+     "me": false
+    },
+    {
+     "name": "Thomas Ibanez",
+     "me": false
+    },
+    {
+     "name": "Jugo Ilic",
+     "me": false
+    },
+    {
+     "name": "Steven Jansen",
+     "me": false
+    },
+    {
+     "name": "Rinku Moni Kalita",
+     "me": false
+    },
+    {
+     "name": "Tanaka Kenzo",
+     "me": false
+    },
+    {
+     "name": "Liana Kindermann",
+     "me": false
+    },
+    {
+     "name": "Subashree Kothandaraman",
+     "me": false
+    },
+    {
+     "name": "Martyna Kotowska",
+     "me": false
+    },
+    {
+     "name": "Yasuhiro Kubota",
+     "me": false
+    },
+    {
+     "name": "Patrick Langbour",
+     "me": false
+    },
+    {
+     "name": "James Lawson",
+     "me": false
+    },
+    {
+     "name": "André Luiz Alves de Lima",
+     "me": false
+    },
+    {
+     "name": "Roman Mathias Link",
+     "me": false
+    },
+    {
+     "name": "Anja Linstädter",
+     "me": false
+    },
+    {
+     "name": "Rosana López",
+     "me": false
+    },
+    {
+     "name": "Cate Macinnis-Ng",
+     "me": false
+    },
+    {
+     "name": "Luiz Fernando S. Magnago",
+     "me": false
+    },
+    {
+     "name": "Adam R. Martin",
+     "me": false
+    },
+    {
+     "name": "Ashley M. Matheny",
+     "me": false
+    },
+    {
+     "name": "James K. McCarthy",
+     "me": false
+    },
+    {
+     "name": "Regis B. Miller",
+     "me": false
+    },
+    {
+     "name": "Arun Jyoti Nath",
+     "me": false
+    },
+    {
+     "name": "Bruce Walker Nelson",
+     "me": false
+    },
+    {
+     "name": "Marco Njana",
+     "me": false
+    },
+    {
+     "name": "Euler Melo Nogueira",
+     "me": false
+    },
+    {
+     "name": "Alexandre A. de Oliveira",
+     "me": false
+    },
+    {
+     "name": "Rafael S. Oliveira",
+     "me": false
+    },
+    {
+     "name": "Mark E. Olson",
+     "me": false
+    },
+    {
+     "name": "Yusuke Onoda",
+     "me": false
+    },
+    {
+     "name": "Keryn Paul",
+     "me": false
+    },
+    {
+     "name": "Daniel Piotto",
+     "me": false
+    },
+    {
+     "name": "Phil Radtke",
+     "me": false
+    },
+    {
+     "name": "Onja Razafindratsima",
+     "me": false
+    },
+    {
+     "name": "Tahiana Ramananantoandro",
+     "me": false
+    },
+    {
+     "name": "Jennifer Read",
+     "me": false
+    },
+    {
+     "name": "Sarah J. Richardson",
+     "me": false
+    },
+    {
+     "name": "Enrique G. de la Riva",
+     "me": false
+    },
+    {
+     "name": "Oris Rodríguez-Reyes",
+     "me": false
+    },
+    {
+     "name": "Samir G. Rolim",
+     "me": false
+    },
+    {
+     "name": "Victor Rolo",
+     "me": false
+    },
+    {
+     "name": "Julieta A. Rosell",
+     "me": false
+    },
+    {
+     "name": "Sassan Saatchi",
+     "me": false
+    },
+    {
+     "name": "Roberto Salguero-Gómez",
+     "me": false
+    },
+    {
+     "name": "Nadia S. Santini",
+     "me": false
+    },
+    {
+     "name": "Bernhard Schuldt",
+     "me": false
+    },
+    {
+     "name": "Luitgard Schwendenmann",
+     "me": false
+    },
+    {
+     "name": "Arne Sellin",
+     "me": false
+    },
+    {
+     "name": "Timothy Staples",
+     "me": false
+    },
+    {
+     "name": "Pablo R. Stevenson",
+     "me": false
+    },
+    {
+     "name": "Somaiah Sundarapandian",
+     "me": false
+    },
+    {
+     "name": "Masha T. van der Sande",
+     "me": false
+    },
+    {
+     "name": "Hans ter Steege",
+     "me": false
+    },
+    {
+     "name": "Shengli Tao",
+     "me": false
+    },
+    {
+     "name": "Bernard Thibaut",
+     "me": false
+    },
+    {
+     "name": "David Yue Phin Tng",
+     "me": false
+    },
+    {
+     "name": "José Marcelo Domingues Torezan",
+     "me": false
+    },
+    {
+     "name": "Boris Villanueva",
+     "me": false
+    },
+    {
+     "name": "Aaron Weiskittel",
+     "me": false
+    },
+    {
+     "name": "Jessie Wells",
+     "me": false
+    },
+    {
+     "name": "Stuart Joseph Wright",
+     "me": false
+    },
+    {
+     "name": "Kasia Zieminska",
+     "me": false
+    },
+    {
+     "name": "Alexander Zizka",
+     "me": false
+    }
+   ],
+   "me_index": 32
   },
   {
    "title": "Citizen science records are fuelling exciting discoveries of new plant species",
@@ -515,6 +1537,37 @@
     }
    ],
    "me_index": 2
+  },
+  {
+   "title": "Systematic review of heatwave experiments on plant health and survival",
+   "year": 2025,
+   "journal": "",
+   "type": "preprint",
+   "doi": "10.32942/x2q93c",
+   "url": "http://dx.doi.org/10.32942/x2q93c",
+   "authors": [
+    {
+     "name": "Xuemeng Mu",
+     "me": false
+    },
+    {
+     "name": "Rocco F. Notarnicola",
+     "me": false
+    },
+    {
+     "name": "Pieter Arnold",
+     "me": false
+    },
+    {
+     "name": "Pietro Pollo",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    }
+   ],
+   "me_index": 4
   },
   {
    "title": "Traits Associated With Local Extinctions of Native Plants in a Species‐Rich Urban Reserve",
@@ -4921,7 +5974,7 @@
      "me": false
     },
     {
-     "name": "Adam Martin",
+     "name": "Adam R. Martin",
      "me": false
     },
     {
@@ -4957,7 +6010,7 @@
      "me": false
     },
     {
-     "name": "James McCarthy",
+     "name": "James K. McCarthy",
      "me": false
     },
     {
@@ -10788,7 +11841,7 @@
      "me": false
     },
     {
-     "name": "H. ter Steege",
+     "name": "Hans ter Steege",
      "me": false
     },
     {
@@ -10812,7 +11865,7 @@
      "me": false
     },
     {
-     "name": "G. Conti",
+     "name": "Georgina Conti",
      "me": false
     },
     {
@@ -11438,7 +12491,7 @@
      "me": false
     },
     {
-     "name": "J. Q. Chambers",
+     "name": "Jeffrey Q. Chambers",
      "me": false
     },
     {
@@ -11446,7 +12499,7 @@
      "me": false
     },
     {
-     "name": "J. Chave",
+     "name": "Jérôme Chave",
      "me": false
     },
     {
@@ -11506,7 +12559,7 @@
      "me": false
     },
     {
-     "name": "O. Flores",
+     "name": "Olivier Flores",
      "me": false
     },
     {
