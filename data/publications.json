@@ -1,8 +1,8 @@
 {
  "generated": "2026-09-25",
  "orcid": "0000-0003-4080-4073",
- "count": 169,
- "with_authors": 165,
+ "count": 170,
+ "with_authors": 166,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -818,6 +818,33 @@
     }
    ],
    "me_index": 4
+  },
+  {
+   "title": "Why trait gradients across environments differ within species and across communities: Insights from a theoretical model",
+   "year": 2026,
+   "journal": "",
+   "type": "preprint",
+   "doi": "10.32942/x2d973",
+   "url": "http://dx.doi.org/10.32942/x2d973",
+   "authors": [
+    {
+     "name": "Sophie Yang",
+     "me": false
+    },
+    {
+     "name": "William K. Cornwell",
+     "me": true
+    },
+    {
+     "name": "Isaac Towers",
+     "me": false
+    },
+    {
+     "name": "Daniel S. Falster",
+     "me": false
+    }
+   ],
+   "me_index": 1
   },
   {
    "title": "<em>infinitylists</em>: A Shiny application and R package for rapid generation of place‐based species checklists",
