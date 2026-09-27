@@ -51,6 +51,13 @@ DEFAULT_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5")
 BATCH_SIZE = 20  # Crossref DOI filters are OR'd; keeps the URL comfortably short.
 OPENALEX_BATCH_SIZE = 25  # OpenAlex caps an OR'd filter list at 50.
 
+# How many themes the page should show. The prompt asks for this range, but
+# nothing in a strict schema can enforce an array's length, and gpt-5 has
+# returned 14 -- so the count is checked in code, re-asked once or twice, and
+# a result still out of range is refused rather than written.
+MIN_CLUSTERS, MAX_CLUSTERS = 6, 12
+CLUSTER_COUNT_RETRIES = 2
+
 JATS_TAG = re.compile(r"<[^>]+>")
 
 
@@ -291,7 +298,7 @@ SYSTEM_PROMPT = """You are helping an ecologist understand the shape of their ow
 25-year publication record. You will be given titles, years, journals, and (where \
 available) abstracts for their academic papers.
 
-Group these works into 6-12 coherent research themes based on their actual scientific \
+Group these works into {MIN_CLUSTERS}-{MAX_CLUSTERS} coherent research themes based on their actual scientific \
 content -- not by journal, year, or author. Prefer a moderate number of well-separated, \
 substantive themes over many overlapping micro-clusters. Base each cluster on genuine \
 thematic/methodological similarity in the abstracts and titles, not superficial keyword \
@@ -302,10 +309,11 @@ COMPLETENESS IS MANDATORY. The corpus below is numbered, and the last line tells
 how many works there are. Every single DOI must appear in exactly one cluster's `dois` \
 list -- no omissions, no duplicates. Works with no abstract are clustered on their title \
 alone; a work is never skipped for being hard to place. Before you answer, count the \
-DOIs you are emitting and check the total matches the corpus count."""
+DOIs you are emitting and check the total matches the corpus count.""".format(
+    MIN_CLUSTERS=MIN_CLUSTERS, MAX_CLUSTERS=MAX_CLUSTERS)
 
 
-def cluster_offline(works, abstracts, k_range=range(6, 13)):
+def cluster_offline(works, abstracts, k_range=range(MIN_CLUSTERS, MAX_CLUSTERS + 1)):
     """TF-IDF + k-means fallback: no LLM, no API key, no cost.
 
     Picks k (within k_range) by silhouette score, then names each cluster
@@ -360,34 +368,56 @@ def cluster_with_openai(works, abstracts, model):
     corpus = build_corpus_text(works, abstracts)
     print(f"Asking {model} to cluster {len(works)} works...", file=sys.stderr)
     client = openai.OpenAI()  # reads OPENAI_API_KEY from the environment
-    try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": corpus},
-            ],
-            response_format={
-                "type": "json_schema",
-                "json_schema": CLUSTER_SCHEMA,
-            },
-        )
-    except openai.AuthenticationError:
-        sys.exit(
-            "No OpenAI API credentials found. Set OPENAI_API_KEY in your "
-            "environment, then re-run this script. Or pass --offline to cluster "
-            "without the API (lower quality, but free and local)."
-        )
-    except openai.NotFoundError:
-        sys.exit(
-            f"Model {model!r} is not available to this API key. Pass a different "
-            "one with --model, or set OPENAI_MODEL."
-        )
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": corpus},
+    ]
+    for attempt in range(CLUSTER_COUNT_RETRIES + 1):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": CLUSTER_SCHEMA,
+                },
+            )
+        except openai.AuthenticationError:
+            sys.exit(
+                "No OpenAI API credentials found. Set OPENAI_API_KEY in your "
+                "environment, then re-run this script. Or pass --offline to cluster "
+                "without the API (lower quality, but free and local)."
+            )
+        except openai.NotFoundError:
+            sys.exit(
+                f"Model {model!r} is not available to this API key. Pass a different "
+                "one with --model, or set OPENAI_MODEL."
+            )
 
-    message = response.choices[0].message
-    if message.refusal:
-        sys.exit(f"The model refused to answer: {message.refusal}")
-    return json.loads(message.content)["clusters"]
+        message = response.choices[0].message
+        if message.refusal:
+            sys.exit(f"The model refused to answer: {message.refusal}")
+        clusters = json.loads(message.content)["clusters"]
+        if MIN_CLUSTERS <= len(clusters) <= MAX_CLUSTERS:
+            return clusters
+        if attempt == CLUSTER_COUNT_RETRIES:
+            break
+        # Show the model its own answer and ask it to regroup, rather than
+        # starting afresh: merging or splitting is a smaller ask than a redo.
+        print(f"  {len(clusters)} themes, outside {MIN_CLUSTERS}-{MAX_CLUSTERS}; "
+              f"regrouping {attempt + 1}/{CLUSTER_COUNT_RETRIES}", file=sys.stderr)
+        messages += [
+            {"role": "assistant", "content": message.content},
+            {"role": "user", "content": (
+                f"You returned {len(clusters)} themes, but there must be between "
+                f"{MIN_CLUSTERS} and {MAX_CLUSTERS}. Regroup: "
+                + ("merge the closest or smallest themes"
+                   if len(clusters) > MAX_CLUSTERS else "split the broadest themes")
+                + ". Every DOI must still appear exactly once."
+            )},
+        ]
+    # main() refuses to write an out-of-range result; return it so it can say so.
+    return clusters
 
 
 def fill_coverage_gaps(works, abstracts, clusters, model, max_retries):
@@ -562,7 +592,15 @@ def main():
             "description": c["description"],
             "works": cluster_works,
         })
+    # A theme can end up empty if every DOI in it was unknown or claimed earlier.
+    out_clusters = [c for c in out_clusters if c["works"]]
     out_clusters.sort(key=lambda c: -len(c["works"]))
+    if not MIN_CLUSTERS <= len(out_clusters) <= MAX_CLUSTERS:
+        sys.exit(
+            f"Refusing to write {OUT.name}: {len(out_clusters)} themes, outside "
+            f"{MIN_CLUSTERS}-{MAX_CLUSTERS}. Re-run, or change MIN_CLUSTERS/"
+            "MAX_CLUSTERS in this script if the range itself is wrong."
+        )
 
     unassigned = [
         {"doi": w["doi"], "title": w["title"], "year": w["year"]}
