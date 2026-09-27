@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-25",
+ "generated": "2026-09-27",
  "orcid": "0000-0003-4080-4073",
  "count": 170,
- "with_authors": 166,
+ "with_authors": 165,
  "publications": [
   {
    "title": "Accounting for functional diversity in biodiversity protection measures",
@@ -13589,47 +13589,14 @@
    "me_index": 0
   },
   {
-   "title": "Interactions between Herbivorous Fishes and Limiting Nutrients in a Tropical Stream Ecosystem",
+   "title": "Interactions between herbivorous fishes and limiting nutrients in a tropical stream ecosystem",
    "year": 2002,
    "journal": "Ecology",
    "type": "journal-article",
    "doi": "10.2307/3071768",
    "url": "http://dx.doi.org/10.1890/0012-9658(2002)083[1831:IBHFAL]2.0.CO;2",
-   "authors": [
-    {
-     "name": "Alexander S. Flecker",
-     "me": false
-    },
-    {
-     "name": "Brad W. Taylor",
-     "me": false
-    },
-    {
-     "name": "Emily S. Bernhardt",
-     "me": false
-    },
-    {
-     "name": "James M. Hood",
-     "me": false
-    },
-    {
-     "name": "William K. Cornwell",
-     "me": true
-    },
-    {
-     "name": "Shawn R. Cassatt",
-     "me": false
-    },
-    {
-     "name": "Michael J. Vanni",
-     "me": false
-    },
-    {
-     "name": "Naomi S. Altman",
-     "me": false
-    }
-   ],
-   "me_index": 4
+   "authors": [],
+   "me_index": -1
   },
   {
    "title": "Occurrence of arbuscular mycorrhizal fungi in a phosphorus‐poor wetland and mycorrhizal response to phosphorus fertilization",
